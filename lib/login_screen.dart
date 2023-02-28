@@ -1,3 +1,4 @@
+import 'package:fatura_app_2/forgot_password.dart';
 import 'package:fatura_app_2/sign_up_screen.dart';
 import "package:flutter/material.dart";
 
@@ -116,7 +117,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   children: [
                     MaterialButton(
                       child: Text("Şifremi Unuttum", style: TextStyle(color: Colors.white)),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => ForgotPassword()));
+                      },
                     ),
                   ],
                               ),

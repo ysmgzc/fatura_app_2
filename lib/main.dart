@@ -1,5 +1,6 @@
-import 'package:fatura_app_2/sign_up_screen.dart';
 import 'package:flutter/material.dart';
+
+import 'forgot_password.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Fatura',
     debugShowCheckedModeBanner: false,
-      home: SignUp(),
+      home: ForgotPassword(),
     );
   }
 }
