@@ -29,6 +29,7 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  dropdown_button2: ^1.0.0
   flutter:
     sdk: flutter
 
@@ -67,6 +68,7 @@ flutter:
     - assets/icons/f.png
     - assets/icons/g.png
     - assets/icons/t.png
+    - assets/images/drawer.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -75,6 +75,26 @@ class ForgotPassword extends StatelessWidget {
                   ),
                   
                 ),
+              SizedBox(height: MediaQuery.of(context).size.height*0.06,),
+                GestureDetector(
+                  onTap: () {},
+                  child: Container(
+                    width: MediaQuery.of(context).size.width*0.4,
+                    padding: EdgeInsets.all(MediaQuery.of(context).size.width*0.02,),
+                    decoration: BoxDecoration(
+                      color: Color(0xff74A2C3),
+                      borderRadius: BorderRadius.all(Radius.circular(20)),
+                      boxShadow: [BoxShadow(color: Colors.black26,
+                      offset: Offset(3, 3),
+                      blurRadius: 5,
+                      ),],
+                    ),
+                    child: Center(
+                      child: Text('Şifremi Sıfırla',
+                      style: TextStyle(color: Colors.white,
+                      fontSize: MediaQuery.of(context).size.width*0.04),),),
+                  ),
+                ),
               ],
             ),
     ),

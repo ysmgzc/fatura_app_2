@@ -1,5 +1,7 @@
-import 'package:fatura_app_2/forgot_password.dart';
-import 'package:fatura_app_2/sign_up_screen.dart';
+import 'package:fatura_app_2/constants.dart';
+import 'package:fatura_app_2/screens/forgot_password_screen.dart';
+import 'package:fatura_app_2/screens/home_page_screen.dart';
+import 'package:fatura_app_2/screens/sign_up_screen.dart';
 import "package:flutter/material.dart";
 
 class LoginScreen extends StatefulWidget {
@@ -115,23 +117,47 @@ class _LoginScreenState extends State<LoginScreen> {
                   child: Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    MaterialButton(
+                     GestureDetector(
+                onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              ForgotPassword(),
+                        ),
+                      );
+                    },
+                child: Text(
+                  "Şifremi Unuttum",
+                  style: TextStyle(color: Colors.white,decoration: TextDecoration.underline),
+                ),
+              )
+                   /* MaterialButton(
+
                       child: Text("Şifremi Unuttum", style: TextStyle(color: Colors.white)),
                       onPressed: () {
                         Navigator.push(context, MaterialPageRoute(builder: (context) => ForgotPassword()));
                       },
-                    ),
+                    ),*/
                   ],
                               ),
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height*0.055,),
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              HomePageScreen(),
+                        ),
+                      );
+                  },
                   child: Container(
                     width: MediaQuery.of(context).size.width*0.4,
                     padding: EdgeInsets.all(MediaQuery.of(context).size.width*0.02,),
                     decoration: BoxDecoration(
-                      color: Color(0xff74A2C3),
+                      color: kbuttonColor,
                       borderRadius: BorderRadius.all(Radius.circular(20)),
                       boxShadow: [BoxShadow(color: Colors.black26,
                       offset: Offset(3, 3),

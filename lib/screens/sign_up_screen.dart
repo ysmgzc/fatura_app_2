@@ -1,6 +1,5 @@
+import 'package:fatura_app_2/screens/first_login.dart';
 import 'package:flutter/material.dart';
-
-
 
 class SignUp extends StatelessWidget {
   const SignUp({super.key});
@@ -122,7 +121,15 @@ class SignUp extends StatelessWidget {
                   height: MediaQuery.of(context).size.height * 0.055,
                 ),
                 GestureDetector(
-                  onTap: () {},
+                 onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              FirstLoginScreen(),
+                        ),
+                      );
+                    },
                   child: Container(
                     width: MediaQuery.of(context).size.width * 0.4,
                     padding: EdgeInsets.all(
