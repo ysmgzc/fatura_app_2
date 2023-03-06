@@ -16,14 +16,13 @@ class _TedarikciEkleState extends State<TedarikciEkle> {
       body: Container(
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
-        decoration: BoxDecoration(
+        decoration:const BoxDecoration(
            image: DecorationImage(
             image: AssetImage("assets/images/loggin2.png"),
             fit: BoxFit.cover,
           ),
         ),
-        child: Container(
-          child: SingleChildScrollView(
+        child: SingleChildScrollView(
             child: Column(
               children: [
                 SizedBox(height: MediaQuery.of(context).size.height*0.1,),
@@ -33,21 +32,21 @@ class _TedarikciEkleState extends State<TedarikciEkle> {
                       color: Colors.white,
                       fontSize: MediaQuery.of(context).size.width*0.07,
                       fontWeight: FontWeight.bold,
-                      shadows: [BoxShadow(color: Colors.black, offset: Offset(1,2),blurRadius: 3 ),],
+                      shadows:const [BoxShadow(color: Colors.black, offset: Offset(1,2),blurRadius: 3 ),],
                   ),
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height*0.05,),
                 Container(
                   width: MediaQuery.of(context).size.width*0.8,
                   child: TextFormField(
-                    style: TextStyle(
+                    style:const TextStyle(
                             height: 1.5,
                             ),
-                    decoration: InputDecoration(
+                    decoration:const InputDecoration(
                       contentPadding:
                       EdgeInsets.only(left: 10, top: 10, bottom: 15),
                        prefixIcon: Padding(
-                         padding: const EdgeInsets.only(top: 17),
+                         padding:  EdgeInsets.only(top: 17),
                          child: Icon(
                               Icons.person,
                               color: Colors.white,
@@ -60,7 +59,7 @@ class _TedarikciEkleState extends State<TedarikciEkle> {
                     
                       borderSide: BorderSide(color: Colors.white) 
                       ),
-                    label: const Center(
+                    label: Center(
                     child: Text("Müsteri Ünvanı"),
                   ), 
                   labelStyle: TextStyle(
@@ -76,14 +75,14 @@ class _TedarikciEkleState extends State<TedarikciEkle> {
                 Container(
                   width: MediaQuery.of(context).size.width*0.8,
                   child: TextFormField(
-                    style: TextStyle(
+                    style:const TextStyle(
                             height: 1.5,
                             ),
-                    decoration: InputDecoration(
+                    decoration:const InputDecoration(
                       contentPadding:
                       EdgeInsets.only(left: 10, top: 10, bottom: 15),
                        prefixIcon: Padding(
-                         padding: const EdgeInsets.only(top: 17),
+                         padding:  EdgeInsets.only(top: 17),
                          child: Icon(
                               Icons.phone,
                               color: Colors.white,
@@ -96,7 +95,7 @@ class _TedarikciEkleState extends State<TedarikciEkle> {
                     
                       borderSide: BorderSide(color: Colors.white) 
                       ),
-                    label: const Center(
+                    label:  Center(
                     child: Text("Telefon"),
                   ), 
                   labelStyle: TextStyle(
@@ -112,14 +111,14 @@ class _TedarikciEkleState extends State<TedarikciEkle> {
                 Container(
                   width: MediaQuery.of(context).size.width*0.8,
                   child: TextFormField(
-                    style: TextStyle(
+                    style:const TextStyle(
                             height: 1.5,
                             ),
-                    decoration: InputDecoration(
+                    decoration:const InputDecoration(
                       contentPadding:
                       EdgeInsets.only(left: 10, top: 10, bottom: 15),
                        prefixIcon: Padding(
-                         padding: const EdgeInsets.only(top: 17),
+                         padding: EdgeInsets.only(top: 17),
                          child: Icon(
                               Icons.home_filled,
                               color: Colors.white,
@@ -132,7 +131,7 @@ class _TedarikciEkleState extends State<TedarikciEkle> {
                     
                       borderSide: BorderSide(color: Colors.white) 
                       ),
-                    label: const Center(
+                    label: Center(
                     child: Text("Adres"),
                   ), 
                   labelStyle: TextStyle(
@@ -148,14 +147,14 @@ class _TedarikciEkleState extends State<TedarikciEkle> {
                 Container(
                   width: MediaQuery.of(context).size.width*0.8,
                   child: TextFormField(
-                    style: TextStyle(
+                    style:const TextStyle(
                             height: 1.5,
                             ),
-                    decoration: InputDecoration(
+                    decoration:const InputDecoration(
                       contentPadding:
                       EdgeInsets.only(left: 10, top: 10, bottom: 15),
                        prefixIcon: Padding(
-                         padding: const EdgeInsets.only(top: 17),
+                         padding:  EdgeInsets.only(top: 17),
                          child: Icon(
                               Icons.business,
                               color: Colors.white,
@@ -168,7 +167,7 @@ class _TedarikciEkleState extends State<TedarikciEkle> {
                     
                       borderSide: BorderSide(color: Colors.white) 
                       ),
-                    label: const Center(
+                    label:  Center(
                     child: Text("Vergi Dairesi"),
                   ), 
                   labelStyle: TextStyle(
@@ -184,14 +183,14 @@ class _TedarikciEkleState extends State<TedarikciEkle> {
                 Container(
                   width: MediaQuery.of(context).size.width*0.8,
                   child: TextFormField(
-                    style: TextStyle(
+                    style:const TextStyle(
                             height: 1.5,
                             ),
-                    decoration: InputDecoration(
+                    decoration:const InputDecoration(
                       contentPadding:
                       EdgeInsets.only(left: 10, top: 10, bottom: 15),
                        prefixIcon: Padding(
-                         padding: const EdgeInsets.only(top: 17),
+                         padding: EdgeInsets.only(top: 17),
                          child: Icon(
                               Icons.more_horiz,
                               color: Colors.white,
@@ -204,7 +203,7 @@ class _TedarikciEkleState extends State<TedarikciEkle> {
                     
                       borderSide: BorderSide(color: Colors.white) 
                       ),
-                    label: const Center(
+                    label: Center(
                     child: Text("Vergi/TC Kimlik No"),
                   ), 
                   labelStyle: TextStyle(
@@ -220,14 +219,14 @@ class _TedarikciEkleState extends State<TedarikciEkle> {
                 Container(
                   width: MediaQuery.of(context).size.width*0.8,
                   child: TextFormField(
-                    style: TextStyle(
+                    style:const TextStyle(
                             height: 1.5,
                             ),
-                    decoration: InputDecoration(
+                    decoration:const InputDecoration(
                       contentPadding:
                       EdgeInsets.only(left: 10, top: 10, bottom: 15),
                        prefixIcon: Padding(
-                         padding: const EdgeInsets.only(top: 17),
+                         padding: EdgeInsets.only(top: 17),
                          child: Icon(
                               Icons.email_outlined,
                               color: Colors.white,
@@ -240,7 +239,7 @@ class _TedarikciEkleState extends State<TedarikciEkle> {
                     
                       borderSide: BorderSide(color: Colors.white) 
                       ),
-                    label: const Center(
+                    label: Center(
                     child: Text("E-posta"),
                   ), 
                   labelStyle: TextStyle(
@@ -261,7 +260,7 @@ class _TedarikciEkleState extends State<TedarikciEkle> {
                   child: Container(
                     width: MediaQuery.of(context).size.width*0.4,
                     padding: EdgeInsets.all(MediaQuery.of(context).size.width*0.02,),
-                    decoration: BoxDecoration(
+                    decoration:const BoxDecoration(
                       color: Color(0xff74A2C3),
                       borderRadius: BorderRadius.all(Radius.circular(20)),
                       boxShadow: [BoxShadow(color: Colors.black26,
@@ -280,7 +279,6 @@ class _TedarikciEkleState extends State<TedarikciEkle> {
             ),
           ),
         ),
-      ),
     );
   }
 }

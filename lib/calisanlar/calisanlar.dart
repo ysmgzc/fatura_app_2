@@ -16,25 +16,22 @@ class _CalisanlarScreenState extends State<CalisanlarScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: NavBar(),
+      drawer: const NavBar(),
       appBar: AppBar(
         backgroundColor: kAppBarColor,
         centerTitle: true,
-        title: Text(
+        title: const Text(
           'çalışanlar',
         ),
       ),
       
-      body: Container(
-        child: Column(
+      body: Column(
           children: [
             SizedBox(height: MediaQuery.of(context).size.height*0.02,),
-            SearchField(
+           const SearchField(
             ), 
           ],
         ),
-        
-      ),
       
      floatingActionButton: FloatingActionButton.extended(
         backgroundColor: kbuttonColor,
@@ -43,14 +40,12 @@ class _CalisanlarScreenState extends State<CalisanlarScreen> {
                         context,
                         MaterialPageRoute(
                           builder: (context) =>
-                              CalisanEkle(),
+                           const   CalisanEkle(),
                         ),
                       );
         },
-        icon: Icon(Icons.add),
-        label: Text('Ekle'),
-        shape:
-            const StadiumBorder(side: BorderSide(color: kbuttonColor, width: 3)),
+        icon: const Icon(Icons.add),
+        label: const Text('Ekle'),
       ),
     );
   }

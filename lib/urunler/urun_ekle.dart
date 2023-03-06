@@ -10,7 +10,7 @@ class UrunEkle extends StatefulWidget {
 }
 
 class _UrunEkleState extends State<UrunEkle> {
-    bool? value = false;
+    bool? value = true;
   String? selectedValue;
   List<String> items = [
   'Adet',
@@ -41,14 +41,13 @@ List<String> items2 = [
       body: Container(
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
-        decoration: BoxDecoration(
+        decoration:const BoxDecoration(
            image: DecorationImage(
             image: AssetImage("assets/images/loggin2.png"),
             fit: BoxFit.cover,
           ),
         ),
-        child: Container(
-          child: SingleChildScrollView(
+        child: SingleChildScrollView(
             child: Column(
               children: [
                 SizedBox(height: MediaQuery.of(context).size.height*0.1,),
@@ -58,21 +57,21 @@ List<String> items2 = [
                       color: Colors.white,
                       fontSize: MediaQuery.of(context).size.width*0.07,
                       fontWeight: FontWeight.bold,
-                      shadows: [BoxShadow(color: Colors.black, offset: Offset(1,2),blurRadius: 3 ),],
+                      shadows:const [BoxShadow(color: Colors.black, offset: Offset(1,2),blurRadius: 3 ),],
                   ),
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height*0.05,),
                 Container(
                   width: MediaQuery.of(context).size.width*0.8,
                   child: TextFormField(
-                    style: TextStyle(
+                    style:const TextStyle(
                             height: 1.5,
                             ),
-                    decoration: InputDecoration(
+                    decoration:const InputDecoration(
                       contentPadding:
                       EdgeInsets.only(left: 10, top: 10, bottom: 15),
                        prefixIcon: Padding(
-                         padding: const EdgeInsets.only(top: 17),
+                         padding: EdgeInsets.only(top: 17),
                          child: Icon(
                               Icons.code,
                               color: Colors.white,
@@ -85,7 +84,7 @@ List<String> items2 = [
                     
                       borderSide: BorderSide(color: Colors.white) 
                       ),
-                    label: const Center(
+                    label: Center(
                     child: Text("Ürün Kodu"),
                   ), 
                   labelStyle: TextStyle(
@@ -101,14 +100,14 @@ List<String> items2 = [
                 Container(
                   width: MediaQuery.of(context).size.width*0.8,
                   child: TextFormField(
-                    style: TextStyle(
+                    style:const TextStyle(
                             height: 1.5,
                             ),
-                    decoration: InputDecoration(
+                    decoration:const InputDecoration(
                       contentPadding:
                       EdgeInsets.only(left: 10, top: 10, bottom: 15),
                        prefixIcon: Padding(
-                         padding: const EdgeInsets.only(top: 17),
+                         padding: EdgeInsets.only(top: 17),
                          child: Icon(
                               Icons.text_rotate_vertical,
                               color: Colors.white,
@@ -121,7 +120,7 @@ List<String> items2 = [
                     
                       borderSide: BorderSide(color: Colors.white) 
                       ),
-                    label: const Center(
+                    label: Center(
                     child: Text("Ürün Adı"),
                   ), 
                   labelStyle: TextStyle(
@@ -137,16 +136,16 @@ List<String> items2 = [
                 Container(
                   width: MediaQuery.of(context).size.width*0.8,
                   child: Padding(
-                    padding: EdgeInsets.only( top: 15),
+                    padding:const EdgeInsets.only( top: 15),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: 
                      [    
                         DropdownButton2(
-                          icon: Icon(Icons.expand_more, color: Colors.white,),
+                          icon:const Icon(Icons.expand_more, color: Colors.white,),
                           underline: Container( 
                            height: 2, color: Colors.white60 ),
-                          hint: Text(
+                          hint:const Text(
                             textAlign: TextAlign.center,
                             'Birim',
                             style: TextStyle(
@@ -179,11 +178,11 @@ List<String> items2 = [
                         ),
                         
                         DropdownButton2(
-                         icon: Icon(Icons.expand_more, color: Colors.white,),
+                         icon:const Icon(Icons.expand_more, color: Colors.white,),
                           underline: Container(  
                             height: 2, color: Colors.white60),
                             
-                          hint: Text(
+                          hint:const Text(
                             'Kdv(%)',
                             textAlign: TextAlign.center,
                             style: TextStyle(
@@ -216,9 +215,9 @@ List<String> items2 = [
                         ),
                         
                         DropdownButton2(
-                          icon: Icon(Icons.expand_more, color: Colors.white,),
+                          icon:const Icon(Icons.expand_more, color: Colors.white,),
                           underline: Container( height: 2, color: Colors.white60),
-                          hint: Text(
+                          hint:const Text(
                             'Para Birimi',
                             textAlign: TextAlign.center,
                             
@@ -265,7 +264,7 @@ List<String> items2 = [
                       color: Colors.white,
                       fontSize: MediaQuery.of(context).size.width*0.04,
                       fontWeight: FontWeight.bold,
-                      shadows: [BoxShadow(color: Colors.black, offset: Offset(1,2),blurRadius: 3 ),],
+                      shadows:const [BoxShadow(color: Colors.black, offset: Offset(1,2),blurRadius: 3 ),],
                   ),
                   
                 ),
@@ -273,14 +272,14 @@ List<String> items2 = [
                 Container(
                   width: MediaQuery.of(context).size.width*0.8,
                   child: TextFormField(
-                    style: TextStyle(
+                    style:const TextStyle(
                             height: 1.5,
                             ),
-                    decoration: InputDecoration(
+                    decoration:const InputDecoration(
                       contentPadding:
                       EdgeInsets.only(left: 10, top: 10, bottom: 15),
                        prefixIcon: Padding(
-                         padding: const EdgeInsets.only(top: 17),
+                         padding: EdgeInsets.only(top: 17),
                          child: Icon(
                               Icons.money,
                               color: Colors.white,
@@ -293,7 +292,7 @@ List<String> items2 = [
                     
                       borderSide: BorderSide(color: Colors.white) 
                       ),
-                    label: const Center(
+                    label: Center(
                     child: Text("Birim Fiyat (KDV Dahil)"),
                   ), 
                   labelStyle: TextStyle(
@@ -309,14 +308,14 @@ List<String> items2 = [
                 Container(
                   width: MediaQuery.of(context).size.width*0.8,
                   child: TextFormField(
-                    style: TextStyle(
+                    style:const TextStyle(
                             height: 1.5,
                             ),
-                    decoration: InputDecoration(
+                    decoration:const InputDecoration(
                       contentPadding:
                       EdgeInsets.only(left: 10, top: 10, bottom: 15),
                        prefixIcon: Padding(
-                         padding: const EdgeInsets.only(top: 17),
+                         padding: EdgeInsets.only(top: 17),
                          child: Icon(
                               Icons.money,
                               color: Colors.white,
@@ -329,7 +328,7 @@ List<String> items2 = [
                     
                       borderSide: BorderSide(color: Colors.white) 
                       ),
-                    label: const Center(
+                    label: Center(
                     child: Text("Birim Fiyat (KDV Hariç)"),
                   ), 
                   labelStyle: TextStyle(
@@ -351,20 +350,20 @@ List<String> items2 = [
                       color: Colors.white,
                       fontSize: MediaQuery.of(context).size.width*0.04,
                       fontWeight: FontWeight.bold,
-                      shadows: [BoxShadow(color: Colors.black, offset: Offset(1,2),blurRadius: 3 ),],
+                      shadows:const [BoxShadow(color: Colors.black, offset: Offset(1,2),blurRadius: 3 ),],
                   ),
                 ),
                 Container(
                   width: MediaQuery.of(context).size.width*0.8,
                   child: TextFormField(
-                    style: TextStyle(
+                    style:const TextStyle(
                             height: 1.5,
                             ),
-                    decoration: InputDecoration(
+                    decoration:const InputDecoration(
                       contentPadding:
                       EdgeInsets.only(left: 10, top: 10, bottom: 15),
                        prefixIcon: Padding(
-                         padding: const EdgeInsets.only(top: 17),
+                         padding: EdgeInsets.only(top: 17),
                          child: Icon(
                               Icons.money,
                               color: Colors.white,
@@ -377,7 +376,7 @@ List<String> items2 = [
                     
                       borderSide: BorderSide(color: Colors.white) 
                       ),
-                    label: const Center(
+                    label: Center(
                     child: Text("Birim Fiyat (KDV Dahil)"),
                   ), 
                   labelStyle: TextStyle(
@@ -393,14 +392,14 @@ List<String> items2 = [
                 Container(
                   width: MediaQuery.of(context).size.width*0.8,
                   child: TextFormField(
-                    style: TextStyle(
+                    style:const TextStyle(
                             height: 1.5,
                             ),
-                    decoration: InputDecoration(
+                    decoration:const InputDecoration(
                       contentPadding:
                       EdgeInsets.only(left: 10, top: 10, bottom: 15),
                        prefixIcon: Padding(
-                         padding: const EdgeInsets.only(top: 17),
+                         padding: EdgeInsets.only(top: 17),
                          child: Icon(
                               Icons.money,
                               color: Colors.white,
@@ -413,7 +412,7 @@ List<String> items2 = [
                     
                       borderSide: BorderSide(color: Colors.white) 
                       ),
-                    label: const Center(
+                    label: Center(
                     child: Text("Birim Fiyat (KDV Hariç)"),
                   ), 
                   labelStyle: TextStyle(
@@ -428,14 +427,14 @@ List<String> items2 = [
                 Container(
                   width: MediaQuery.of(context).size.width*0.8,
                   child: TextFormField(
-                    style: TextStyle(
+                    style:const TextStyle(
                             height: 1.5,
                             ),
-                    decoration: InputDecoration(
+                    decoration:const InputDecoration(
                       contentPadding:
                       EdgeInsets.only(left: 10, top: 10, bottom: 15),
                        prefixIcon: Padding(
-                         padding: const EdgeInsets.only(top: 17),
+                         padding: EdgeInsets.only(top: 17),
                          child: Icon(
                               Icons.barcode_reader,
                               color: Colors.white,
@@ -448,7 +447,7 @@ List<String> items2 = [
                     
                       borderSide: BorderSide(color: Colors.white) 
                       ),
-                    label: const Center(
+                    label: Center(
                     child: Text("Barkod:"),
                   ), 
                   labelStyle: TextStyle(
@@ -464,14 +463,14 @@ List<String> items2 = [
                 Container(
                   width: MediaQuery.of(context).size.width*0.8,
                   child: TextFormField(
-                    style: TextStyle(
+                    style:const TextStyle(
                             height: 1.5,
                             ),
-                    decoration: InputDecoration(
+                    decoration:const InputDecoration(
                       contentPadding:
                       EdgeInsets.only(left: 10, top: 10, bottom: 15),
                        prefixIcon: Padding(
-                         padding: const EdgeInsets.only(top: 17),
+                         padding:  EdgeInsets.only(top: 17),
                          child: Icon(
                               Icons.sync_alt,
                               color: Colors.white,
@@ -484,7 +483,7 @@ List<String> items2 = [
                     
                       borderSide: BorderSide(color: Colors.white) 
                       ),
-                    label: const Center(
+                    label:  Center(
                     child: Text("Ürün Adı(2): "),
                   ), 
                   labelStyle: TextStyle(
@@ -503,7 +502,7 @@ List<String> items2 = [
            Checkbox(      
             checkColor: Colors.white,
            side: MaterialStateBorderSide.resolveWith(
-             (states) => BorderSide(width: 1.0, color: Colors.white),
+             (states) => const BorderSide(width: 1.0, color: Colors.white),
               ),
             value: this.value,
             onChanged: (bool? value) {
@@ -526,7 +525,7 @@ List<String> items2 = [
                     ),
                 );*/
                     },
-                child: Text(
+                child:const Text(
                   "Aktif mi?",
                   style: TextStyle(color: Colors.white,decoration: TextDecoration.underline),
                 ),
@@ -545,7 +544,7 @@ List<String> items2 = [
                   child: Container(
                     width: MediaQuery.of(context).size.width*0.4,
                     padding: EdgeInsets.all(MediaQuery.of(context).size.width*0.02,),
-                    decoration: BoxDecoration(
+                    decoration:const BoxDecoration(
                       color: Color(0xff74A2C3),
                       borderRadius: BorderRadius.all(Radius.circular(20)),
                       boxShadow: [BoxShadow(color: Colors.black26,
@@ -564,7 +563,6 @@ List<String> items2 = [
             ),
           ),
         ),
-      ),
     );
   }
 }

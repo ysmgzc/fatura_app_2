@@ -9,14 +9,13 @@ class ForgotPassword extends StatelessWidget {
      body: Container(
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
-        decoration: BoxDecoration(
+        decoration:const BoxDecoration(
            image: DecorationImage(
             image: AssetImage("assets/images/loggin2.png"),
             fit: BoxFit.cover,
           ),
         ),
-        child: Container(
-          child: SingleChildScrollView(
+        child: SingleChildScrollView(
             child: Column(
               children: [
                 SizedBox(height: MediaQuery.of(context).size.height*0.15,),
@@ -26,7 +25,7 @@ class ForgotPassword extends StatelessWidget {
                       color: Colors.white,
                       fontSize: MediaQuery.of(context).size.width*0.05,
                       fontWeight: FontWeight.bold,
-                      shadows: [BoxShadow(color: Colors.black, offset: Offset(1,2),blurRadius: 3 ),],
+                      shadows:const [BoxShadow(color: Colors.black, offset: Offset(1,2),blurRadius: 3 ),],
                   ),
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height*0.05,),
@@ -43,14 +42,14 @@ class ForgotPassword extends StatelessWidget {
                 Container(
                   width: MediaQuery.of(context).size.width*0.8,
                   child: TextFormField(
-                    style: TextStyle(
+                    style:const TextStyle(
                             height: 1.5,
                             ),
-                    decoration: InputDecoration(
+                    decoration:const InputDecoration(
                       contentPadding:
                       EdgeInsets.only(left: 10, top: 10, bottom: 15),
                        prefixIcon: Padding(
-                         padding: const EdgeInsets.only(top: 17),
+                         padding: EdgeInsets.only(top: 17),
                          child: Icon(
                               Icons.mail_outline,
                               color: Colors.white,
@@ -63,7 +62,7 @@ class ForgotPassword extends StatelessWidget {
                     
                       borderSide: BorderSide(color: Colors.white) 
                       ),
-                    label: const Center(
+                    label: Center(
                     child: Text("E-posta"),
                   ), 
                   labelStyle: TextStyle(
@@ -81,7 +80,7 @@ class ForgotPassword extends StatelessWidget {
                   child: Container(
                     width: MediaQuery.of(context).size.width*0.4,
                     padding: EdgeInsets.all(MediaQuery.of(context).size.width*0.02,),
-                    decoration: BoxDecoration(
+                    decoration:const BoxDecoration(
                       color: Color(0xff74A2C3),
                       borderRadius: BorderRadius.all(Radius.circular(20)),
                       boxShadow: [BoxShadow(color: Colors.black26,
@@ -99,7 +98,6 @@ class ForgotPassword extends StatelessWidget {
             ),
     ),
         ),
-     ),
         );
     
   }

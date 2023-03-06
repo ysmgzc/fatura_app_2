@@ -16,14 +16,13 @@ class _FirstLoginScreenState extends State<FirstLoginScreen> {
        body: Container(
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
-        decoration: BoxDecoration(
+        decoration:const BoxDecoration(
            image: DecorationImage(
             image: AssetImage("assets/images/loggin2.png"),
             fit: BoxFit.cover,
           ),
         ),
-        child: Container(
-          child: SingleChildScrollView(
+        child: SingleChildScrollView(
             child: Column(
               children: [
                 SizedBox(height: MediaQuery.of(context).size.height*0.15,),
@@ -33,21 +32,21 @@ class _FirstLoginScreenState extends State<FirstLoginScreen> {
                       color: Colors.white,
                       fontSize: MediaQuery.of(context).size.width*0.1,
                       fontWeight: FontWeight.bold,
-                      shadows: [BoxShadow(color: Colors.black, offset: Offset(1,2),blurRadius: 3 ),],
+                      shadows:const [BoxShadow(color: Colors.black, offset: Offset(1,2),blurRadius: 3 ),],
                   ),
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height*0.12,),
                 Container(
                   width: MediaQuery.of(context).size.width*0.76,
                   child: TextFormField(
-                    style: TextStyle(
+                    style:const TextStyle(
                             height: 1.5,
                             ),
-                    decoration: InputDecoration(
+                    decoration:const InputDecoration(
                       contentPadding:
                       EdgeInsets.only(left: 10, top: 10, bottom: 15),
                        prefixIcon: Padding(
-                         padding: const EdgeInsets.only(top: 17),
+                         padding: EdgeInsets.only(top: 17),
                          child: Icon(
                               Icons.business_center,
                               color: Colors.white,
@@ -60,7 +59,7 @@ class _FirstLoginScreenState extends State<FirstLoginScreen> {
                     
                       borderSide: BorderSide(color: Colors.white) 
                       ),
-                    label: const Center(
+                    label: Center(
                     child: Text("Şirket Adı"),
                   ), 
                   labelStyle: TextStyle(
@@ -76,14 +75,14 @@ class _FirstLoginScreenState extends State<FirstLoginScreen> {
                 Container(
                   width: MediaQuery.of(context).size.width*0.76,
                   child: TextFormField(
-                    style: TextStyle(
+                    style:const TextStyle(
                             height: 1.5,
                             ),
-                    decoration: InputDecoration(
+                    decoration:const InputDecoration(
                       contentPadding:
                       EdgeInsets.only(left: 10, top: 10, bottom: 15),
                        prefixIcon: Padding(
-                         padding: const EdgeInsets.only(top: 17),
+                         padding:  EdgeInsets.only(top: 17),
                          child: Icon(
                               Icons.phone,
                               color: Colors.white,
@@ -96,7 +95,7 @@ class _FirstLoginScreenState extends State<FirstLoginScreen> {
                     
                       borderSide: BorderSide(color: Colors.white) 
                       ),
-                    label: const Center(
+                    label: Center(
                     child: Text("Telefon"),
                   ), 
                   labelStyle: TextStyle(
@@ -115,7 +114,7 @@ class _FirstLoginScreenState extends State<FirstLoginScreen> {
            Checkbox(      
             checkColor: Colors.white,
            side: MaterialStateBorderSide.resolveWith(
-             (states) => BorderSide(width: 1.0, color: Colors.white),
+             (states) => const BorderSide(width: 1.0, color: Colors.white),
               ),
             value: this.value,
             onChanged: (bool? value) {
@@ -138,7 +137,7 @@ class _FirstLoginScreenState extends State<FirstLoginScreen> {
                     ),
                 );*/
                     },
-                child: Text(
+                child:const Text(
                   "Üyelik Sözleşmesini Kabul Ediyorum",
                   style: TextStyle(color: Colors.white,decoration: TextDecoration.underline),
                 ),
@@ -156,14 +155,14 @@ class _FirstLoginScreenState extends State<FirstLoginScreen> {
                         context,
                         MaterialPageRoute(
                           builder: (context) =>
-                              HomePageScreen(),
+                            const  HomePageScreen(),
                         ),
                       );
                   },
                   child: Container(
                     width: MediaQuery.of(context).size.width*0.4,
                     padding: EdgeInsets.all(MediaQuery.of(context).size.width*0.02,),
-                    decoration: BoxDecoration(
+                    decoration:const BoxDecoration(
                       color: Color(0xff74A2C3),
                       borderRadius: BorderRadius.all(Radius.circular(20)),
                       boxShadow: [BoxShadow(color: Colors.black26,
@@ -180,7 +179,6 @@ class _FirstLoginScreenState extends State<FirstLoginScreen> {
               ],)
         )
        )
-    )
     );
     
   }

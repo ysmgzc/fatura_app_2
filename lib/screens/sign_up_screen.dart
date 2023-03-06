@@ -10,20 +10,19 @@ class SignUp extends StatelessWidget {
       body: Container(
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
-        decoration: BoxDecoration(
+        decoration:const BoxDecoration(
           image: DecorationImage(
             image: AssetImage("assets/images/loggin2.png"),
             fit: BoxFit.cover,
           ),
         ),
-        child: Container(
-          child: SingleChildScrollView(
+        child: SingleChildScrollView(
             child: Column(
               children: [
                 SizedBox(
                   height: MediaQuery.of(context).size.height * 0.12,
                 ),
-                CircleAvatar(
+               const CircleAvatar(
                   radius: 50,
                   backgroundImage: AssetImage("assets/images/camera.png"),
                 ),
@@ -33,13 +32,13 @@ class SignUp extends StatelessWidget {
                 Container(
                   width: MediaQuery.of(context).size.width * 0.76,
                   child: TextFormField(
-                    style: TextStyle(
+                    style: const TextStyle(
                       height: 1.5,
                     ),
-                    decoration: InputDecoration(
+                    decoration:const InputDecoration(
                       contentPadding: EdgeInsets.only(left: 10, top: 10, bottom: 15),
                       prefixIcon: Padding(
-                        padding: const EdgeInsets.only(top: 17),
+                        padding:  EdgeInsets.only(top: 17),
                         child: Icon(
                           Icons.person,
                           color: Colors.white,
@@ -49,7 +48,7 @@ class SignUp extends StatelessWidget {
                         borderSide: BorderSide(color: Colors.white),
                       ),
                       focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),
-                      label: const Center(
+                      label:  Center(
                         child: Text("Kullanıcı Adı"),
                       ),
                       labelStyle: TextStyle(
@@ -63,13 +62,13 @@ class SignUp extends StatelessWidget {
                   width: MediaQuery.of(context).size.width * 0.76,
                   child: TextFormField(
                     obscureText: true,
-                    style: TextStyle(
+                    style:const TextStyle(
                       height: 1.5,
                     ),
-                    decoration: InputDecoration(
+                    decoration:const InputDecoration(
                       contentPadding: EdgeInsets.only(left: 10, top: 10, bottom: 15),
                       prefixIcon: Padding(
-                        padding: const EdgeInsets.only(top: 17),
+                        padding: EdgeInsets.only(top: 17),
                         child: Icon(
                           Icons.lock_outline,
                           color: Colors.white,
@@ -79,7 +78,7 @@ class SignUp extends StatelessWidget {
                         borderSide: BorderSide(color: Colors.white),
                       ),
                       focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),
-                      label: const Center(
+                      label: Center(
                         child: Text("Parola"),
                       ),
                       labelStyle: TextStyle(
@@ -92,13 +91,13 @@ class SignUp extends StatelessWidget {
                 Container(
                   width: MediaQuery.of(context).size.width * 0.76,
                   child: TextFormField(
-                    style: TextStyle(
+                    style:const TextStyle(
                       height: 1.5,
                     ),
-                    decoration: InputDecoration(
+                    decoration:const InputDecoration(
                       contentPadding: EdgeInsets.only(left: 10, top: 10, bottom: 15),
                       prefixIcon: Padding(
-                        padding: const EdgeInsets.only(top: 17),
+                        padding:  EdgeInsets.only(top: 17),
                         child: Icon(
                           Icons.mail,
                           color: Colors.white,
@@ -108,7 +107,7 @@ class SignUp extends StatelessWidget {
                         borderSide: BorderSide(color: Colors.white),
                       ),
                       focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),
-                      label: const Center(
+                      label:  Center(
                         child: Text("E-mail"),
                       ),
                       labelStyle: TextStyle(
@@ -126,7 +125,7 @@ class SignUp extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                           builder: (context) =>
-                              FirstLoginScreen(),
+                           const   FirstLoginScreen(),
                         ),
                       );
                     },
@@ -136,7 +135,7 @@ class SignUp extends StatelessWidget {
                       MediaQuery.of(context).size.width * 0.02,
                     ),
                     decoration:
-                        BoxDecoration(color: Color(0xff74A2C3), 
+                       const BoxDecoration(color: Color(0xff74A2C3), 
                         borderRadius: BorderRadius.all(Radius.circular(20)), 
                         boxShadow: [
                       BoxShadow(
@@ -157,7 +156,7 @@ class SignUp extends StatelessWidget {
                   height: MediaQuery.of(context).size.height * 0.055,
                 ),
                 RichText(
-                    text: TextSpan(
+                    text:const TextSpan(
                   text: 'Sosyal hesabınızı bağlayabilirsiniz.',
                   style: TextStyle(
                     color: Colors.white70,
@@ -175,7 +174,7 @@ class SignUp extends StatelessWidget {
                   child: Container(
                     height: 40.0,
                     width: 40.0,
-                    decoration: BoxDecoration(
+                    decoration:const BoxDecoration(
                       shape: BoxShape.circle,
                       color: Colors.white,
                       boxShadow: [
@@ -201,7 +200,7 @@ class SignUp extends StatelessWidget {
                   child: Container(
                     height: 40.0,
                     width: 40.0,
-                    decoration: BoxDecoration(
+                    decoration:const BoxDecoration(
                       shape: BoxShape.circle,
                       color: Colors.white,
                       boxShadow: [
@@ -227,7 +226,7 @@ class SignUp extends StatelessWidget {
                   child: Container(
                     height: 40.0,
                     width: 40.0,
-                    decoration: BoxDecoration(
+                    decoration:const BoxDecoration(
                       shape: BoxShape.circle,
                       color: Colors.white,
                       boxShadow: [
@@ -254,7 +253,6 @@ class SignUp extends StatelessWidget {
             ),
           ),
         ),
-      ),
     );
   }
 }

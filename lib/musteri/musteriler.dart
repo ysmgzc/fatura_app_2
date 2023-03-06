@@ -17,36 +17,34 @@ class _MusterilerScreenState extends State<MusterilerScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: NavBar(),
+      drawer: const NavBar(),
       appBar: AppBar(
         backgroundColor: kAppBarColor,
         centerTitle: true,
-        title: Text(
+        title: const Text(
           'müşteriler',
         ),
       ),
-      body: Container(
-        child: Column(
+      body:Column(
           children: [
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.02,
             ),
-            SearchField(),
+           const SearchField(),
           ],
         ),
-      ),
       floatingActionButton: FloatingActionButton.extended(
         backgroundColor: kbuttonColor,
         onPressed: () {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => MusteriEkle(),
+              builder: (context) => const MusteriEkle(),
             ),
           );
         },
-        icon: Icon(Icons.add),
-        label: Text('Ekle'),
+        icon: const Icon(Icons.add),
+        label: const Text('Ekle'),
         shape: const StadiumBorder(side: BorderSide(color: kbuttonColor, width: 3)),
       ),
     );

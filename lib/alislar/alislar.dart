@@ -17,14 +17,14 @@ class _AlislarScreenState extends State<AlislarScreen> {
     return DefaultTabController(
       length: 3,
       child: Scaffold(
-        drawer: NavBar(),
+        drawer: const NavBar(),
         appBar: AppBar(
           backgroundColor: kAppBarColor,
           centerTitle: true,
-          title: Text(
+          title: const Text(
             'alışlar',
           ),
-          bottom: TabBar(
+          bottom: const TabBar(
             indicatorColor: Colors.white,
             indicatorWeight: 5,
             tabs: [
@@ -43,83 +43,81 @@ class _AlislarScreenState extends State<AlislarScreen> {
             ],
           ),
         ),
-        body: TabBarView(
+        body:const TabBarView(
           children: [
             Siparisler(),
             Irsaliyeler(),
             Faturalar(),
           ],
         ),
-         floatingActionButton: FloatingActionButton(
-        backgroundColor: kbuttonColor,
-         child: Icon(Icons.add),
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => TedarikcilerScreen(),
-            ),
-          );
-        },
-      //  label: Text('Ekle'),
-      ),
+        floatingActionButton: FloatingActionButton(
+          backgroundColor: kbuttonColor,
+          child: const Icon(Icons.add),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const TedarikcilerScreen(),
+              ),
+            );
+          },
+          //  label: Text('Ekle'),
+        ),
       ),
     );
   }
 }
+
 class Siparisler extends StatelessWidget {
+  const Siparisler({super.key});
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        children: [
-          SizedBox(
-            height: MediaQuery.of(context).size.height * 0.02,
-          ),
-          SearchField(),
-          Center(
-            child: Text("Siparişler"),
-          ),
-        ],
-      ),
+    return Column(
+      children: [
+        SizedBox(
+          height: MediaQuery.of(context).size.height * 0.02,
+        ),
+        const SearchField(),
+        const Center(
+          child: Text("Siparişler"),
+        ),
+      ],
     );
   }
 }
 
 class Irsaliyeler extends StatelessWidget {
+ const Irsaliyeler({super.key});
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        children: [
-          SizedBox(
-            height: MediaQuery.of(context).size.height * 0.02,
-          ),
-          SearchField(),
-          Center(
-            child: Text("İrsaliyeler"),
-          ),
-        ],
-      ),
+    return Column(
+      children: [
+        SizedBox(
+          height: MediaQuery.of(context).size.height * 0.02,
+        ),
+        const SearchField(),
+        const Center(
+          child: Text("İrsaliyeler"),
+        ),
+      ],
     );
   }
 }
 
 class Faturalar extends StatelessWidget {
+ const Faturalar({super.key});
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        children: [
-          SizedBox(
-            height: MediaQuery.of(context).size.height * 0.02,
-          ),
-          SearchField(),
-          Center(
-            child: Text("Faturalar"),
-          ),
-        ],
-      ),
+    return Column(
+      children: [
+        SizedBox(
+          height: MediaQuery.of(context).size.height * 0.02,
+        ),
+        const SearchField(),
+        const Center(
+          child: Text("Faturalar"),
+        ),
+      ],
     );
   }
 }

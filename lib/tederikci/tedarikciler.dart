@@ -16,36 +16,34 @@ class _TedarikcilerScreenState extends State<TedarikcilerScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: NavBar(),
+      drawer:const NavBar(),
       appBar: AppBar(
         backgroundColor: kAppBarColor,
         centerTitle: true,
-        title: Text(
+        title:const Text(
           'tedarikçiler',
         ),
       ),
-      body: Container(
-        child: Column(
+      body: Column(
           children: [
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.02,
             ),
-            SearchField(),
+           const SearchField(),
           ],
         ),
-      ),
       floatingActionButton: FloatingActionButton.extended(
         backgroundColor: kbuttonColor,
         onPressed: () {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => TedarikciEkle(),
+              builder: (context) => const TedarikciEkle(),
             ),
           );
         },
-        icon: Icon(Icons.add),
-        label: Text('Ekle'),
+        icon:const Icon(Icons.add),
+        label:const Text('Ekle'),
         shape: const StadiumBorder(side: BorderSide(color: kbuttonColor, width: 3)),
       ),
     );

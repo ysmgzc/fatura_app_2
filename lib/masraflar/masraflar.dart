@@ -1,19 +1,18 @@
 import 'package:fatura_app_2/constants.dart';
-import 'package:fatura_app_2/musteri/musteriler.dart';
+import 'package:fatura_app_2/masraflar/manuel_masraf_giri%C5%9Fi.dart';
 import 'package:fatura_app_2/navigation_bar.dart';
-import 'package:fatura_app_2/satislar/perakende_satis.dart';
 import 'package:fatura_app_2/search_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 
-class SatislarScreen extends StatefulWidget {
-  const SatislarScreen({super.key});
+class MasraflarScreen extends StatefulWidget {
+  const MasraflarScreen({super.key});
 
   @override
-  State<SatislarScreen> createState() => _SatislarScreenState();
+  State<MasraflarScreen> createState() => _MasraflarScreenState();
 }
 
-class _SatislarScreenState extends State<SatislarScreen> {
+class _MasraflarScreenState extends State<MasraflarScreen> {
   final isDialOpen = ValueNotifier(false);
   @override
   Widget build(BuildContext context) => WillPopScope(//geri tusuna basılınca speedbar kapatır sayfadan cikis olmaz
@@ -33,7 +32,7 @@ class _SatislarScreenState extends State<SatislarScreen> {
           backgroundColor: kAppBarColor,
           centerTitle: true,
           title:const Text(
-            'satışlar',
+            'masraflar',
           ),
           bottom:const TabBar(
             indicatorColor: Colors.white,
@@ -41,24 +40,24 @@ class _SatislarScreenState extends State<SatislarScreen> {
             tabs: [
               Tab(
                 icon: Icon(Icons.add_shopping_cart),
-                text: "Siparişler",
+                text: "Gecikmiş",
               ),
               Tab(
                 icon: Icon(Icons.difference),
-                text: "İrsaliyeler",
+                text: "Ödenmiş",
               ),
               Tab(
                 icon: Icon(Icons.receipt),
-                text: "Faturalar",
+                text: "Ödenecek",
               ),
             ],
           ),
         ),
         body: const TabBarView(
           children: [
-          Siparisler(),
-          Irsaliyeler(),
-          Faturalar(),
+          Gecikmis(),
+          Odenmis(),
+          Odenecek(),
           ],
         ),
         floatingActionButton: SpeedDial(
@@ -71,56 +70,22 @@ class _SatislarScreenState extends State<SatislarScreen> {
           openCloseDial: isDialOpen,
           children: [
             SpeedDialChild(
-              child:const Icon(Icons.add_shopping_cart),
-              label: "Kayıtlı Müşteriye Satış",
-              onTap: () {
-                  Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) =>
-                            const  MusterilerScreen(),
-                        ),
-                      );
-              },
-            ),
-            SpeedDialChild(
-              child:const Icon(Icons.shopping_cart),
-              label: "Perakende Müşteriye Satış",
-              onTap: () {
-                Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) =>
-                            const  Perakende(),
-                        ),
-                      );
-              },
-            ),
-            SpeedDialChild(
               child:const Icon(Icons.difference),
-              label: "Kayıtlı Müşteriye Sipariş",
+              label: "Manuel Masraf Girişi",
               onTap: () {
-                  Navigator.push(
+                 Navigator.push(
                         context,
                         MaterialPageRoute(
                           builder: (context) =>
-                            const  MusterilerScreen(),
+                            const  ManuelMasraf(),
                         ),
                       );
               },
             ),
             SpeedDialChild(
               child:const Icon(Icons.receipt),
-              label: "Kayıtlı Müşteriye İrsaliye",
-              onTap: () {
-                  Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) =>
-                            const  MusterilerScreen(),
-                        ),
-                      );
-              },
+              label: "Kasa Fişi Okutarak",
+              onTap: () {},
             )
           ],
         ),
@@ -128,8 +93,8 @@ class _SatislarScreenState extends State<SatislarScreen> {
   ),
   ); 
 }
-class Siparisler extends StatelessWidget {
- const Siparisler({super.key});
+class Gecikmis extends StatelessWidget {
+ const Gecikmis({super.key});
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -139,14 +104,14 @@ class Siparisler extends StatelessWidget {
           ),
          const SearchField(),
          const Center(
-            child: Text("Siparişler"),
+            child: Text("Gecikmiş"),
           ),
         ],
     );
   }
 }
-class Irsaliyeler extends StatelessWidget {
-  const Irsaliyeler({super.key});
+class Odenmis extends StatelessWidget {
+  const Odenmis({super.key});
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -156,14 +121,14 @@ class Irsaliyeler extends StatelessWidget {
           ),
          const SearchField(),
           const Center(
-            child: Text("İrsaliyeler"),
+            child: Text("Ödenmiş"),
           ),
         ],
     );
   }
 }
-class Faturalar extends StatelessWidget {
-  const Faturalar({super.key});
+class Odenecek extends StatelessWidget {
+  const Odenecek({super.key});
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -173,7 +138,7 @@ class Faturalar extends StatelessWidget {
           ),
          const SearchField(),
          const Center(
-            child: Text("Faturalar"),
+            child: Text("Ödenecek"),
           ),
         ],
     );

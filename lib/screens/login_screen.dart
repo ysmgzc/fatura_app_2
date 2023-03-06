@@ -18,14 +18,13 @@ class _LoginScreenState extends State<LoginScreen> {
       body: Container(
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
-        decoration: BoxDecoration(
+        decoration:const BoxDecoration(
            image: DecorationImage(
             image: AssetImage("assets/images/loggin2.png"),
             fit: BoxFit.cover,
           ),
         ),
-        child: Container(
-          child: SingleChildScrollView(
+        child: SingleChildScrollView(
             child: Column(
               children: [
                 SizedBox(height: MediaQuery.of(context).size.height*0.15,),
@@ -35,21 +34,21 @@ class _LoginScreenState extends State<LoginScreen> {
                       color: Colors.white,
                       fontSize: MediaQuery.of(context).size.width*0.1,
                       fontWeight: FontWeight.bold,
-                      shadows: [BoxShadow(color: Colors.black, offset: Offset(1,2),blurRadius: 3 ),],
+                      shadows:const [BoxShadow(color: Colors.black, offset: Offset(1,2),blurRadius: 3 ),],
                   ),
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height*0.15,),
                 Container(
                   width: MediaQuery.of(context).size.width*0.76,
                   child: TextFormField(
-                    style: TextStyle(
+                    style:const TextStyle(
                             height: 1.5,
                             ),
-                    decoration: InputDecoration(
+                    decoration:const InputDecoration(
                       contentPadding:
                       EdgeInsets.only(left: 10, top: 10, bottom: 15),
                        prefixIcon: Padding(
-                         padding: const EdgeInsets.only(top: 17),
+                         padding:  EdgeInsets.only(top: 17),
                          child: Icon(
                               Icons.person,
                               color: Colors.white,
@@ -62,7 +61,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     
                       borderSide: BorderSide(color: Colors.white) 
                       ),
-                    label: const Center(
+                    label: Center(
                     child: Text("Kullanıcı Adı"),
                   ), 
                   labelStyle: TextStyle(
@@ -79,14 +78,14 @@ class _LoginScreenState extends State<LoginScreen> {
                   width: MediaQuery.of(context).size.width*0.76,
                   child: TextFormField(
                     obscureText: true,
-                    style: TextStyle(
+                    style:const TextStyle(
                             height: 1.5,
                             ),
-                    decoration: InputDecoration(
+                    decoration:const InputDecoration(
                       contentPadding:
                       EdgeInsets.only(left: 10, top: 10, bottom: 15),
                        prefixIcon: Padding(
-                         padding: const EdgeInsets.only(top: 17),
+                         padding: EdgeInsets.only(top: 17),
                          child: Icon(
                               Icons.lock_outline,
                               color: Colors.white,
@@ -99,7 +98,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     
                       borderSide: BorderSide(color: Colors.white) 
                       ),
-                    label: const Center(
+                    label: Center(
                     child: Text("Parola"),
                   ), 
                   labelStyle: TextStyle(
@@ -123,11 +122,11 @@ class _LoginScreenState extends State<LoginScreen> {
                         context,
                         MaterialPageRoute(
                           builder: (context) =>
-                              ForgotPassword(),
+                             const ForgotPassword(),
                         ),
                       );
                     },
-                child: Text(
+                child:const Text(
                   "Şifremi Unuttum",
                   style: TextStyle(color: Colors.white,decoration: TextDecoration.underline),
                 ),
@@ -149,14 +148,14 @@ class _LoginScreenState extends State<LoginScreen> {
                         context,
                         MaterialPageRoute(
                           builder: (context) =>
-                              HomePageScreen(),
+                            const  HomePageScreen(),
                         ),
                       );
                   },
                   child: Container(
                     width: MediaQuery.of(context).size.width*0.4,
                     padding: EdgeInsets.all(MediaQuery.of(context).size.width*0.02,),
-                    decoration: BoxDecoration(
+                    decoration:const BoxDecoration(
                       color: kbuttonColor,
                       borderRadius: BorderRadius.all(Radius.circular(20)),
                       boxShadow: [BoxShadow(color: Colors.black26,
@@ -177,13 +176,13 @@ class _LoginScreenState extends State<LoginScreen> {
                         context,
                         MaterialPageRoute(
                           builder: (context) =>
-                              SignUp(),
+                            const  SignUp(),
                         ),
                       );
                     },
                   child: RichText(
                     textAlign: TextAlign.center,
-                    text: TextSpan(
+                    text:const TextSpan(
                     children: [
                       TextSpan(
                         text: 'Hesabınız yok mu? ',
@@ -212,7 +211,6 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
           ),
         ),
-      ),
     );
   }
 }

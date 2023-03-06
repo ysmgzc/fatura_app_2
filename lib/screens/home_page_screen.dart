@@ -15,13 +15,13 @@ class _HomePageScreenState extends State<HomePageScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: NavBar(),
-      bottomNavigationBar: BottomNavBar(selectedMenu: MenuState.home),
+      drawer:const NavBar(),
+      bottomNavigationBar:const BottomNavBar(selectedMenu: MenuState.home),
       appBar: AppBar(
         backgroundColor: kAppBarColor,
-        title: Text("e-fatura"),
+        title:const Text("e-fatura"),
       ),
-      body: Center(),
+      body:const Center(),
     );
   }
 }

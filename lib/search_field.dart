@@ -1,11 +1,5 @@
-import 'package:fatura_app_2/calisanlar/calisan_ekle.dart';
-import 'package:fatura_app_2/calisanlar/calisanlar.dart';
-import 'package:fatura_app_2/musteri/musteri_ekle.dart';
-import 'package:fatura_app_2/tederikci/tedarikci_ekle.dart';
 import 'package:flutter/material.dart';
 import '../../../constants.dart';
-import 'tederikci/tedarikciler.dart';
-
 class SearchField extends StatelessWidget {
   const SearchField({
     Key? key,
@@ -27,25 +21,25 @@ class SearchField extends StatelessWidget {
           controller: _controller,
           onChanged: (value){}, //=> print(value),
           decoration: InputDecoration(
-              contentPadding: EdgeInsets.symmetric(
+              contentPadding:const EdgeInsets.symmetric(
                  // horizontal: 20,
                   vertical: 20),
               border: InputBorder.none,
               focusedBorder: InputBorder.none,
               enabledBorder: InputBorder.none,
               hintText: "Ara",
-              prefixIcon: Icon(Icons.search),
+              prefixIcon:const Icon(Icons.search),
               suffixIcon: Row(
                  mainAxisAlignment: MainAxisAlignment.spaceBetween, // added line
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   IconButton(
                     onPressed: _controller.clear,
-                     icon: Icon(Icons.clear),
+                     icon:const Icon(Icons.clear),
                   ),
-                  Text("|"),
+                 const Text("|"),
                   IconButton(
-                    icon: Icon(Icons.add),
+                    icon:const Icon(Icons.add),
                     onPressed: () {  
                      /* if (index == 0) { //eğer butona calısanscreen sayfasında tıklandıysa calısanekle sayafasına gitsin
                             Navigator.push(
