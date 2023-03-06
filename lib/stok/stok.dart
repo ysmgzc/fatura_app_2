@@ -1,6 +1,5 @@
 import 'package:fatura_app_2/constants.dart';
 import 'package:fatura_app_2/navigation_bar.dart';
-import 'package:fatura_app_2/screens/login_screen.dart';
 import 'package:fatura_app_2/stok/stok_durumu.dart';
 import 'package:flutter/material.dart';
 
@@ -63,10 +62,9 @@ class _StokScreenState extends State<StokScreen> {
                         Navigator.of(context).push(
                             MaterialPageRoute(builder: (context) => const StokDurumu()));
                       },
-                  child: ListTile(
-                      leading: Container(
-                        child: Icon(Icons.warehouse, color: Colors.black),
-                      ),
+                  child: const ListTile(
+                      leading: Icon(Icons.warehouse, color: Colors.black),
+                      
                       title: Text(
                         "Ana Depo Durumu",
                       ),

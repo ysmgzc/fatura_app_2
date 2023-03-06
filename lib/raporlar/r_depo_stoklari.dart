@@ -1,7 +1,6 @@
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:fatura_app_2/constants.dart';
 import "package:flutter/material.dart";
-import 'package:intl/intl.dart';
 
 class DepoStokRaporu extends StatefulWidget {
   const DepoStokRaporu({super.key});

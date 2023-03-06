@@ -244,14 +244,14 @@ class _MasrafRaporuState extends State<MasrafRaporu> {
                   },
                   
                   child: Container(
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         border: Border(
                           bottom: BorderSide(
                             width: 2.0, 
                             color: Colors.white60))),
-                    child: ListTile(
+                    child: const ListTile(
                       title: Padding(
-                        padding: const EdgeInsets.only(left: 1),
+                        padding: EdgeInsets.only(left: 1),
                         child: Text(
                            textAlign: TextAlign.start,
                           "Ödenen Hesap",style: TextStyle(

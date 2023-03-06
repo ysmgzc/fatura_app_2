@@ -7,7 +7,6 @@ import 'package:fatura_app_2/raporlar/r_iadeler.dart';
 import 'package:fatura_app_2/raporlar/r_masraflar.dart';
 import 'package:fatura_app_2/raporlar/r_satislar.dart';
 import 'package:fatura_app_2/raporlar/r_stok_hareketleri.dart';
-import 'package:fatura_app_2/stok/stok_durumu.dart';
 import 'package:flutter/material.dart';
 
 class RaporlarScreen extends StatefulWidget {
@@ -51,10 +50,9 @@ class _RaporlarScreenState extends State<RaporlarScreen> {
                         Navigator.of(context).push(
                             MaterialPageRoute(builder: (context) => const AlisRaporu()));
                       },
-                  child: ListTile(
-                      leading: Container(
-                        child: Icon(Icons.add_shopping_cart, color: Colors.black),
-                      ),
+                  child: const ListTile(
+                      leading: Icon(Icons.add_shopping_cart, color: Colors.black),
+                      
                       title: Text(
                         "Alış Raporu",
                       ),
@@ -64,7 +62,7 @@ class _RaporlarScreenState extends State<RaporlarScreen> {
                  ),
                            
                ),
-               Divider(),
+               const Divider(),
                 Container(
                 color: Colors.white,
                  width:  MediaQuery.of(context).size.width*3,
@@ -75,10 +73,9 @@ class _RaporlarScreenState extends State<RaporlarScreen> {
                         Navigator.of(context).push(
                             MaterialPageRoute(builder: (context) => const SatisRaporu()));
                       },
-                  child: ListTile(
-                      leading: Container(
-                        child: Icon(Icons.shopping_cart, color: Colors.black),
-                      ),
+                  child: const ListTile(
+                      leading: Icon(Icons.shopping_cart, color: Colors.black),
+                      
                       title: Text(
                         "Satış Raporu",
                       ),
@@ -88,7 +85,7 @@ class _RaporlarScreenState extends State<RaporlarScreen> {
                  ),
                            
                ),
-                Divider(),
+               const Divider(),
                 Container(
                 color: Colors.white,
                  width:  MediaQuery.of(context).size.width*3,
@@ -99,10 +96,9 @@ class _RaporlarScreenState extends State<RaporlarScreen> {
                         Navigator.of(context).push(
                             MaterialPageRoute(builder: (context) => const MasrafRaporu()));
                       },
-                  child: ListTile(
-                      leading: Container(
-                        child: Icon(Icons.account_balance_wallet, color: Colors.black),
-                      ),
+                  child: const ListTile(
+                      leading: Icon(Icons.account_balance_wallet, color: Colors.black),
+                      
                       title: Text(
                         "Masraflar",
                       ),
@@ -112,7 +108,7 @@ class _RaporlarScreenState extends State<RaporlarScreen> {
                  ),
                            
                ),
-                Divider(),
+               const Divider(),
                 Container(
                 color: Colors.white,
                  width:  MediaQuery.of(context).size.width*3,
@@ -123,10 +119,9 @@ class _RaporlarScreenState extends State<RaporlarScreen> {
                         Navigator.of(context).push(
                             MaterialPageRoute(builder: (context) => const IadeRaporu()));
                       },
-                  child: ListTile(
-                      leading: Container(
-                        child: Icon(Icons.recycling, color: Colors.black),
-                      ),
+                  child: const ListTile(
+                      leading: Icon(Icons.recycling, color: Colors.black),
+                      
                       title: Text(
                         "İadeler",
                       ),
@@ -136,7 +131,7 @@ class _RaporlarScreenState extends State<RaporlarScreen> {
                  ),
                            
                ),
-                Divider(),
+              const  Divider(),
                 Container(
                 color: Colors.white,
                  width:  MediaQuery.of(context).size.width*3,
@@ -147,10 +142,9 @@ class _RaporlarScreenState extends State<RaporlarScreen> {
                         Navigator.of(context).push(
                             MaterialPageRoute(builder: (context) => const DepoStokRaporu()));
                       },
-                  child: ListTile(
-                      leading: Container(
-                        child: Icon(Icons.warehouse, color: Colors.black),
-                      ),
+                  child: const ListTile(
+                      leading: Icon(Icons.warehouse, color: Colors.black),
+                      
                       title: Text(
                         "Depo Stokları",
                       ),
@@ -160,7 +154,7 @@ class _RaporlarScreenState extends State<RaporlarScreen> {
                  ),
                            
                ),
-                Divider(),
+               const Divider(),
                 Container(
                 color: Colors.white,
                  width:  MediaQuery.of(context).size.width*3,
@@ -171,10 +165,9 @@ class _RaporlarScreenState extends State<RaporlarScreen> {
                         Navigator.of(context).push(
                             MaterialPageRoute(builder: (context) => const StokHareketleriRaporu()));
                       },
-                  child: ListTile(
-                      leading: Container(
-                        child: Icon(Icons.warehouse, color: Colors.black),
-                      ),
+                  child: const ListTile(
+                      leading:Icon(Icons.warehouse, color: Colors.black),
+                      
                       title: Text(
                         "Stok Hareketleri",
                       ),
@@ -184,7 +177,7 @@ class _RaporlarScreenState extends State<RaporlarScreen> {
                  ),
                            
                ),
-                Divider(),
+              const  Divider(),
                 Container(
                 color: Colors.white,
                  width:  MediaQuery.of(context).size.width*3,
@@ -195,10 +188,9 @@ class _RaporlarScreenState extends State<RaporlarScreen> {
                         Navigator.of(context).push(
                             MaterialPageRoute(builder: (context) => const HesapHareketleri()));
                       },
-                  child: ListTile(
-                      leading: Container(
-                        child: Icon(Icons.person, color: Colors.black),
-                      ),
+                  child: const ListTile(
+                      leading: Icon(Icons.person, color: Colors.black),
+                      
                       title: Text(
                         "Hesap Hareketleri",
                       ),

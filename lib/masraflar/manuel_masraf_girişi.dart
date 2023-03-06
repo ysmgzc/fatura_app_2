@@ -1,9 +1,7 @@
+import "package:flutter/material.dart";
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:fatura_app_2/constants.dart';
-import "package:flutter/material.dart";
 import 'package:intl/intl.dart';
-
-import '../urunler/urunler_screen.dart';
 
 class ManuelMasraf extends StatefulWidget {
   const ManuelMasraf({super.key});
@@ -52,6 +50,7 @@ class _ManuelMasrafState extends State<ManuelMasraf> {
           ),
         ),
         child: SingleChildScrollView(
+       
           child: Column(
             children: [
               SizedBox(
@@ -71,7 +70,7 @@ class _ManuelMasrafState extends State<ManuelMasraf> {
              SizedBox(
                 height: MediaQuery.of(context).size.height * 0.05,
               ),
-              Container(
+               Container(
                 width: MediaQuery.of(context).size.width * 0.8,
                 child: TextField(
                   controller: dateInput,
@@ -88,7 +87,7 @@ class _ManuelMasrafState extends State<ManuelMasraf> {
                     if (pickedDate != null) {
                       print(pickedDate);
                       String formattedDate = DateFormat('dd-MM-yyyy').format(pickedDate);
-                      print(formattedDate); //formatted date output using intl package =>  2021-03-16
+                      print(formattedDate);
                       setState(() {
                         dateInput.text = 
                         formattedDate;
