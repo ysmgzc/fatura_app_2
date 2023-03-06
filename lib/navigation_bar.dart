@@ -1,5 +1,9 @@
+import 'package:fatura_app_2/alislar/alislar.dart';
 import 'package:fatura_app_2/calisanlar/calisanlar.dart';
 import 'package:fatura_app_2/musteri/musteriler.dart';
+import 'package:fatura_app_2/notifications.dart';
+import 'package:fatura_app_2/satislar/satislar.dart';
+import 'package:fatura_app_2/screens/login_screen.dart';
 import 'package:fatura_app_2/tederikci/tedarikciler.dart';
 import 'package:fatura_app_2/urunler/urunler_screen.dart';
 import 'package:flutter/material.dart';
@@ -79,7 +83,7 @@ class NavBar extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                           builder: (context) =>
-                              TedarikcilerScreen(),
+                              AlislarScreen(),
                         ),
                       );
             },
@@ -92,7 +96,7 @@ class NavBar extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                           builder: (context) =>
-                              TedarikcilerScreen(),
+                              SatislarScreen(),
                         ),
                       );
             },
@@ -171,7 +175,7 @@ class NavBar extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                           builder: (context) =>
-                              TedarikcilerScreen(),
+                              BildirimlerScreen(),
                         ),
                       );
             },
@@ -184,7 +188,7 @@ class NavBar extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                           builder: (context) =>
-                              TedarikcilerScreen(),
+                              LoginScreen(),
                         ),
                       );
             },

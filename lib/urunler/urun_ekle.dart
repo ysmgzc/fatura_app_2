@@ -1,3 +1,4 @@
+import 'package:fatura_app_2/constants.dart';
 import "package:flutter/material.dart";
 import 'package:dropdown_button2/dropdown_button2.dart';
 
@@ -9,6 +10,7 @@ class UrunEkle extends StatefulWidget {
 }
 
 class _UrunEkleState extends State<UrunEkle> {
+    bool? value = false;
   String? selectedValue;
   List<String> items = [
   'Adet',
@@ -72,7 +74,7 @@ List<String> items2 = [
                        prefixIcon: Padding(
                          padding: const EdgeInsets.only(top: 17),
                          child: Icon(
-                              Icons.person,
+                              Icons.code,
                               color: Colors.white,
                                   ),
                        ),
@@ -108,7 +110,7 @@ List<String> items2 = [
                        prefixIcon: Padding(
                          padding: const EdgeInsets.only(top: 17),
                          child: Icon(
-                              Icons.phone,
+                              Icons.text_rotate_vertical,
                               color: Colors.white,
                                   ),
                        ),
@@ -134,156 +136,140 @@ List<String> items2 = [
                //  SizedBox(height: MediaQuery.of(context).size.height*0.02,),
                 Container(
                   width: MediaQuery.of(context).size.width*0.8,
-                  child: TextFormField(
-                    style: TextStyle(
-                            height: 1.5,
+                  child: Padding(
+                    padding: EdgeInsets.only( top: 15),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: 
+                     [    
+                        DropdownButton2(
+                          icon: Icon(Icons.expand_more, color: Colors.white,),
+                          underline: Container( 
+                           height: 2, color: Colors.white60 ),
+                          hint: Text(
+                            textAlign: TextAlign.center,
+                            'Birim',
+                            style: TextStyle(
+                              fontSize: 15.5,
+                              color: ktextColor,
                             ),
-                    decoration: InputDecoration(
-                      contentPadding:
-                      EdgeInsets.only(left: 10, top: 10, bottom: 15),
-                       prefixIcon: Padding(
-                         padding: const EdgeInsets.only(top: 17),
-                         child: Icon(
-                              Icons.home_filled,
-                              color: Colors.white,
+                          ),
+                          items: items
+                              .map((item) =>
+                              DropdownMenuItem<String>(
+                                value: item,
+                                child: Text(
+                                  item,
+                                  style: const TextStyle(
+                                    fontSize: 14,
                                   ),
-                       ),
-                  enabledBorder: UnderlineInputBorder(      
-                      borderSide: BorderSide(color: Colors.white),   
-                      ),  
-                   focusedBorder: UnderlineInputBorder(
-                    
-                      borderSide: BorderSide(color: Colors.white) 
-                      ),
-                    label: const Center(
-                    child: Text("Adres"),
-                  ), 
-                  labelStyle: TextStyle(
-                   
-                    color: Colors.white,
-                  ),
-                  
-                    ),
-                  ),
-                  
-                ),
-               //  SizedBox(height: MediaQuery.of(context).size.height*0.02,),
-                Container(
-                  width: MediaQuery.of(context).size.width*0.8,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: 
-                   [    
-                      DropdownButton2(
-                        underline: Container( 
-                          height: 0.75, 
-                        color: Colors.white, ),
-                        hint: Text(
-                          textAlign: TextAlign.center,
-                          'Birim',
-                          style: TextStyle(
-                            fontSize: 14,
-                            color: Colors.grey.shade400,
-                          ),
-                        ),
-                        items: items
-                            .map((item) =>
-                            DropdownMenuItem<String>(
-                              value: item,
-                              child: Text(
-                                item,
-                                style: const TextStyle(
-                                  fontSize: 14,
                                 ),
-                              ),
-                            ))
-                            .toList(),
-                        value: selectedValue,
-                        onChanged: (value) {
-                          setState(() {
-                            selectedValue = value as String;
-                          });
-                        },
-                        buttonHeight: 40,
-                        buttonWidth: 90,
-                        itemHeight: 40,
-                        //itemWidth: 140,
-                      ),
-                      
-                      DropdownButton2(
-                        underline: Container(  
-                          height: 0.75, color: Colors.cyan.shade700),
-                          
-                        hint: Text(
-                          'Kdv(%)',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            fontSize: 14,
-                            color: Colors.grey.shade400
-                          ),
+                              ))
+                              .toList(),
+                          value: selectedValue,
+                          onChanged: (value) {
+                            setState(() {
+                              selectedValue = value as String;
+                            });
+                          },
+                          buttonHeight: 40,
+                          buttonWidth: 90,
+                          itemHeight: 40,
+                          //itemWidth: 140,
                         ),
-                        items: items1
-                            .map((item) =>
-                            DropdownMenuItem<String>(
-                              value: item,
-                              child: Text(
-                                item,
-                                style: const TextStyle(
-                                  fontSize: 14,
-                                ),
-                              ),
-                            ))
-                            .toList(),
-                        value: selectedValue,
-                        onChanged: (value) {
-                          setState(() {
-                            selectedValue = value as String;
-                          });
-                        },
-                        buttonHeight: 40,
-                        buttonWidth: 70,
-                        itemHeight: 40,
-                      // itemWidth: 140,
-                      ),
-                      
-                      DropdownButton2(
-                        underline: Container( height: 0.75,   color: Colors.cyan.shade700),
-                        hint: Text(
-                          'Para Birimi',
-                          textAlign: TextAlign.center,
-                          
-                          style: TextStyle(
-                            fontSize: 14,
-                            color: Colors.grey.shade400
-                          ),
-                        ),
-                        items: items2
-                            .map((item) =>
-                            DropdownMenuItem<String>(
-                              value: item,
-                              child: Text(
-                                item,
-                                style: const TextStyle(
-                                  fontSize: 14,
-                                ),
-                              ),
-                            ))
-                            .toList(),
-                        value: selectedValue,
-                        onChanged: (value) {
-                          setState(() {
-                            selectedValue = value as String;
-                          });
-                        },
-                        buttonHeight: 40,
-                        buttonWidth: 120,
-                        itemHeight: 40,
-                        //itemWidth: 140,
-                      ),
-                      
-                  ],
+                        
+                        DropdownButton2(
+                         icon: Icon(Icons.expand_more, color: Colors.white,),
+                          underline: Container(  
+                            height: 2, color: Colors.white60),
+                            
+                          hint: Text(
+                            'Kdv(%)',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: 15.5,
+                              color: ktextColor
                             ),
+                          ),
+                          items: items1
+                              .map((item) =>
+                              DropdownMenuItem<String>(
+                                value: item,
+                                child: Text(
+                                  item,
+                                  style: const TextStyle(
+                                    fontSize: 14,
+                                  ),
+                                ),
+                              ))
+                              .toList(),
+                          value: selectedValue,
+                          onChanged: (value) {
+                            setState(() {
+                              selectedValue = value as String;
+                            });
+                          },
+                          buttonHeight: 40,
+                          buttonWidth: 90,
+                          itemHeight: 40,
+                        // itemWidth: 140,
+                        ),
+                        
+                        DropdownButton2(
+                          icon: Icon(Icons.expand_more, color: Colors.white,),
+                          underline: Container( height: 2, color: Colors.white60),
+                          hint: Text(
+                            'Para Birimi',
+                            textAlign: TextAlign.center,
+                            
+                            style: TextStyle(
+                              fontSize: 15.5,
+                              color: ktextColor
+                            ),
+                          ),
+                          items: items2
+                              .map((item) =>
+                              DropdownMenuItem<String>(
+                                value: item,
+                                child: Text(
+                                  item,
+                                  style: const TextStyle(
+                                    fontSize: 14,
+                                  ),
+                                ),
+                              ))
+                              .toList(),
+                          value: selectedValue,
+                          onChanged: (value) {
+                            setState(() {
+                              selectedValue = value as String;
+                            });
+                          },
+                          buttonHeight: 40,
+                          buttonWidth: 120,
+                          itemHeight: 40,
+                          //itemWidth: 140,
+                        ),
+                        
+                    ],
+                              ),
+                  ),
                 ),
+                 SizedBox(height: MediaQuery.of(context).size.height*0.05,),
+                Text(
+                  'Satış Fiyatı',
+                  style: TextStyle(
+                      decoration: TextDecoration.underline,
+                      decorationColor: Colors.white60,
+                      decorationThickness: 3,
+                      color: Colors.white,
+                      fontSize: MediaQuery.of(context).size.width*0.04,
+                      fontWeight: FontWeight.bold,
+                      shadows: [BoxShadow(color: Colors.black, offset: Offset(1,2),blurRadius: 3 ),],
+                  ),
+                  
+                ),
+
                 Container(
                   width: MediaQuery.of(context).size.width*0.8,
                   child: TextFormField(
@@ -296,7 +282,7 @@ List<String> items2 = [
                        prefixIcon: Padding(
                          padding: const EdgeInsets.only(top: 17),
                          child: Icon(
-                              Icons.business,
+                              Icons.money,
                               color: Colors.white,
                                   ),
                        ),
@@ -308,7 +294,7 @@ List<String> items2 = [
                       borderSide: BorderSide(color: Colors.white) 
                       ),
                     label: const Center(
-                    child: Text("Vergi Dairesi"),
+                    child: Text("Birim Fiyat (KDV Dahil)"),
                   ), 
                   labelStyle: TextStyle(
                    
@@ -332,7 +318,7 @@ List<String> items2 = [
                        prefixIcon: Padding(
                          padding: const EdgeInsets.only(top: 17),
                          child: Icon(
-                              Icons.more_horiz,
+                              Icons.money,
                               color: Colors.white,
                                   ),
                        ),
@@ -344,7 +330,126 @@ List<String> items2 = [
                       borderSide: BorderSide(color: Colors.white) 
                       ),
                     label: const Center(
-                    child: Text("Vergi/TC Kimlik No"),
+                    child: Text("Birim Fiyat (KDV Hariç)"),
+                  ), 
+                  labelStyle: TextStyle(
+                   
+                    color: Colors.white,
+                  ),
+                  
+                    ),
+                  ),
+                  
+                ),
+                SizedBox(height: MediaQuery.of(context).size.height*0.05,),
+                Text(
+                  'Alış Fiyatı',
+                  style: TextStyle(
+                    decoration: TextDecoration.underline,
+                      decorationColor: Colors.white60,
+                      decorationThickness: 3,
+                      color: Colors.white,
+                      fontSize: MediaQuery.of(context).size.width*0.04,
+                      fontWeight: FontWeight.bold,
+                      shadows: [BoxShadow(color: Colors.black, offset: Offset(1,2),blurRadius: 3 ),],
+                  ),
+                ),
+                Container(
+                  width: MediaQuery.of(context).size.width*0.8,
+                  child: TextFormField(
+                    style: TextStyle(
+                            height: 1.5,
+                            ),
+                    decoration: InputDecoration(
+                      contentPadding:
+                      EdgeInsets.only(left: 10, top: 10, bottom: 15),
+                       prefixIcon: Padding(
+                         padding: const EdgeInsets.only(top: 17),
+                         child: Icon(
+                              Icons.money,
+                              color: Colors.white,
+                                  ),
+                       ),
+                  enabledBorder: UnderlineInputBorder(      
+                      borderSide: BorderSide(color: Colors.white),   
+                      ),  
+                   focusedBorder: UnderlineInputBorder(
+                    
+                      borderSide: BorderSide(color: Colors.white) 
+                      ),
+                    label: const Center(
+                    child: Text("Birim Fiyat (KDV Dahil)"),
+                  ), 
+                  labelStyle: TextStyle(
+                   
+                    color: Colors.white,
+                  ),
+                  
+                    ),
+                  ),
+                  
+                ),
+                // SizedBox(height: MediaQuery.of(context).size.height*0.02,),
+                Container(
+                  width: MediaQuery.of(context).size.width*0.8,
+                  child: TextFormField(
+                    style: TextStyle(
+                            height: 1.5,
+                            ),
+                    decoration: InputDecoration(
+                      contentPadding:
+                      EdgeInsets.only(left: 10, top: 10, bottom: 15),
+                       prefixIcon: Padding(
+                         padding: const EdgeInsets.only(top: 17),
+                         child: Icon(
+                              Icons.money,
+                              color: Colors.white,
+                                  ),
+                       ),
+                  enabledBorder: UnderlineInputBorder(      
+                      borderSide: BorderSide(color: Colors.white),   
+                      ),  
+                   focusedBorder: UnderlineInputBorder(
+                    
+                      borderSide: BorderSide(color: Colors.white) 
+                      ),
+                    label: const Center(
+                    child: Text("Birim Fiyat (KDV Hariç)"),
+                  ), 
+                  labelStyle: TextStyle(
+                   
+                    color: Colors.white,
+                  ),
+                  
+                    ),
+                  ),
+                  
+                ),
+                Container(
+                  width: MediaQuery.of(context).size.width*0.8,
+                  child: TextFormField(
+                    style: TextStyle(
+                            height: 1.5,
+                            ),
+                    decoration: InputDecoration(
+                      contentPadding:
+                      EdgeInsets.only(left: 10, top: 10, bottom: 15),
+                       prefixIcon: Padding(
+                         padding: const EdgeInsets.only(top: 17),
+                         child: Icon(
+                              Icons.barcode_reader,
+                              color: Colors.white,
+                                  ),
+                       ),
+                  enabledBorder: UnderlineInputBorder(      
+                      borderSide: BorderSide(color: Colors.white),   
+                      ),  
+                   focusedBorder: UnderlineInputBorder(
+                    
+                      borderSide: BorderSide(color: Colors.white) 
+                      ),
+                    label: const Center(
+                    child: Text("Barkod:"),
                   ), 
                   labelStyle: TextStyle(
                    
@@ -368,7 +473,7 @@ List<String> items2 = [
                        prefixIcon: Padding(
                          padding: const EdgeInsets.only(top: 17),
                          child: Icon(
-                              Icons.email_outlined,
+                              Icons.sync_alt,
                               color: Colors.white,
                                   ),
                        ),
@@ -380,7 +485,7 @@ List<String> items2 = [
                       borderSide: BorderSide(color: Colors.white) 
                       ),
                     label: const Center(
-                    child: Text("E-posta"),
+                    child: Text("Ürün Adı(2): "),
                   ), 
                   labelStyle: TextStyle(
                    
@@ -391,7 +496,47 @@ List<String> items2 = [
                   ),
                   
                 ),
-                
+                 SizedBox(height: MediaQuery.of(context).size.height*0.03,),
+                Row(
+        mainAxisAlignment: MainAxisAlignment.end,
+         children: [
+           Checkbox(      
+            checkColor: Colors.white,
+           side: MaterialStateBorderSide.resolveWith(
+             (states) => BorderSide(width: 1.0, color: Colors.white),
+              ),
+            value: this.value,
+            onChanged: (bool? value) {
+            setState(() {
+            this.value = value;
+             });
+             },
+             ),
+           Container(
+              width: MediaQuery.of(context).size.width*0.8,
+               child: Row(
+                children: [
+               GestureDetector(
+            onTap: () {
+                /* Navigator.push(
+                     context,
+                     MaterialPageRoute(
+                     builder: (context) =>
+                       sozlesme(),
+                    ),
+                );*/
+                    },
+                child: Text(
+                  "Aktif mi?",
+                  style: TextStyle(color: Colors.white,decoration: TextDecoration.underline),
+                ),
+              )
+                  ],
+                              ),
+                ),
+         ],
+         
+       ),
                 SizedBox(height: MediaQuery.of(context).size.height*0.055,),
                 GestureDetector(
                   onTap: () {
@@ -409,12 +554,12 @@ List<String> items2 = [
                       )]
                     ),
                     child: Center(
-                      child: Text('Ekle',
+                      child: Text('Kaydet',
                       style: TextStyle(color: Colors.white,
                       fontSize: MediaQuery.of(context).size.width*0.04),),),
                   ),
                 ),
-                
+                SizedBox(height: MediaQuery.of(context).size.height*0.055,),
               ],
             ),
           ),

@@ -1,4 +1,6 @@
+import 'package:fatura_app_2/alislar/alislar.dart';
 import 'package:fatura_app_2/musteri/musteriler.dart';
+import 'package:fatura_app_2/satislar/satislar.dart';
 import 'package:fatura_app_2/screens/login_screen.dart';
 import 'package:fatura_app_2/urunler/urun_ekle.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Fatura',
     debugShowCheckedModeBanner: false,
-      home: UrunEkle(),
+      home: LoginScreen(),
     );
   }
 }
