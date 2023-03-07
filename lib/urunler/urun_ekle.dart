@@ -54,7 +54,7 @@ List<String> items2 = [
                 Text(
                   'Yeni Ürün Ekle',
                   style: TextStyle(
-                      color: Colors.white,
+                      color: kTextColor,
                       fontSize: MediaQuery.of(context).size.width*0.07,
                       fontWeight: FontWeight.bold,
                       shadows:const [BoxShadow(color: Colors.black, offset: Offset(1,2),blurRadius: 3 ),],
@@ -74,22 +74,22 @@ List<String> items2 = [
                          padding: EdgeInsets.only(top: 17),
                          child: Icon(
                               Icons.code,
-                              color: Colors.white,
+                              color: kIconColor,
                                   ),
                        ),
                   enabledBorder: UnderlineInputBorder(      
-                      borderSide: BorderSide(color: Colors.white),   
+                      borderSide: BorderSide(color: kBorderColor),   
                       ),  
                    focusedBorder: UnderlineInputBorder(
                     
-                      borderSide: BorderSide(color: Colors.white) 
+                      borderSide: BorderSide(color: kBorderColor) 
                       ),
                     label: Center(
                     child: Text("Ürün Kodu"),
                   ), 
                   labelStyle: TextStyle(
                    
-                    color: Colors.white,
+                    color: kTextColor,
                   ),
                   
                     ),
@@ -110,22 +110,22 @@ List<String> items2 = [
                          padding: EdgeInsets.only(top: 17),
                          child: Icon(
                               Icons.text_rotate_vertical,
-                              color: Colors.white,
+                              color: kIconColor,
                                   ),
                        ),
                   enabledBorder: UnderlineInputBorder(      
-                      borderSide: BorderSide(color: Colors.white),   
+                      borderSide: BorderSide(color: kBorderColor),   
                       ),  
                    focusedBorder: UnderlineInputBorder(
                     
-                      borderSide: BorderSide(color: Colors.white) 
+                      borderSide: BorderSide(color: kBorderColor) 
                       ),
                     label: Center(
                     child: Text("Ürün Adı"),
                   ), 
                   labelStyle: TextStyle(
                    
-                    color: Colors.white,
+                    color: kTextColor,
                   ),
                   
                     ),
@@ -142,7 +142,7 @@ List<String> items2 = [
                       children: 
                      [    
                         DropdownButton2(
-                          icon:const Icon(Icons.expand_more, color: Colors.white,),
+                          icon:const Icon(Icons.expand_more, color: kIconColor,),
                           underline: Container( 
                            height: 2, color: Colors.white60 ),
                           hint:const Text(
@@ -178,7 +178,7 @@ List<String> items2 = [
                         ),
                         
                         DropdownButton2(
-                         icon:const Icon(Icons.expand_more, color: Colors.white,),
+                         icon:const Icon(Icons.expand_more, color: kIconColor,),
                           underline: Container(  
                             height: 2, color: Colors.white60),
                             
@@ -215,7 +215,7 @@ List<String> items2 = [
                         ),
                         
                         DropdownButton2(
-                          icon:const Icon(Icons.expand_more, color: Colors.white,),
+                          icon:const Icon(Icons.expand_more, color: kIconColor,),
                           underline: Container( height: 2, color: Colors.white60),
                           hint:const Text(
                             'Para Birimi',
@@ -261,7 +261,7 @@ List<String> items2 = [
                       decoration: TextDecoration.underline,
                       decorationColor: Colors.white60,
                       decorationThickness: 3,
-                      color: Colors.white,
+                      color: kTextColor,
                       fontSize: MediaQuery.of(context).size.width*0.04,
                       fontWeight: FontWeight.bold,
                       shadows:const [BoxShadow(color: Colors.black, offset: Offset(1,2),blurRadius: 3 ),],
@@ -282,22 +282,22 @@ List<String> items2 = [
                          padding: EdgeInsets.only(top: 17),
                          child: Icon(
                               Icons.money,
-                              color: Colors.white,
+                              color: kIconColor,
                                   ),
                        ),
                   enabledBorder: UnderlineInputBorder(      
-                      borderSide: BorderSide(color: Colors.white),   
+                      borderSide: BorderSide(color: kBorderColor),   
                       ),  
                    focusedBorder: UnderlineInputBorder(
                     
-                      borderSide: BorderSide(color: Colors.white) 
+                      borderSide: BorderSide(color: kBorderColor) 
                       ),
                     label: Center(
                     child: Text("Birim Fiyat (KDV Dahil)"),
                   ), 
                   labelStyle: TextStyle(
                    
-                    color: Colors.white,
+                    color: kTextColor,
                   ),
                   
                     ),
@@ -318,22 +318,22 @@ List<String> items2 = [
                          padding: EdgeInsets.only(top: 17),
                          child: Icon(
                               Icons.money,
-                              color: Colors.white,
+                              color: kIconColor,
                                   ),
                        ),
                   enabledBorder: UnderlineInputBorder(      
-                      borderSide: BorderSide(color: Colors.white),   
+                      borderSide: BorderSide(color: kBorderColor),   
                       ),  
                    focusedBorder: UnderlineInputBorder(
                     
-                      borderSide: BorderSide(color: Colors.white) 
+                      borderSide: BorderSide(color: kBorderColor) 
                       ),
                     label: Center(
                     child: Text("Birim Fiyat (KDV Hariç)"),
                   ), 
                   labelStyle: TextStyle(
                    
-                    color: Colors.white,
+                    color: kTextColor,
                   ),
                   
                     ),
@@ -347,7 +347,7 @@ List<String> items2 = [
                     decoration: TextDecoration.underline,
                       decorationColor: Colors.white60,
                       decorationThickness: 3,
-                      color: Colors.white,
+                      color: kTextColor,
                       fontSize: MediaQuery.of(context).size.width*0.04,
                       fontWeight: FontWeight.bold,
                       shadows:const [BoxShadow(color: Colors.black, offset: Offset(1,2),blurRadius: 3 ),],
@@ -366,22 +366,22 @@ List<String> items2 = [
                          padding: EdgeInsets.only(top: 17),
                          child: Icon(
                               Icons.money,
-                              color: Colors.white,
+                              color: kIconColor,
                                   ),
                        ),
                   enabledBorder: UnderlineInputBorder(      
-                      borderSide: BorderSide(color: Colors.white),   
+                      borderSide: BorderSide(color: kBorderColor),   
                       ),  
                    focusedBorder: UnderlineInputBorder(
                     
-                      borderSide: BorderSide(color: Colors.white) 
+                      borderSide: BorderSide(color: kBorderColor) 
                       ),
                     label: Center(
                     child: Text("Birim Fiyat (KDV Dahil)"),
                   ), 
                   labelStyle: TextStyle(
                    
-                    color: Colors.white,
+                    color: kTextColor,
                   ),
                   
                     ),
@@ -402,22 +402,22 @@ List<String> items2 = [
                          padding: EdgeInsets.only(top: 17),
                          child: Icon(
                               Icons.money,
-                              color: Colors.white,
+                              color: kIconColor,
                                   ),
                        ),
                   enabledBorder: UnderlineInputBorder(      
-                      borderSide: BorderSide(color: Colors.white),   
+                      borderSide: BorderSide(color: kBorderColor),   
                       ),  
                    focusedBorder: UnderlineInputBorder(
                     
-                      borderSide: BorderSide(color: Colors.white) 
+                      borderSide: BorderSide(color:kBorderColor) 
                       ),
                     label: Center(
                     child: Text("Birim Fiyat (KDV Hariç)"),
                   ), 
                   labelStyle: TextStyle(
                    
-                    color: Colors.white,
+                    color: kTextColor,
                   ),
                   
                     ),
@@ -437,22 +437,22 @@ List<String> items2 = [
                          padding: EdgeInsets.only(top: 17),
                          child: Icon(
                               Icons.barcode_reader,
-                              color: Colors.white,
+                              color: kIconColor,
                                   ),
                        ),
                   enabledBorder: UnderlineInputBorder(      
-                      borderSide: BorderSide(color: Colors.white),   
+                      borderSide: BorderSide(color: kBorderColor),   
                       ),  
                    focusedBorder: UnderlineInputBorder(
                     
-                      borderSide: BorderSide(color: Colors.white) 
+                      borderSide: BorderSide(color: kBorderColor) 
                       ),
                     label: Center(
                     child: Text("Barkod:"),
                   ), 
                   labelStyle: TextStyle(
                    
-                    color: Colors.white,
+                    color: kTextColor,
                   ),
                   
                     ),
@@ -473,22 +473,22 @@ List<String> items2 = [
                          padding:  EdgeInsets.only(top: 17),
                          child: Icon(
                               Icons.sync_alt,
-                              color: Colors.white,
+                              color: kIconColor,
                                   ),
                        ),
                   enabledBorder: UnderlineInputBorder(      
-                      borderSide: BorderSide(color: Colors.white),   
+                      borderSide: BorderSide(color: kBorderColor),   
                       ),  
                    focusedBorder: UnderlineInputBorder(
                     
-                      borderSide: BorderSide(color: Colors.white) 
+                      borderSide: BorderSide(color: kBorderColor) 
                       ),
                     label:  Center(
                     child: Text("Ürün Adı(2): "),
                   ), 
                   labelStyle: TextStyle(
                    
-                    color: Colors.white,
+                    color: kTextColor,
                   ),
                   
                     ),
@@ -502,7 +502,7 @@ List<String> items2 = [
            Checkbox(      
             checkColor: Colors.white,
            side: MaterialStateBorderSide.resolveWith(
-             (states) => const BorderSide(width: 1.0, color: Colors.white),
+             (states) => const BorderSide(width: 1.0, color: kBorderColor),
               ),
             value: this.value,
             onChanged: (bool? value) {
@@ -527,7 +527,7 @@ List<String> items2 = [
                     },
                 child:const Text(
                   "Aktif mi?",
-                  style: TextStyle(color: Colors.white,decoration: TextDecoration.underline),
+                  style: TextStyle(color: kTextColor,decoration: TextDecoration.underline),
                 ),
               )
                   ],
@@ -545,7 +545,7 @@ List<String> items2 = [
                     width: MediaQuery.of(context).size.width*0.4,
                     padding: EdgeInsets.all(MediaQuery.of(context).size.width*0.02,),
                     decoration:const BoxDecoration(
-                      color: Color(0xff74A2C3),
+                      color: kButtonColor,
                       borderRadius: BorderRadius.all(Radius.circular(20)),
                       boxShadow: [BoxShadow(color: Colors.black26,
                       offset: Offset(3, 3),
@@ -554,7 +554,7 @@ List<String> items2 = [
                     ),
                     child: Center(
                       child: Text('Kaydet',
-                      style: TextStyle(color: Colors.white,
+                      style: TextStyle(color: kTextColor,
                       fontSize: MediaQuery.of(context).size.width*0.04),),),
                   ),
                 ),
