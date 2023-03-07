@@ -112,17 +112,17 @@ class _HesapBilgileriState extends State<HesapBilgileri> {
                   height: 1.5,
                 ),
                 decoration: InputDecoration(
-                  contentPadding: EdgeInsets.only(left: 10, top: 10, bottom: 15),
+                  contentPadding: const EdgeInsets.only(left: 10, top: 10, bottom: 15),
                   prefixIcon: Padding(
-                      padding: EdgeInsets.only(top: 12),
+                      padding:const EdgeInsets.only(top: 12),
                       child: Text(
                         text,
-                        style: TextStyle(color: kTextColor),
+                        style:const TextStyle(color: kTextColor),
                       )),
-                  enabledBorder: UnderlineInputBorder(
+                  enabledBorder:const UnderlineInputBorder(
                     borderSide: BorderSide(color: kBorderColor),
                   ),
-                  focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: kBorderColor)),
+                  focusedBorder:const UnderlineInputBorder(borderSide: BorderSide(color: kBorderColor)),
                 ),
               ),
             );
@@ -140,7 +140,7 @@ class _HesapBilgileriState extends State<HesapBilgileri> {
                     hint: Text(
                       textAlign: TextAlign.start,
                       text,
-                      style: TextStyle(
+                      style:const TextStyle(
                         fontSize: 15.5,
                         color: kTextColor,
                       ),

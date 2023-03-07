@@ -117,7 +117,7 @@ class _HesaplarScreenState extends State<HesaplarScreen> {
                     title: Text(
                       text,
                     ),
-                    trailing:Icon(Icons.navigate_next, color: kIconColor2, size: 30.0)
+                    trailing:const Icon(Icons.navigate_next, color: kIconColor2, size: 30.0)
                 ))
                  ],
                ),

@@ -117,7 +117,7 @@ class _DepoStokRaporuState extends State<DepoStokRaporu> {
                     hint: Text(
                       textAlign: TextAlign.start,
                       text,
-                      style: TextStyle(
+                      style:const TextStyle(
                         fontSize: 15.5,
                         color: kTextColor,
                       ),

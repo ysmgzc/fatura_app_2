@@ -163,7 +163,7 @@ class _MasrafRaporuState extends State<MasrafRaporu> {
                     hint: Text(
                       textAlign: TextAlign.start,
                       text,
-                      style: TextStyle(
+                      style:const TextStyle(
                         fontSize: 15.5,
                         color: kTextColor,
                       ),
@@ -224,18 +224,18 @@ class _MasrafRaporuState extends State<MasrafRaporu> {
                   height: 1.5,
                 ),
                 decoration:  InputDecoration(
-                  contentPadding: EdgeInsets.only(left: 10, top: 10, bottom: 15),
-                  suffixIcon: Icon(Icons.date_range,color: kIconColor,),
+                  contentPadding:const EdgeInsets.only(left: 10, top: 10, bottom: 15),
+                  suffixIcon:const Icon(Icons.date_range,color: kIconColor,),
                   prefixIcon: Padding(
-                      padding: EdgeInsets.only(top: 12),
+                      padding:const EdgeInsets.only(top: 12),
                       child: Text(
                         text,
-                        style: TextStyle(color: kTextColor),
+                        style:const TextStyle(color: kTextColor),
                       )),
-                  enabledBorder: UnderlineInputBorder(
+                  enabledBorder:const UnderlineInputBorder(
                     borderSide: BorderSide(color: kBorderColor),
                   ),
-                  focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: kBorderColor)),
+                  focusedBorder:const UnderlineInputBorder(borderSide: BorderSide(color: kBorderColor)),
                 ),
               ),
             );

@@ -193,7 +193,7 @@ List<String> items2 = [
                         hint: Text(
                           textAlign: TextAlign.center,
                           text,
-                          style: TextStyle(
+                          style:const TextStyle(
                             fontSize: 15.5,
                             color: kTextColor,
                           ),
@@ -231,26 +231,26 @@ List<String> items2 = [
                           height: 1.5,
                           ),
                   decoration: InputDecoration(
-                    contentPadding:
+                    contentPadding:const
                     EdgeInsets.only(left: 10, top: 10, bottom: 15),
                      prefixIcon: Padding(
-                       padding: EdgeInsets.only(top: 17),
+                       padding:const EdgeInsets.only(top: 17),
                        child: Icon(
                             icon,
                             color: kIconColor,
                                 ),
                      ),
-                enabledBorder: UnderlineInputBorder(      
+                enabledBorder:const UnderlineInputBorder(      
                     borderSide: BorderSide(color: kBorderColor),   
                     ),  
-                 focusedBorder: UnderlineInputBorder(
+                 focusedBorder:const UnderlineInputBorder(
                   
                     borderSide: BorderSide(color: kBorderColor) 
                     ),
                   label: Center(
                   child: Text(text),
                 ), 
-                labelStyle: TextStyle(
+                labelStyle:const TextStyle(
                  
                   color: kTextColor,
                 ),

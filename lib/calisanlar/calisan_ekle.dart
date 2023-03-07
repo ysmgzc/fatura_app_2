@@ -87,19 +87,19 @@ class _CalisanEkleState extends State<CalisanEkle> {
           height: 1.5,
         ),
         decoration: InputDecoration(
-          contentPadding: EdgeInsets.only(left: 10, top: 10, bottom: 15),
+          contentPadding:const  EdgeInsets.only(left: 10, top: 10, bottom: 15),
           prefixIcon: Padding(
-            padding: EdgeInsets.only(top: 17),
+            padding:const EdgeInsets.only(top: 17),
             child: Icon(icon, color: kIconColor),
           ),
-          enabledBorder: UnderlineInputBorder(
+          enabledBorder: const UnderlineInputBorder(
             borderSide: BorderSide(color: kBorderColor),
           ),
-          focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: kBorderColor)),
+          focusedBorder: const UnderlineInputBorder(borderSide: BorderSide(color: kBorderColor)),
           label: Center(
             child: Text(text),
           ),
-          labelStyle: TextStyle(color: kTextColor),
+          labelStyle:const TextStyle(color: kTextColor),
         ),
       ),
     );
