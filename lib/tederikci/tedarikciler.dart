@@ -33,7 +33,7 @@ class _TedarikcilerScreenState extends State<TedarikcilerScreen> {
           ],
         ),
       floatingActionButton: FloatingActionButton.extended(
-        backgroundColor: kbuttonColor,
+        backgroundColor: kButtonColor,
         onPressed: () {
           Navigator.push(
             context,
@@ -44,7 +44,7 @@ class _TedarikcilerScreenState extends State<TedarikcilerScreen> {
         },
         icon:const Icon(Icons.add),
         label:const Text('Ekle'),
-        shape: const StadiumBorder(side: BorderSide(color: kbuttonColor, width: 3)),
+        shape: const StadiumBorder(side: BorderSide(color: kButtonColor, width: 3)),
       ),
     );
   }

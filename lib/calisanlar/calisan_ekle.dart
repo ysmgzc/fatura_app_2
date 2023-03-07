@@ -1,4 +1,5 @@
 
+import 'package:fatura_app_2/constants.dart';
 import "package:flutter/material.dart";
 
 class CalisanEkle extends StatefulWidget {
@@ -28,7 +29,7 @@ class _CalisanEkleState extends State<CalisanEkle> {
                 Text(
                   'Yeni Çalışan Ekle',
                   style: TextStyle(
-                      color: Colors.white,
+                      color: kTextColor,
                       fontSize: MediaQuery.of(context).size.width*0.07,
                       fontWeight: FontWeight.bold,
                       shadows: const [BoxShadow(color: Colors.black, offset: Offset(1,2),blurRadius: 3 ),],
@@ -48,22 +49,22 @@ class _CalisanEkleState extends State<CalisanEkle> {
                          padding: EdgeInsets.only(top: 17),
                          child: Icon(
                               Icons.person,
-                              color: Colors.white,
+                              color:kIconColor
                                   ),
                        ),
                   enabledBorder: UnderlineInputBorder(      
-                      borderSide: BorderSide(color: Colors.white),   
+                      borderSide: BorderSide(color: kBorderColor),   
                       ),  
                    focusedBorder: UnderlineInputBorder(
                     
-                      borderSide: BorderSide(color: Colors.white) 
+                      borderSide: BorderSide(color: kBorderColor) 
                       ),
                     label: Center(
                     child: Text("Adı Soyadı"),
                   ), 
                   labelStyle: TextStyle(
                    
-                    color: Colors.white,
+                    color: kTextColor
                   ),
                   
                     ),
@@ -84,22 +85,22 @@ class _CalisanEkleState extends State<CalisanEkle> {
                          padding: EdgeInsets.only(top: 17),
                          child: Icon(
                               Icons.more_horiz,
-                              color: Colors.white,
+                              color: kIconColor,
                                   ),
                        ),
                   enabledBorder: UnderlineInputBorder(      
-                      borderSide: BorderSide(color: Colors.white),   
+                      borderSide: BorderSide(color: kBorderColor),   
                       ),  
                    focusedBorder: UnderlineInputBorder(
                     
-                      borderSide: BorderSide(color: Colors.white) 
+                      borderSide: BorderSide(color: kBorderColor) 
                       ),
                     label: Center(
                     child: Text("TC Kimlik No"),
                   ), 
                   labelStyle: TextStyle(
                    
-                    color: Colors.white,
+                    color: kTextColor
                   ),
                   
                     ),
@@ -120,22 +121,22 @@ class _CalisanEkleState extends State<CalisanEkle> {
                          padding: EdgeInsets.only(top: 17),
                          child: Icon(
                               Icons.phone,
-                              color: Colors.white,
+                              color: kIconColor,
                                   ),
                        ),
                   enabledBorder: UnderlineInputBorder(      
-                      borderSide: BorderSide(color: Colors.white),   
+                      borderSide: BorderSide(color: kBorderColor),   
                       ),  
                    focusedBorder: UnderlineInputBorder(
                     
-                      borderSide: BorderSide(color: Colors.white) 
+                      borderSide: BorderSide(color: kBorderColor) 
                       ),
                     label:  Center(
                     child: Text("Telefon"),
                   ), 
                   labelStyle: TextStyle(
                    
-                    color: Colors.white,
+                    color: kTextColor
                   ),
                   
                     ),
@@ -156,22 +157,22 @@ class _CalisanEkleState extends State<CalisanEkle> {
                          padding:  EdgeInsets.only(top: 17),
                          child: Icon(
                               Icons.email_outlined,
-                              color: Colors.white,
+                              color: kIconColor
                                   ),
                        ),
                   enabledBorder: UnderlineInputBorder(      
-                      borderSide: BorderSide(color: Colors.white),   
+                      borderSide: BorderSide(color: kBorderColor),   
                       ),  
                    focusedBorder: UnderlineInputBorder(
                     
-                      borderSide: BorderSide(color: Colors.white) 
+                      borderSide: BorderSide(color: kBorderColor) 
                       ),
                     label:  Center(
                     child: Text("E-posta"),
                   ), 
                   labelStyle: TextStyle(
                    
-                    color: Colors.white,
+                    color: kTextColor
                   ),
                   
                     ),
@@ -188,7 +189,7 @@ class _CalisanEkleState extends State<CalisanEkle> {
                     width: MediaQuery.of(context).size.width*0.4,
                     padding:  EdgeInsets.all(MediaQuery.of(context).size.width*0.02,),
                     decoration: const BoxDecoration(
-                      color: Color(0xff74A2C3),
+                      color: kButtonColor,
                       borderRadius: BorderRadius.all(Radius.circular(20)),
                       boxShadow: [BoxShadow(color: Colors.black26,
                       offset: Offset(3, 3),
@@ -197,7 +198,7 @@ class _CalisanEkleState extends State<CalisanEkle> {
                     ),
                     child: Center(
                       child: Text('Ekle',
-                      style: TextStyle(color: Colors.white,
+                      style: TextStyle(color: kTextColor,
                       fontSize: MediaQuery.of(context).size.width*0.04),),),
                   ),
                 ),

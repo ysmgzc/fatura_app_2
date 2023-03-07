@@ -51,7 +51,7 @@ class _AlislarScreenState extends State<AlislarScreen> {
           ],
         ),
         floatingActionButton: FloatingActionButton(
-          backgroundColor: kbuttonColor,
+          backgroundColor: kButtonColor,
           child: const Icon(Icons.add),
           onPressed: () {
             Navigator.push(

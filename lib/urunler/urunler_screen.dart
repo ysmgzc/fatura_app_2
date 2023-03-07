@@ -32,7 +32,7 @@ class _UrunlerScreenState extends State<UrunlerScreen> {
           ],
         ),
       floatingActionButton: FloatingActionButton.extended(
-        backgroundColor: kbuttonColor,
+        backgroundColor: kButtonColor,
         onPressed: () {
           Navigator.push(
             context,
@@ -43,7 +43,7 @@ class _UrunlerScreenState extends State<UrunlerScreen> {
         },
         icon:const Icon(Icons.add),
         label:const Text('Ekle'),
-        shape: const StadiumBorder(side: BorderSide(color: kbuttonColor, width: 3)),
+        shape: const StadiumBorder(side: BorderSide(color: kButtonColor, width: 3)),
       ),
     );
   }

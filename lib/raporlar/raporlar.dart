@@ -51,12 +51,12 @@ class _RaporlarScreenState extends State<RaporlarScreen> {
                             MaterialPageRoute(builder: (context) => const AlisRaporu()));
                       },
                   child: const ListTile(
-                      leading: Icon(Icons.add_shopping_cart, color: Colors.black),
+                      leading: Icon(Icons.add_shopping_cart, color: kIconColor2),
                       
                       title: Text(
                         "Alış Raporu",
                       ),
-                      trailing:Icon(Icons.navigate_next, color: Colors.black, size: 30.0)
+                      trailing:Icon(Icons.navigate_next, color: kIconColor2, size: 30.0)
                   ))
                    ],
                  ),
@@ -74,12 +74,12 @@ class _RaporlarScreenState extends State<RaporlarScreen> {
                             MaterialPageRoute(builder: (context) => const SatisRaporu()));
                       },
                   child: const ListTile(
-                      leading: Icon(Icons.shopping_cart, color: Colors.black),
+                      leading: Icon(Icons.shopping_cart, color: kIconColor2),
                       
                       title: Text(
                         "Satış Raporu",
                       ),
-                      trailing:Icon(Icons.navigate_next, color: Colors.black, size: 30.0)
+                      trailing:Icon(Icons.navigate_next, color: kIconColor2, size: 30.0)
                   ))
                    ],
                  ),
@@ -97,12 +97,12 @@ class _RaporlarScreenState extends State<RaporlarScreen> {
                             MaterialPageRoute(builder: (context) => const MasrafRaporu()));
                       },
                   child: const ListTile(
-                      leading: Icon(Icons.account_balance_wallet, color: Colors.black),
+                      leading: Icon(Icons.account_balance_wallet, color: kIconColor2),
                       
                       title: Text(
                         "Masraflar",
                       ),
-                      trailing:Icon(Icons.navigate_next, color: Colors.black, size: 30.0)
+                      trailing:Icon(Icons.navigate_next, color: kIconColor2, size: 30.0)
                   ))
                    ],
                  ),
@@ -120,12 +120,12 @@ class _RaporlarScreenState extends State<RaporlarScreen> {
                             MaterialPageRoute(builder: (context) => const IadeRaporu()));
                       },
                   child: const ListTile(
-                      leading: Icon(Icons.recycling, color: Colors.black),
+                      leading: Icon(Icons.recycling, color: kIconColor2),
                       
                       title: Text(
                         "İadeler",
                       ),
-                      trailing:Icon(Icons.navigate_next, color: Colors.black, size: 30.0)
+                      trailing:Icon(Icons.navigate_next, color: kIconColor2, size: 30.0)
                   ))
                    ],
                  ),
@@ -143,12 +143,12 @@ class _RaporlarScreenState extends State<RaporlarScreen> {
                             MaterialPageRoute(builder: (context) => const DepoStokRaporu()));
                       },
                   child: const ListTile(
-                      leading: Icon(Icons.warehouse, color: Colors.black),
+                      leading: Icon(Icons.warehouse, color: kIconColor2),
                       
                       title: Text(
                         "Depo Stokları",
                       ),
-                      trailing:Icon(Icons.navigate_next, color: Colors.black, size: 30.0)
+                      trailing:Icon(Icons.navigate_next, color: kIconColor2, size: 30.0)
                   ))
                    ],
                  ),
@@ -166,12 +166,12 @@ class _RaporlarScreenState extends State<RaporlarScreen> {
                             MaterialPageRoute(builder: (context) => const StokHareketleriRaporu()));
                       },
                   child: const ListTile(
-                      leading:Icon(Icons.warehouse, color: Colors.black),
+                      leading:Icon(Icons.warehouse, color: kIconColor2),
                       
                       title: Text(
                         "Stok Hareketleri",
                       ),
-                      trailing:Icon(Icons.navigate_next, color: Colors.black, size: 30.0)
+                      trailing:Icon(Icons.navigate_next, color: kIconColor2, size: 30.0)
                   ))
                    ],
                  ),
@@ -189,12 +189,12 @@ class _RaporlarScreenState extends State<RaporlarScreen> {
                             MaterialPageRoute(builder: (context) => const HesapHareketleri()));
                       },
                   child: const ListTile(
-                      leading: Icon(Icons.person, color: Colors.black),
+                      leading: Icon(Icons.person, color: kIconColor2),
                       
                       title: Text(
                         "Hesap Hareketleri",
                       ),
-                      trailing:Icon(Icons.navigate_next, color: Colors.black, size: 30.0)
+                      trailing:Icon(Icons.navigate_next, color: kIconColor2, size: 30.0)
                   ))
                    ],
                  ),                       

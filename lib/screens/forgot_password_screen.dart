@@ -1,3 +1,4 @@
+import 'package:fatura_app_2/constants.dart';
 import 'package:flutter/material.dart';
 
 class ForgotPassword extends StatelessWidget {
@@ -22,7 +23,7 @@ class ForgotPassword extends StatelessWidget {
                 Text(
                   'Şifrenizi mi unuttunuz?',
                   style: TextStyle(
-                      color: Colors.white,
+                      color: kTextColor,
                       fontSize: MediaQuery.of(context).size.width*0.05,
                       fontWeight: FontWeight.bold,
                       shadows:const [BoxShadow(color: Colors.black, offset: Offset(1,2),blurRadius: 3 ),],
@@ -52,22 +53,22 @@ class ForgotPassword extends StatelessWidget {
                          padding: EdgeInsets.only(top: 17),
                          child: Icon(
                               Icons.mail_outline,
-                              color: Colors.white,
+                              color: kIconColor,
                                   ),
                        ),
                   enabledBorder: UnderlineInputBorder(      
-                      borderSide: BorderSide(color: Colors.white),   
+                      borderSide: BorderSide(color: kBorderColor),   
                       ),  
                    focusedBorder: UnderlineInputBorder(
                     
-                      borderSide: BorderSide(color: Colors.white) 
+                      borderSide: BorderSide(color: kBorderColor) 
                       ),
                     label: Center(
                     child: Text("E-posta"),
                   ), 
                   labelStyle: TextStyle(
                    
-                    color: Colors.white,
+                    color: kTextColor,
                   ),
                   
                     ),
@@ -81,7 +82,7 @@ class ForgotPassword extends StatelessWidget {
                     width: MediaQuery.of(context).size.width*0.4,
                     padding: EdgeInsets.all(MediaQuery.of(context).size.width*0.02,),
                     decoration:const BoxDecoration(
-                      color: Color(0xff74A2C3),
+                      color: kButtonColor,
                       borderRadius: BorderRadius.all(Radius.circular(20)),
                       boxShadow: [BoxShadow(color: Colors.black26,
                       offset: Offset(3, 3),
@@ -90,7 +91,7 @@ class ForgotPassword extends StatelessWidget {
                     ),
                     child: Center(
                       child: Text('Şifremi Sıfırla',
-                      style: TextStyle(color: Colors.white,
+                      style: TextStyle(color: kTextColor,
                       fontSize: MediaQuery.of(context).size.width*0.04),),),
                   ),
                 ),

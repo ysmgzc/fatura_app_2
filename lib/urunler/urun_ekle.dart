@@ -150,7 +150,7 @@ List<String> items2 = [
                             'Birim',
                             style: TextStyle(
                               fontSize: 15.5,
-                              color: ktextColor,
+                              color: kTextColor,
                             ),
                           ),
                           items: items
@@ -187,7 +187,7 @@ List<String> items2 = [
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               fontSize: 15.5,
-                              color: ktextColor
+                              color: kTextColor
                             ),
                           ),
                           items: items1
@@ -223,7 +223,7 @@ List<String> items2 = [
                             
                             style: TextStyle(
                               fontSize: 15.5,
-                              color: ktextColor
+                              color: kTextColor
                             ),
                           ),
                           items: items2

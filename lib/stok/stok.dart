@@ -43,7 +43,7 @@ class _StokScreenState extends State<StokScreen> {
                 "Depo Durumu",
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  color: Colors.black,
+                  color: kTextColor2,
                   fontWeight: FontWeight.bold,
                   fontSize: size.height * 0.032,
                 ),
@@ -63,12 +63,12 @@ class _StokScreenState extends State<StokScreen> {
                             MaterialPageRoute(builder: (context) => const StokDurumu()));
                       },
                   child: const ListTile(
-                      leading: Icon(Icons.warehouse, color: Colors.black),
+                      leading: Icon(Icons.warehouse, color: kIconColor2),
                       
                       title: Text(
                         "Ana Depo Durumu",
                       ),
-                      trailing:Icon(Icons.navigate_next, color: Colors.black, size: 30.0)
+                      trailing:Icon(Icons.navigate_next, color: kIconColor2, size: 30.0)
                   ))
                    ],
                  ),

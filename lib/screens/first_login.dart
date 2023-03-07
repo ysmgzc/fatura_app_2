@@ -1,3 +1,4 @@
+import 'package:fatura_app_2/constants.dart';
 import 'package:fatura_app_2/screens/home_page_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -29,7 +30,7 @@ class _FirstLoginScreenState extends State<FirstLoginScreen> {
                 Text(
                   'e-fatura',
                   style: TextStyle(
-                      color: Colors.white,
+                      color: kTextColor,
                       fontSize: MediaQuery.of(context).size.width*0.1,
                       fontWeight: FontWeight.bold,
                       shadows:const [BoxShadow(color: Colors.black, offset: Offset(1,2),blurRadius: 3 ),],
@@ -49,22 +50,22 @@ class _FirstLoginScreenState extends State<FirstLoginScreen> {
                          padding: EdgeInsets.only(top: 17),
                          child: Icon(
                               Icons.business_center,
-                              color: Colors.white,
+                              color: kIconColor,
                                   ),
                        ),
                   enabledBorder: UnderlineInputBorder(      
-                      borderSide: BorderSide(color: Colors.white),   
+                      borderSide: BorderSide(color: kBorderColor),   
                       ),  
                    focusedBorder: UnderlineInputBorder(
                     
-                      borderSide: BorderSide(color: Colors.white) 
+                      borderSide: BorderSide(color: kBorderColor) 
                       ),
                     label: Center(
                     child: Text("Şirket Adı"),
                   ), 
                   labelStyle: TextStyle(
                    
-                    color: Colors.white,
+                    color: kTextColor,
                   ),
                   
                     ),
@@ -85,22 +86,22 @@ class _FirstLoginScreenState extends State<FirstLoginScreen> {
                          padding:  EdgeInsets.only(top: 17),
                          child: Icon(
                               Icons.phone,
-                              color: Colors.white,
+                              color: kIconColor,
                                   ),
                        ),
                   enabledBorder: UnderlineInputBorder(      
-                      borderSide: BorderSide(color: Colors.white),   
+                      borderSide: BorderSide(color: kBorderColor),   
                       ),  
                    focusedBorder: UnderlineInputBorder(
                     
-                      borderSide: BorderSide(color: Colors.white) 
+                      borderSide: BorderSide(color: kBorderColor) 
                       ),
                     label: Center(
                     child: Text("Telefon"),
                   ), 
                   labelStyle: TextStyle(
                    
-                    color: Colors.white,
+                    color: kTextColor,
                   ),
                   
                     ),
@@ -114,7 +115,7 @@ class _FirstLoginScreenState extends State<FirstLoginScreen> {
            Checkbox(      
             checkColor: Colors.white,
            side: MaterialStateBorderSide.resolveWith(
-             (states) => const BorderSide(width: 1.0, color: Colors.white),
+             (states) => const BorderSide(width: 1.0, color: kBorderColor),
               ),
             value: this.value,
             onChanged: (bool? value) {
@@ -139,7 +140,7 @@ class _FirstLoginScreenState extends State<FirstLoginScreen> {
                     },
                 child:const Text(
                   "Üyelik Sözleşmesini Kabul Ediyorum",
-                  style: TextStyle(color: Colors.white,decoration: TextDecoration.underline),
+                  style: TextStyle(color: kTextColor,decoration: TextDecoration.underline),
                 ),
               )
                   ],
@@ -163,7 +164,7 @@ class _FirstLoginScreenState extends State<FirstLoginScreen> {
                     width: MediaQuery.of(context).size.width*0.4,
                     padding: EdgeInsets.all(MediaQuery.of(context).size.width*0.02,),
                     decoration:const BoxDecoration(
-                      color: Color(0xff74A2C3),
+                      color: kButtonColor,
                       borderRadius: BorderRadius.all(Radius.circular(20)),
                       boxShadow: [BoxShadow(color: Colors.black26,
                       offset: Offset(3, 3),
@@ -172,7 +173,7 @@ class _FirstLoginScreenState extends State<FirstLoginScreen> {
                     ),
                     child: Center(
                       child: Text('Kayıt Ol',
-                      style: TextStyle(color: Colors.white,
+                      style: TextStyle(color: kTextColor,
                       fontSize: MediaQuery.of(context).size.width*0.04),),),
                   ),
                 ),

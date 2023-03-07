@@ -1,3 +1,4 @@
+import 'package:fatura_app_2/constants.dart';
 import 'package:fatura_app_2/screens/first_login.dart';
 import 'package:flutter/material.dart';
 
@@ -41,13 +42,13 @@ class SignUp extends StatelessWidget {
                         padding:  EdgeInsets.only(top: 17),
                         child: Icon(
                           Icons.person,
-                          color: Colors.white,
+                          color: kIconColor,
                         ),
                       ),
                       enabledBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Colors.white),
+                        borderSide: BorderSide(color: kBorderColor),
                       ),
-                      focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),
+                      focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: kBorderColor)),
                       label:  Center(
                         child: Text("Kullanıcı Adı"),
                       ),
@@ -71,18 +72,18 @@ class SignUp extends StatelessWidget {
                         padding: EdgeInsets.only(top: 17),
                         child: Icon(
                           Icons.lock_outline,
-                          color: Colors.white,
+                          color: kIconColor,
                         ),
                       ),
                       enabledBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Colors.white),
+                        borderSide: BorderSide(color: kBorderColor),
                       ),
-                      focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),
+                      focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: kBorderColor)),
                       label: Center(
                         child: Text("Parola"),
                       ),
                       labelStyle: TextStyle(
-                        color: Colors.white,
+                        color: kTextColor,
                       ),
                     ),
                   ),
@@ -100,18 +101,18 @@ class SignUp extends StatelessWidget {
                         padding:  EdgeInsets.only(top: 17),
                         child: Icon(
                           Icons.mail,
-                          color: Colors.white,
+                          color: kIconColor,
                         ),
                       ),
                       enabledBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Colors.white),
+                        borderSide: BorderSide(color: kBorderColor),
                       ),
-                      focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),
+                      focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: kBorderColor)),
                       label:  Center(
                         child: Text("E-mail"),
                       ),
                       labelStyle: TextStyle(
-                        color: Colors.white,
+                        color: kTextColor,
                       ),
                     ),
                   ),
@@ -135,7 +136,7 @@ class SignUp extends StatelessWidget {
                       MediaQuery.of(context).size.width * 0.02,
                     ),
                     decoration:
-                       const BoxDecoration(color: Color(0xff74A2C3), 
+                       const BoxDecoration(color: kButtonColor, 
                         borderRadius: BorderRadius.all(Radius.circular(20)), 
                         boxShadow: [
                       BoxShadow(
@@ -147,7 +148,7 @@ class SignUp extends StatelessWidget {
                     child: Center(
                       child: Text(
                         'Kaydol',
-                        style: TextStyle(color: Colors.white, fontSize: MediaQuery.of(context).size.width * 0.04),
+                        style: TextStyle(color: kTextColor, fontSize: MediaQuery.of(context).size.width * 0.04),
                       ),
                     ),
                   ),

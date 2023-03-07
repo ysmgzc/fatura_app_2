@@ -1,3 +1,4 @@
+import 'package:fatura_app_2/constants.dart';
 import "package:flutter/material.dart";
 import 'package:intl/intl.dart';
 
@@ -39,7 +40,7 @@ class _PerakendeState extends State<Perakende> {
               Text(
                 'Perakende Satış',
                 style: TextStyle(
-                  color: Colors.white,
+                  color: kTextColor,
                   fontSize: MediaQuery.of(context).size.width * 0.07,
                   fontWeight: FontWeight.bold,
                   shadows: const [
@@ -62,12 +63,12 @@ class _PerakendeState extends State<Perakende> {
                         padding: EdgeInsets.only(top: 12),
                         child: Text(
                           "Belge No: ",
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(color: kTextColor),
                         )),
                     enabledBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.white),
+                      borderSide: BorderSide(color: kBorderColor),
                     ),
-                    focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),
+                    focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: kBorderColor)),
                   ),
                 ),
               ),
@@ -101,17 +102,17 @@ class _PerakendeState extends State<Perakende> {
                   ),
                   decoration: const InputDecoration(
                     contentPadding: EdgeInsets.only(left: 10, top: 10, bottom: 15),
-                    suffixIcon: Icon(Icons.date_range,color: Colors.white,),
+                    suffixIcon: Icon(Icons.date_range,color: kIconColor,),
                     prefixIcon: Padding(
                         padding: EdgeInsets.only(top: 12),
                         child: Text(
                           "İşlem Tarihi: ",
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(color: kTextColor),
                         )),
                     enabledBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.white),
+                      borderSide: BorderSide(color: kBorderColor),
                     ),
-                    focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),
+                    focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: kBorderColor)),
                   ),
                 ),
               ),
@@ -128,12 +129,12 @@ class _PerakendeState extends State<Perakende> {
                         padding: EdgeInsets.only(top: 12),
                         child: Text(
                           "Açıklama: ",
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(color: kTextColor),
                         )),
                     enabledBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.white),
+                      borderSide: BorderSide(color: kBorderColor),
                     ),
-                    focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),
+                    focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: kBorderColor)),
                   ),
                 ),
               ),
@@ -160,7 +161,7 @@ class _PerakendeState extends State<Perakende> {
                     MediaQuery.of(context).size.width * 0.02,
                   ),
                   decoration: const BoxDecoration(
-                      color: Color(0xff74A2C3),
+                      color: kButtonColor,
                       borderRadius: BorderRadius.all(Radius.circular(20)),
                       boxShadow: [
                         BoxShadow(
@@ -172,7 +173,7 @@ class _PerakendeState extends State<Perakende> {
                   child: Center(
                     child: Text(
                       '+ Ürün Ekle',
-                      style: TextStyle(color: Colors.white, fontSize: MediaQuery.of(context).size.width * 0.04),
+                      style: TextStyle(color: kTextColor, fontSize: MediaQuery.of(context).size.width * 0.04),
                     ),
                   ),
                 ),
@@ -185,7 +186,7 @@ class _PerakendeState extends State<Perakende> {
                         MediaQuery.of(context).size.width * 0.02,
                       ),
                       decoration: const BoxDecoration(
-                          color: Color(0xff74A2C3),
+                          color: kButtonColor,
                           borderRadius: BorderRadius.all(Radius.circular(20)),
                           boxShadow: [
                             BoxShadow(
@@ -197,7 +198,7 @@ class _PerakendeState extends State<Perakende> {
                       child: Center(
                         child: Text(
                           'Kaydet',
-                          style: TextStyle(color: Colors.white, fontSize: MediaQuery.of(context).size.width * 0.04),
+                          style: TextStyle(color: kTextColor, fontSize: MediaQuery.of(context).size.width * 0.04),
                         ),
                       ),
                     ),

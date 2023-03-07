@@ -43,7 +43,7 @@ class _HesaplarScreenState extends State<HesaplarScreen> {
                 "Kasa Hesapları",
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  color: Colors.black,
+                  color: kTextColor2,
                   fontWeight: FontWeight.bold,
                   fontSize: size.height * 0.032,
                 ),
@@ -57,11 +57,11 @@ class _HesaplarScreenState extends State<HesaplarScreen> {
                       GestureDetector(
                       onTap: (){},
                   child: const ListTile(
-                      leading: Icon(Icons.warehouse, color: Colors.black),
+                      leading: Icon(Icons.warehouse, color:kIconColor2),
                       title: Text(
                         "TL Kasa",
                       ),
-                      trailing:Icon(Icons.navigate_next, color: Colors.black, size: 30.0)
+                      trailing:Icon(Icons.navigate_next, color: kIconColor2, size: 30.0)
                   ))
                    ],
                  ),
@@ -75,7 +75,7 @@ class _HesaplarScreenState extends State<HesaplarScreen> {
                 "Banka Hesapları",
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  color: Colors.black,
+                  color: kTextColor2,
                   fontWeight: FontWeight.bold,
                   fontSize: size.height * 0.032,
                 ),
@@ -89,32 +89,32 @@ class _HesaplarScreenState extends State<HesaplarScreen> {
                       GestureDetector(
                       onTap: (){},
                   child: const ListTile(
-                      leading: Icon(Icons.currency_lira, color: Colors.black),
+                      leading: Icon(Icons.currency_lira, color: kIconColor2),
                       
                       title: Text(
                         "Banka TL Hesabı",
                       ),
-                      trailing:Icon(Icons.navigate_next, color: Colors.black, size: 30.0)
+                      trailing:Icon(Icons.navigate_next, color: kIconColor2, size: 30.0)
                   )),
                   GestureDetector(
                       onTap: (){},
                   child: const ListTile(
-                      leading: Icon(Icons.attach_money, color: Colors.black),
+                      leading: Icon(Icons.attach_money, color: kIconColor2),
                       
                       title: Text(
                         "Banka USD Hesabı",
                       ),
-                      trailing:Icon(Icons.navigate_next, color: Colors.black, size: 30.0)
+                      trailing:Icon(Icons.navigate_next, color: kIconColor2, size: 30.0)
                   )),
                   GestureDetector(
                       onTap: (){},
                   child:const ListTile(
-                      leading:Icon(Icons.euro, color: Colors.black),
+                      leading:Icon(Icons.euro, color: kIconColor2),
                       
                       title: Text(
                         "Banka EUR Hesabı",
                       ),
-                      trailing:Icon(Icons.navigate_next, color: Colors.black, size: 30.0)
+                      trailing:Icon(Icons.navigate_next, color: kIconColor2, size: 30.0)
                   )),
                    ],
                  ),
@@ -128,7 +128,7 @@ class _HesaplarScreenState extends State<HesaplarScreen> {
                 "POS Hesapları",
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  color: Colors.black,
+                  color: kTextColor2,
                   fontWeight: FontWeight.bold,
                   fontSize: size.height * 0.032,
                 ),
@@ -142,12 +142,12 @@ class _HesaplarScreenState extends State<HesaplarScreen> {
                       GestureDetector(
                       onTap: (){},
                   child: const ListTile(
-                      leading: Icon(Icons.point_of_sale, color: Colors.black),
+                      leading: Icon(Icons.point_of_sale, color: kIconColor2),
                       
                       title: Text(
                         "POS Hesabı",
                       ),
-                      trailing:Icon(Icons.navigate_next, color: Colors.black, size: 30.0)
+                      trailing:Icon(Icons.navigate_next, color: kIconColor2, size: 30.0)
                   ))
                    ],
                  ),
@@ -161,7 +161,7 @@ class _HesaplarScreenState extends State<HesaplarScreen> {
                 "Kredi Kartları",
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  color: Colors.black,
+                  color: kTextColor2,
                   fontWeight: FontWeight.bold,
                   fontSize: size.height * 0.032,
                 ),
@@ -175,12 +175,12 @@ class _HesaplarScreenState extends State<HesaplarScreen> {
                       GestureDetector(
                       onTap: (){},
                   child: const ListTile(
-                      leading: Icon(Icons.credit_card, color: Colors.black),
+                      leading: Icon(Icons.credit_card, color: kIconColor2),
                       
                       title: Text(
                         "Kredi Kartım",
                       ),
-                      trailing:Icon(Icons.navigate_next, color: Colors.black, size: 30.0)
+                      trailing:Icon(Icons.navigate_next, color: kIconColor2, size: 30.0)
                   ))
                    ],
                  ),
@@ -191,7 +191,7 @@ class _HesaplarScreenState extends State<HesaplarScreen> {
       ),
     ),
     floatingActionButton: FloatingActionButton(
-          backgroundColor: kbuttonColor,
+          backgroundColor: kButtonColor,
           child: const Icon(Icons.add),
           onPressed: () {
             Navigator.push(

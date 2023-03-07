@@ -59,7 +59,7 @@ class _ManuelMasrafState extends State<ManuelMasraf> {
               Text(
                 'Manuel Masraf Girişi',
                 style: TextStyle(
-                  color: Colors.white,
+                  color: kTextColor,
                   fontSize: MediaQuery.of(context).size.width * 0.07,
                   fontWeight: FontWeight.bold,
                   shadows: const [
@@ -99,17 +99,17 @@ class _ManuelMasrafState extends State<ManuelMasraf> {
                   ),
                   decoration: const InputDecoration(
                     contentPadding: EdgeInsets.only(left: 10, top: 10, bottom: 15),
-                    suffixIcon: Icon(Icons.date_range,color: Colors.white,),
+                    suffixIcon: Icon(Icons.date_range,color: kIconColor,),
                     prefixIcon: Padding(
                         padding: EdgeInsets.only(top: 12),
                         child: Text(
                           "Ödeme Tarihi: ",
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(color: kTextColor),
                         )),
                     enabledBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.white),
+                      borderSide: BorderSide(color: kBorderColor),
                     ),
-                    focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),
+                    focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: kBorderColor)),
                   ),
                 ),
               ),
@@ -119,7 +119,7 @@ class _ManuelMasrafState extends State<ManuelMasraf> {
                   child: Padding(
                     padding:const EdgeInsets.only( top: 15),
                     child: DropdownButton2(
-                      icon:const Icon(Icons.expand_more, color: Colors.white,),
+                      icon:const Icon(Icons.expand_more, color: kIconColor,),
                       underline: Container( 
                        height: 2, color: Colors.white60 ),
                       hint:const Text(
@@ -127,7 +127,7 @@ class _ManuelMasrafState extends State<ManuelMasraf> {
                         'Durumu',
                         style: TextStyle(
                           fontSize: 15.5,
-                          color: ktextColor,
+                          color: kTextColor,
                         ),
                       ),
                       items: items0
@@ -160,7 +160,7 @@ class _ManuelMasrafState extends State<ManuelMasraf> {
                   child: Padding(
                     padding:const EdgeInsets.only( top: 15),
                     child: DropdownButton2(
-                      icon:const Icon(Icons.expand_more, color: Colors.white,),
+                      icon:const Icon(Icons.expand_more, color: kIconColor,),
                       underline: Container( 
                        height: 2, color: Colors.white60 ),
                       hint:const Text(
@@ -168,7 +168,7 @@ class _ManuelMasrafState extends State<ManuelMasraf> {
                         'Ödenen Hesap',
                         style: TextStyle(
                           fontSize: 15.5,
-                          color: ktextColor,
+                          color: kTextColor,
                         ),
                       ),
                       items: items0
@@ -208,12 +208,12 @@ class _ManuelMasrafState extends State<ManuelMasraf> {
                         padding: EdgeInsets.only(top: 12),
                         child: Text(
                           "Tutar: ",
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(color: kTextColor),
                         )),
                     enabledBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.white),
+                      borderSide: BorderSide(color: kBorderColor),
                     ),
-                    focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),
+                    focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: kBorderColor)),
                   ),
                 ),
               ),
@@ -222,7 +222,7 @@ class _ManuelMasrafState extends State<ManuelMasraf> {
                   child: Padding(
                     padding:const EdgeInsets.only( top: 15),
                     child: DropdownButton2(
-                      icon:const Icon(Icons.expand_more, color: Colors.white,),
+                      icon:const Icon(Icons.expand_more, color: kIconColor,),
                       underline: Container( 
                        height: 2, color: Colors.white60 ),
                       hint:const Text(
@@ -230,7 +230,7 @@ class _ManuelMasrafState extends State<ManuelMasraf> {
                         'KDV Oranı(%)',
                         style: TextStyle(
                           fontSize: 15.5,
-                          color: ktextColor,
+                          color: kTextColor,
                         ),
                       ),
                       items: items2
@@ -270,12 +270,12 @@ class _ManuelMasrafState extends State<ManuelMasraf> {
                         padding: EdgeInsets.only(top: 12),
                         child: Text(
                           "Açıklama: ",
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(color: kTextColor),
                         )),
                     enabledBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.white),
+                      borderSide: BorderSide(color: kBorderColor),
                     ),
-                    focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),
+                    focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: kBorderColor)),
                   ),
                 ),
               ),
@@ -291,7 +291,7 @@ class _ManuelMasrafState extends State<ManuelMasraf> {
                     MediaQuery.of(context).size.width * 0.02,
                   ),
                   decoration: const BoxDecoration(
-                      color: Color(0xff74A2C3),
+                      color: kButtonColor,
                       borderRadius: BorderRadius.all(Radius.circular(20)),
                       boxShadow: [
                         BoxShadow(
@@ -303,7 +303,7 @@ class _ManuelMasrafState extends State<ManuelMasraf> {
                   child: Center(
                     child: Text(
                       'Kaydet',
-                      style: TextStyle(color: Colors.white, fontSize: MediaQuery.of(context).size.width * 0.04),
+                      style: TextStyle(color: kTextColor, fontSize: MediaQuery.of(context).size.width * 0.04),
                     ),
                   ),
                 ),

@@ -51,7 +51,7 @@ class _AlisRaporuState extends State<AlisRaporu> {
               Text(
                 'Alış Raporu',
                 style: TextStyle(
-                  color: Colors.white,
+                  color: kTextColor,
                   fontSize: MediaQuery.of(context).size.width * 0.07,
                   fontWeight: FontWeight.bold,
                   shadows: const [
@@ -91,17 +91,17 @@ class _AlisRaporuState extends State<AlisRaporu> {
                   ),
                   decoration: const InputDecoration(
                     contentPadding: EdgeInsets.only(left: 10, top: 10, bottom: 15),
-                    suffixIcon: Icon(Icons.date_range,color: Colors.white,),
+                    suffixIcon: Icon(Icons.date_range,color: kIconColor,),
                     prefixIcon: Padding(
                         padding: EdgeInsets.only(top: 12),
                         child: Text(
                           "Başlangıç Tarihi: ",
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(color: kTextColor),
                         )),
                     enabledBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.white),
+                      borderSide: BorderSide(color: kBorderColor),
                     ),
-                    focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),
+                    focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: kBorderColor)),
                   ),
                 ),
               ),
@@ -134,17 +134,17 @@ class _AlisRaporuState extends State<AlisRaporu> {
                   ),
                   decoration: const InputDecoration(
                     contentPadding: EdgeInsets.only(left: 10, top: 10, bottom: 15),
-                    suffixIcon: Icon(Icons.date_range,color: Colors.white,),
+                    suffixIcon: Icon(Icons.date_range,color: kIconColor,),
                     prefixIcon: Padding(
                         padding: EdgeInsets.only(top: 12),
                         child: Text(
                           "Bitiş Tarihi: ",
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(color: kTextColor),
                         )),
                     enabledBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.white),
+                      borderSide: BorderSide(color: kBorderColor),
                     ),
-                    focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),
+                    focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: kBorderColor)),
                   ),
                 ),
               ),
@@ -153,7 +153,7 @@ class _AlisRaporuState extends State<AlisRaporu> {
                   child: Padding(
                     padding:const EdgeInsets.only( top: 15),
                     child: DropdownButton2(
-                      icon:const Icon(Icons.expand_more, color: Colors.white,),
+                      icon:const Icon(Icons.expand_more, color: kIconColor,),
                       underline: Container( 
                        height: 2, color: Colors.white60 ),
                       hint:const Text(
@@ -161,7 +161,7 @@ class _AlisRaporuState extends State<AlisRaporu> {
                         'Kategori',
                         style: TextStyle(
                           fontSize: 15.5,
-                          color: ktextColor,
+                          color: kTextColor,
                         ),
                       ),
                       items: items0
@@ -194,7 +194,7 @@ class _AlisRaporuState extends State<AlisRaporu> {
                   child: Padding(
                     padding:const EdgeInsets.only( top: 15),
                     child: DropdownButton2(
-                      icon:const Icon(Icons.expand_more, color: Colors.white,),
+                      icon:const Icon(Icons.expand_more, color: kIconColor,),
                       underline: Container( 
                        height: 2, color: Colors.white60 ),
                       hint:const Text(
@@ -202,7 +202,7 @@ class _AlisRaporuState extends State<AlisRaporu> {
                         'Marka',
                         style: TextStyle(
                           fontSize: 15.5,
-                          color: ktextColor,
+                          color: kTextColor,
                         ),
                       ),
                       items: items1
@@ -235,7 +235,7 @@ class _AlisRaporuState extends State<AlisRaporu> {
                   child: Padding(
                     padding:const EdgeInsets.only( top: 15),
                     child: DropdownButton2(
-                      icon:const Icon(Icons.expand_more, color: Colors.white,),
+                      icon:const Icon(Icons.expand_more, color: kIconColor,),
                       underline: Container( 
                        height: 2, color: Colors.white60 ),
                       hint:const Text(
@@ -243,7 +243,7 @@ class _AlisRaporuState extends State<AlisRaporu> {
                         'Rapor Tipi',
                         style: TextStyle(
                           fontSize: 15.5,
-                          color: ktextColor,
+                          color: kTextColor,
                         ),
                       ),
                       items: items2
@@ -284,7 +284,7 @@ class _AlisRaporuState extends State<AlisRaporu> {
                     MediaQuery.of(context).size.width * 0.02,
                   ),
                   decoration: const BoxDecoration(
-                      color: Color(0xff74A2C3),
+                      color: kButtonColor,
                       borderRadius: BorderRadius.all(Radius.circular(20)),
                       boxShadow: [
                         BoxShadow(
@@ -296,7 +296,7 @@ class _AlisRaporuState extends State<AlisRaporu> {
                   child: Center(
                     child: Text(
                       'Rapor Oluştur',
-                      style: TextStyle(color: Colors.white, fontSize: MediaQuery.of(context).size.width * 0.04),
+                      style: TextStyle(color: kTextColor, fontSize: MediaQuery.of(context).size.width * 0.04),
                     ),
                   ),
                 ),

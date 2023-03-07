@@ -63,8 +63,8 @@ class _SatislarScreenState extends State<SatislarScreen> {
         ),
         floatingActionButton: SpeedDial(
           animatedIcon: AnimatedIcons.add_event,
-          backgroundColor: kbuttonColor,
-          overlayColor: kbuttonColor,
+          backgroundColor: kButtonColor,
+          overlayColor: kButtonColor,
           overlayOpacity: 0.4,
           spaceBetweenChildren: 12, //speedler arasındaki bosluk
           spacing: 12, //speedbar ile floatactionbuton arasındaki bosluk

@@ -52,7 +52,7 @@ class _HesapBilgileriState extends State<HesapBilgileri> {
               Text(
                 'Hesap Bilgileri',
                 style: TextStyle(
-                  color: Colors.white,
+                  color: kTextColor,
                   fontSize: MediaQuery.of(context).size.width * 0.07,
                   fontWeight: FontWeight.bold,
                   shadows: const [
@@ -75,12 +75,12 @@ class _HesapBilgileriState extends State<HesapBilgileri> {
                         padding: EdgeInsets.only(top: 12),
                         child: Text(
                           "Hesap Adı: ",
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(color: kTextColor),
                         )),
                     enabledBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.white),
+                      borderSide: BorderSide(color: kBorderColor),
                     ),
-                    focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),
+                    focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: kBorderColor)),
                   ),
                 ),
               ),
@@ -89,7 +89,7 @@ class _HesapBilgileriState extends State<HesapBilgileri> {
                   child: Padding(
                     padding:const EdgeInsets.only( top: 15),
                     child: DropdownButton2(
-                      icon:const Icon(Icons.expand_more, color: Colors.white,),
+                      icon:const Icon(Icons.expand_more, color: kIconColor,),
                       underline: Container( 
                        height: 2, color: Colors.white60 ),
                       hint:const Text(
@@ -97,7 +97,7 @@ class _HesapBilgileriState extends State<HesapBilgileri> {
                         'Hesap Tipi',
                         style: TextStyle(
                           fontSize: 15.5,
-                          color: ktextColor,
+                          color: kTextColor,
                         ),
                       ),
                       items: items0
@@ -130,7 +130,7 @@ class _HesapBilgileriState extends State<HesapBilgileri> {
                   child: Padding(
                     padding:const EdgeInsets.only( top: 15),
                     child: DropdownButton2(
-                      icon:const Icon(Icons.expand_more, color: Colors.white,),
+                      icon:const Icon(Icons.expand_more, color: kIconColor,),
                       underline: Container( 
                        height: 2, color: Colors.white60 ),
                       hint:const Text(
@@ -138,7 +138,7 @@ class _HesapBilgileriState extends State<HesapBilgileri> {
                         'Para Birimi',
                         style: TextStyle(
                           fontSize: 15.5,
-                          color: ktextColor,
+                          color: kTextColor,
                         ),
                       ),
                       items: items1
@@ -178,12 +178,12 @@ class _HesapBilgileriState extends State<HesapBilgileri> {
                         padding: EdgeInsets.only(top: 12),
                         child: Text(
                           "Bakiyesi: ",
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(color: kTextColor),
                         )),
                     enabledBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.white),
+                      borderSide: BorderSide(color: kBorderColor),
                     ),
-                    focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),
+                    focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: kBorderColor)),
                   ),
                 ),
               ),
@@ -200,7 +200,7 @@ class _HesapBilgileriState extends State<HesapBilgileri> {
                     MediaQuery.of(context).size.width * 0.02,
                   ),
                   decoration: const BoxDecoration(
-                      color: Color(0xff74A2C3),
+                      color: kButtonColor,
                       borderRadius: BorderRadius.all(Radius.circular(20)),
                       boxShadow: [
                         BoxShadow(
@@ -212,7 +212,7 @@ class _HesapBilgileriState extends State<HesapBilgileri> {
                   child: Center(
                     child: Text(
                       'Kaydet',
-                      style: TextStyle(color: Colors.white, fontSize: MediaQuery.of(context).size.width * 0.04),
+                      style: TextStyle(color: kTextColor, fontSize: MediaQuery.of(context).size.width * 0.04),
                     ),
                   ),
                 ),

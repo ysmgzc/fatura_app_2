@@ -31,7 +31,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 Text(
                   'e-fatura',
                   style: TextStyle(
-                      color: Colors.white,
+                      color: kTextColor,
                       fontSize: MediaQuery.of(context).size.width*0.1,
                       fontWeight: FontWeight.bold,
                       shadows:const [BoxShadow(color: Colors.black, offset: Offset(1,2),blurRadius: 3 ),],
@@ -51,22 +51,22 @@ class _LoginScreenState extends State<LoginScreen> {
                          padding:  EdgeInsets.only(top: 17),
                          child: Icon(
                               Icons.person,
-                              color: Colors.white,
+                              color: kIconColor,
                                   ),
                        ),
                   enabledBorder: UnderlineInputBorder(      
-                      borderSide: BorderSide(color: Colors.white),   
+                      borderSide: BorderSide(color: kBorderColor),   
                       ),  
                    focusedBorder: UnderlineInputBorder(
                     
-                      borderSide: BorderSide(color: Colors.white) 
+                      borderSide: BorderSide(color: kBorderColor) 
                       ),
                     label: Center(
                     child: Text("Kullanıcı Adı"),
                   ), 
                   labelStyle: TextStyle(
                    
-                    color: Colors.white,
+                    color: kTextColor,
                   ),
                   
                     ),
@@ -88,22 +88,22 @@ class _LoginScreenState extends State<LoginScreen> {
                          padding: EdgeInsets.only(top: 17),
                          child: Icon(
                               Icons.lock_outline,
-                              color: Colors.white,
+                              color: kIconColor,
                                   ),
                        ),
                   enabledBorder: UnderlineInputBorder(      
-                      borderSide: BorderSide(color: Colors.white),   
+                      borderSide: BorderSide(color: kBorderColor),   
                       ),  
                    focusedBorder: UnderlineInputBorder(
                     
-                      borderSide: BorderSide(color: Colors.white) 
+                      borderSide: BorderSide(color: kBorderColor) 
                       ),
                     label: Center(
                     child: Text("Parola"),
                   ), 
                   labelStyle: TextStyle(
                    
-                    color: Colors.white,
+                    color: kTextColor,
                   ),
                   
                     ),
@@ -128,7 +128,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     },
                 child:const Text(
                   "Şifremi Unuttum",
-                  style: TextStyle(color: Colors.white,decoration: TextDecoration.underline),
+                  style: TextStyle(color: kTextColor,decoration: TextDecoration.underline),
                 ),
               )
                    /* MaterialButton(
@@ -156,7 +156,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     width: MediaQuery.of(context).size.width*0.4,
                     padding: EdgeInsets.all(MediaQuery.of(context).size.width*0.02,),
                     decoration:const BoxDecoration(
-                      color: kbuttonColor,
+                      color: kButtonColor,
                       borderRadius: BorderRadius.all(Radius.circular(20)),
                       boxShadow: [BoxShadow(color: Colors.black26,
                       offset: Offset(3, 3),
@@ -165,7 +165,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     child: Center(
                       child: Text('Giriş Yap',
-                      style: TextStyle(color: Colors.white,
+                      style: TextStyle(color: kTextColor,
                       fontSize: MediaQuery.of(context).size.width*0.04),),),
                   ),
                 ),
@@ -196,7 +196,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         
                         text: 'Kaydol',
                         style: TextStyle(
-                          color: Colors.white,
+                          color: kTextColor,
                         //  fontSize: 18,
                           fontWeight: FontWeight.bold,
                         )

@@ -1,5 +1,5 @@
 import 'package:fatura_app_2/constants.dart';
-import 'package:fatura_app_2/masraflar/manuel_masraf_giri%C5%9Fi.dart';
+import 'package:fatura_app_2/masraflar/manuel_masraf_girisi.dart';
 import 'package:fatura_app_2/navigation_bar.dart';
 import 'package:fatura_app_2/search_field.dart';
 import 'package:flutter/material.dart';
@@ -62,8 +62,8 @@ class _MasraflarScreenState extends State<MasraflarScreen> {
         ),
         floatingActionButton: SpeedDial(
           animatedIcon: AnimatedIcons.add_event,
-          backgroundColor: kbuttonColor,
-          overlayColor: kbuttonColor,
+          backgroundColor: kButtonColor,
+          overlayColor: kButtonColor,
           overlayOpacity: 0.4,
           spaceBetweenChildren: 12, //speedler arasındaki bosluk
           spacing: 12, //speedbar ile floatactionbuton arasındaki bosluk
