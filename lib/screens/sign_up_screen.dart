@@ -30,93 +30,9 @@ class SignUp extends StatelessWidget {
                 SizedBox(
                   height: MediaQuery.of(context).size.height * 0.1,
                 ),
-                Container(
-                  width: MediaQuery.of(context).size.width * 0.76,
-                  child: TextFormField(
-                    style: const TextStyle(
-                      height: 1.5,
-                    ),
-                    decoration:const InputDecoration(
-                      contentPadding: EdgeInsets.only(left: 10, top: 10, bottom: 15),
-                      prefixIcon: Padding(
-                        padding:  EdgeInsets.only(top: 17),
-                        child: Icon(
-                          Icons.person,
-                          color: kIconColor,
-                        ),
-                      ),
-                      enabledBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: kBorderColor),
-                      ),
-                      focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: kBorderColor)),
-                      label:  Center(
-                        child: Text("Kullanıcı Adı"),
-                      ),
-                      labelStyle: TextStyle(
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
-                ),
-                //SizedBox(height: MediaQuery.of(context).size.height*0.01,),
-                Container(
-                  width: MediaQuery.of(context).size.width * 0.76,
-                  child: TextFormField(
-                    obscureText: true,
-                    style:const TextStyle(
-                      height: 1.5,
-                    ),
-                    decoration:const InputDecoration(
-                      contentPadding: EdgeInsets.only(left: 10, top: 10, bottom: 15),
-                      prefixIcon: Padding(
-                        padding: EdgeInsets.only(top: 17),
-                        child: Icon(
-                          Icons.lock_outline,
-                          color: kIconColor,
-                        ),
-                      ),
-                      enabledBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: kBorderColor),
-                      ),
-                      focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: kBorderColor)),
-                      label: Center(
-                        child: Text("Parola"),
-                      ),
-                      labelStyle: TextStyle(
-                        color: kTextColor,
-                      ),
-                    ),
-                  ),
-                ),
-                //SizedBox(height: MediaQuery.of(context).size.height*0.02,),
-                Container(
-                  width: MediaQuery.of(context).size.width * 0.76,
-                  child: TextFormField(
-                    style:const TextStyle(
-                      height: 1.5,
-                    ),
-                    decoration:const InputDecoration(
-                      contentPadding: EdgeInsets.only(left: 10, top: 10, bottom: 15),
-                      prefixIcon: Padding(
-                        padding:  EdgeInsets.only(top: 17),
-                        child: Icon(
-                          Icons.mail,
-                          color: kIconColor,
-                        ),
-                      ),
-                      enabledBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: kBorderColor),
-                      ),
-                      focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: kBorderColor)),
-                      label:  Center(
-                        child: Text("E-mail"),
-                      ),
-                      labelStyle: TextStyle(
-                        color: kTextColor,
-                      ),
-                    ),
-                  ),
-                ),
+                signupcontainer(context,Icons.person,"Kullanıcı Adı"),
+                signupcontainer(context, Icons.lock_outline,"Parola"),
+                signupcontainer(context,Icons.mail,"E-mail"),
                 SizedBox(
                   height: MediaQuery.of(context).size.height * 0.055,
                 ),
@@ -255,5 +171,36 @@ class SignUp extends StatelessWidget {
           ),
         ),
     );
+  }
+
+  Container signupcontainer(BuildContext context, IconData icon, String text) {
+    return Container(
+                width: MediaQuery.of(context).size.width * 0.76,
+                child: TextFormField(
+                  style: const TextStyle(
+                    height: 1.5,
+                  ),
+                  decoration: InputDecoration(
+                    contentPadding: EdgeInsets.only(left: 10, top: 10, bottom: 15),
+                    prefixIcon: Padding(
+                      padding:  EdgeInsets.only(top: 17),
+                      child: Icon(
+                        icon,
+                        color: kIconColor,
+                      ),
+                    ),
+                    enabledBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(color: kBorderColor),
+                    ),
+                    focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: kBorderColor)),
+                    label:  Center(
+                      child: Text(text),
+                    ),
+                    labelStyle: TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              );
   }
 }
