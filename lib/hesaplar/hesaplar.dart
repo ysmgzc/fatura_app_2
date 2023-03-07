@@ -35,52 +35,10 @@ class _HesaplarScreenState extends State<HesaplarScreen> {
               SizedBox(
                 height: size.height * 0.03,      
               ),
-              Container(
-                height: 35,
-                alignment: Alignment.center,
-                color: Colors.grey.shade200,
-                child: Text(
-                "Kasa Hesapları",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: kTextColor2,
-                  fontWeight: FontWeight.bold,
-                  fontSize: size.height * 0.032,
-                ),
-                          ),
-              ),
-               Container(
-                color: Colors.white,
-                 width:  MediaQuery.of(context).size.width*3,
-                 child: Column(
-                   children: [
-                      GestureDetector(
-                      onTap: (){},
-                  child: const ListTile(
-                      leading: Icon(Icons.warehouse, color:kIconColor2),
-                      title: Text(
-                        "TL Kasa",
-                      ),
-                      trailing:Icon(Icons.navigate_next, color: kIconColor2, size: 30.0)
-                  ))
-                   ],
-                 ),
-                           
-               ),
-                Container(
-                height: 35,
-                alignment: Alignment.center,
-                color: Colors.grey.shade200,
-                child: Text(
-                "Banka Hesapları",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: kTextColor2,
-                  fontWeight: FontWeight.bold,
-                  fontSize: size.height * 0.032,
-                ),
-                          ),
-              ),
+              hesaplarcontainer(size,"Kasa Hesapları"),
+               hesaplarcontainer1(Icons.warehouse, "TL Kasa",),
+               hesaplarcontainer(size,"Banka Hesapları"),
+               
                Container(
                 color: Colors.white,
                  width:  MediaQuery.of(context).size.width*3,
@@ -120,72 +78,12 @@ class _HesaplarScreenState extends State<HesaplarScreen> {
                  ),
                            
                ),
-                Container(
-                height: 35,
-                alignment: Alignment.center,
-                color: Colors.grey.shade200,
-                child: Text(
-                "POS Hesapları",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: kTextColor2,
-                  fontWeight: FontWeight.bold,
-                  fontSize: size.height * 0.032,
-                ),
-                          ),
-              ),
-               Container(
-                color: Colors.white,
-                 width:  MediaQuery.of(context).size.width*3,
-                 child: Column(
-                   children: [
-                      GestureDetector(
-                      onTap: (){},
-                  child: const ListTile(
-                      leading: Icon(Icons.point_of_sale, color: kIconColor2),
-                      
-                      title: Text(
-                        "POS Hesabı",
-                      ),
-                      trailing:Icon(Icons.navigate_next, color: kIconColor2, size: 30.0)
-                  ))
-                   ],
-                 ),
-                           
-               ),
-                Container(
-                height: 35,
-                alignment: Alignment.center,
-                color: Colors.grey.shade200,
-                child: Text(
-                "Kredi Kartları",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: kTextColor2,
-                  fontWeight: FontWeight.bold,
-                  fontSize: size.height * 0.032,
-                ),
-                          ),
-              ),
-               Container(
-                color: Colors.white,
-                 width:  MediaQuery.of(context).size.width*3,
-                 child: Column(
-                   children: [
-                      GestureDetector(
-                      onTap: (){},
-                  child: const ListTile(
-                      leading: Icon(Icons.credit_card, color: kIconColor2),
-                      
-                      title: Text(
-                        "Kredi Kartım",
-                      ),
-                      trailing:Icon(Icons.navigate_next, color: kIconColor2, size: 30.0)
-                  ))
-                   ],
-                 ),
-                           
-               ),
+               hesaplarcontainer(size,"POS Hesapları"),
+               hesaplarcontainer1(Icons.point_of_sale, "POS Hesabı"),
+              
+               hesaplarcontainer(size,"Kredi Kartları"),
+              hesaplarcontainer1(Icons.credit_card, "Kredi Kartım"),
+               
             ]
          ),
       ),
@@ -204,5 +102,43 @@ class _HesaplarScreenState extends State<HesaplarScreen> {
           //  label: Text('Ekle'),
         ),
     );
+  }
+
+  Container hesaplarcontainer1(IconData icon, String text) {
+    return Container(
+              color: Colors.white,
+               width:  MediaQuery.of(context).size.width*3,
+               child: Column(
+                 children: [
+                    GestureDetector(
+                    onTap: (){},
+                child: ListTile(
+                    leading: Icon(icon, color:kIconColor2),
+                    title: Text(
+                      text,
+                    ),
+                    trailing:Icon(Icons.navigate_next, color: kIconColor2, size: 30.0)
+                ))
+                 ],
+               ),
+                         
+             );
+  }
+
+  Container hesaplarcontainer(Size size,String text) {
+    return Container(
+              height: 35,
+              alignment: Alignment.center,
+              color: Colors.grey.shade200,
+              child: Text(
+              text,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: kTextColor2,
+                fontWeight: FontWeight.bold,
+                fontSize: size.height * 0.032,
+              ),
+                        ),
+            );
   }
 }

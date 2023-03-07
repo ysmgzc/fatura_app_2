@@ -63,130 +63,10 @@ class _HesapBilgileriState extends State<HesapBilgileri> {
              SizedBox(
                 height: MediaQuery.of(context).size.height * 0.05,
               ),
-               Container(
-                width: MediaQuery.of(context).size.width * 0.8,
-                child: TextFormField(
-                  style: const TextStyle(
-                    height: 1.5,
-                  ),
-                  decoration: const InputDecoration(
-                    contentPadding: EdgeInsets.only(left: 10, top: 10, bottom: 15),
-                    prefixIcon: Padding(
-                        padding: EdgeInsets.only(top: 12),
-                        child: Text(
-                          "Hesap Adı: ",
-                          style: TextStyle(color: kTextColor),
-                        )),
-                    enabledBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: kBorderColor),
-                    ),
-                    focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: kBorderColor)),
-                  ),
-                ),
-              ),
-              Container(
-                  width: MediaQuery.of(context).size.width*0.8,
-                  child: Padding(
-                    padding:const EdgeInsets.only( top: 15),
-                    child: DropdownButton2(
-                      icon:const Icon(Icons.expand_more, color: kIconColor,),
-                      underline: Container( 
-                       height: 2, color: Colors.white60 ),
-                      hint:const Text(
-                        textAlign: TextAlign.start,
-                        'Hesap Tipi',
-                        style: TextStyle(
-                          fontSize: 15.5,
-                          color: kTextColor,
-                        ),
-                      ),
-                      items: items0
-                          .map((item) =>
-                          DropdownMenuItem<String>(
-                            value: item,
-                            child: Text(
-                              item,
-                              style: const TextStyle(
-                                fontSize: 14,
-                              ),
-                            ),
-                          ))
-                          .toList(),
-                      value: selectedValue,
-                      onChanged: (value) {
-                        setState(() {
-                          selectedValue = value as String;
-                        });
-                      },
-                      buttonHeight: 40,
-                      buttonWidth: MediaQuery.of(context).size.width * 0.8,
-                      itemHeight: 40,
-                      //itemWidth: 140,
-                    ),
-                  ),
-                ),
-                 Container(
-                  width: MediaQuery.of(context).size.width*0.8,
-                  child: Padding(
-                    padding:const EdgeInsets.only( top: 15),
-                    child: DropdownButton2(
-                      icon:const Icon(Icons.expand_more, color: kIconColor,),
-                      underline: Container( 
-                       height: 2, color: Colors.white60 ),
-                      hint:const Text(
-                        textAlign: TextAlign.start,
-                        'Para Birimi',
-                        style: TextStyle(
-                          fontSize: 15.5,
-                          color: kTextColor,
-                        ),
-                      ),
-                      items: items1
-                          .map((item) =>
-                          DropdownMenuItem<String>(
-                            value: item,
-                            child: Text(
-                              item,
-                              style: const TextStyle(
-                                fontSize: 14,
-                              ),
-                            ),
-                          ))
-                          .toList(),
-                      value: selectedValue,
-                      onChanged: (value) {
-                        setState(() {
-                          selectedValue = value as String;
-                        });
-                      },
-                      buttonHeight: 40,
-                      buttonWidth: MediaQuery.of(context).size.width * 0.8,
-                      itemHeight: 40,
-                      //itemWidth: 140,
-                    ),
-                  ),
-                ),
-                 Container(
-                width: MediaQuery.of(context).size.width * 0.8,
-                child: TextFormField(
-                  style: const TextStyle(
-                    height: 1.5,
-                  ),
-                  decoration: const InputDecoration(
-                    contentPadding: EdgeInsets.only(left: 10, top: 10, bottom: 15),
-                    prefixIcon: Padding(
-                        padding: EdgeInsets.only(top: 12),
-                        child: Text(
-                          "Bakiyesi: ",
-                          style: TextStyle(color: kTextColor),
-                        )),
-                    enabledBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: kBorderColor),
-                    ),
-                    focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: kBorderColor)),
-                  ),
-                ),
-              ),
+              hesapbilgilericontainer1("Hesap Adı: "),
+              hesapbilgilericontainer('Hesap Tipi'),
+              hesapbilgilericontainer('Para Birimi'),  
+              hesapbilgilericontainer1("Bakiyesi: "),               
                
                SizedBox(
                 height: MediaQuery.of(context).size.height * 0.055,
@@ -222,5 +102,73 @@ class _HesapBilgileriState extends State<HesapBilgileri> {
         ),
       ),
     );
+  }
+
+  Container hesapbilgilericontainer1(String text) {
+    return Container(
+              width: MediaQuery.of(context).size.width * 0.8,
+              child: TextFormField(
+                style: const TextStyle(
+                  height: 1.5,
+                ),
+                decoration: InputDecoration(
+                  contentPadding: EdgeInsets.only(left: 10, top: 10, bottom: 15),
+                  prefixIcon: Padding(
+                      padding: EdgeInsets.only(top: 12),
+                      child: Text(
+                        text,
+                        style: TextStyle(color: kTextColor),
+                      )),
+                  enabledBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: kBorderColor),
+                  ),
+                  focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: kBorderColor)),
+                ),
+              ),
+            );
+  }
+
+  Container hesapbilgilericontainer(String text,) {
+    return Container(
+                width: MediaQuery.of(context).size.width*0.8,
+                child: Padding(
+                  padding:const EdgeInsets.only( top: 15),
+                  child: DropdownButton2(
+                    icon:const Icon(Icons.expand_more, color: kIconColor,),
+                    underline: Container( 
+                     height: 2, color: Colors.white60 ),
+                    hint: Text(
+                      textAlign: TextAlign.start,
+                      text,
+                      style: TextStyle(
+                        fontSize: 15.5,
+                        color: kTextColor,
+                      ),
+                    ),
+                    items: items0
+                        .map((item) =>
+                        DropdownMenuItem<String>(
+                          value: item,
+                          child: Text(
+                            item,
+                            style: const TextStyle(
+                              fontSize: 14,
+                            ),
+                          ),
+                        ))
+                        .toList(),
+                    value: selectedValue,
+                    onChanged: (value) {
+                      setState(() {
+                        selectedValue = value as String;
+                      });
+                    },
+                    buttonHeight: 40,
+                    buttonWidth: MediaQuery.of(context).size.width * 0.8,
+                    itemHeight: 40,
+                    //itemWidth: 140,
+                  ),
+                ),
+              );
   }
 }

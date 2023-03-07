@@ -36,221 +36,13 @@ class _MusteriEkleState extends State<MusteriEkle> {
                   ),
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height*0.05,),
-                Container(
-                  width: MediaQuery.of(context).size.width*0.8,
-                  child: TextFormField(
-                    style:const TextStyle(
-                            height: 1.5,
-                            ),
-                    decoration:const InputDecoration(
-                      contentPadding:
-                      EdgeInsets.only(left: 10, top: 10, bottom: 15),
-                       prefixIcon: Padding(
-                         padding: EdgeInsets.only(top: 17),
-                         child: Icon(
-                              Icons.person,
-                              color: kIconColor,
-                                  ),
-                       ),
-                  enabledBorder: UnderlineInputBorder(      
-                      borderSide: BorderSide(color: kBorderColor),   
-                      ),  
-                   focusedBorder: UnderlineInputBorder(
-                    
-                      borderSide: BorderSide(color: kBorderColor) 
-                      ),
-                    label: Center(
-                    child: Text("Müsteri Ünvanı"),
-                  ), 
-                  labelStyle: TextStyle(
-                   
-                    color: kTextColor,
-                  ),
-                  
-                    ),
-                  ),
-                  
-                ),
-               // SizedBox(height: MediaQuery.of(context).size.height*0.02,),
-                Container(
-                  width: MediaQuery.of(context).size.width*0.8,
-                  child: TextFormField(
-                    style: const TextStyle(
-                            height: 1.5,
-                            ),
-                    decoration: const InputDecoration(
-                      contentPadding:
-                      EdgeInsets.only(left: 10, top: 10, bottom: 15),
-                       prefixIcon:  Padding(
-                         padding:  EdgeInsets.only(top: 17),
-                         child: Icon(
-                              Icons.phone,
-                              color: kIconColor,
-                                  ),
-                       ),
-                  enabledBorder: UnderlineInputBorder(      
-                      borderSide: BorderSide(color: kBorderColor),   
-                      ),  
-                   focusedBorder: UnderlineInputBorder(
-                    
-                      borderSide: BorderSide(color: kBorderColor) 
-                      ),
-                    label:  Center(
-                    child: Text("Telefon"),
-                  ), 
-                  labelStyle: TextStyle(
-                   
-                    color: kTextColor,
-                  ),
-                  
-                    ),
-                  ),
-                  
-                ),
-               //  SizedBox(height: MediaQuery.of(context).size.height*0.02,),
-                Container(
-                  width: MediaQuery.of(context).size.width*0.8,
-                  child: TextFormField(
-                    style: const TextStyle(
-                            height: 1.5,
-                            ),
-                    decoration: const InputDecoration(
-                      contentPadding:
-                      EdgeInsets.only(left: 10, top: 10, bottom: 15),
-                       prefixIcon:  Padding(
-                         padding:  EdgeInsets.only(top: 17),
-                         child: Icon(
-                              Icons.home_filled,
-                              color: kIconColor,
-                                  ),
-                       ),
-                  enabledBorder: UnderlineInputBorder(      
-                      borderSide: BorderSide(color: kBorderColor),   
-                      ),  
-                   focusedBorder: UnderlineInputBorder(
-                    
-                      borderSide: BorderSide(color: kBorderColor) 
-                      ),
-                    label: Center(
-                    child: Text("Adres"),
-                  ), 
-                  labelStyle: TextStyle(
-                   
-                    color: kTextColor,
-                  ),
-                  
-                    ),
-                  ),
-                  
-                ),
-               //  SizedBox(height: MediaQuery.of(context).size.height*0.02,),
-                Container(
-                  width: MediaQuery.of(context).size.width*0.8,
-                  child: TextFormField(
-                    style: const TextStyle(
-                            height: 1.5,
-                            ),
-                    decoration: const InputDecoration(
-                      contentPadding:
-                      EdgeInsets.only(left: 10, top: 10, bottom: 15),
-                       prefixIcon:  Padding(
-                         padding:  EdgeInsets.only(top: 17),
-                         child:  Icon(
-                              Icons.business,
-                              color: kIconColor,
-                                  ),
-                       ),
-                  enabledBorder: UnderlineInputBorder(      
-                      borderSide: BorderSide(color: kBorderColor),   
-                      ),  
-                   focusedBorder:  UnderlineInputBorder(
-                    
-                      borderSide:  BorderSide(color: kBorderColor) 
-                      ),
-                    label:  Center(
-                    child: Text("Vergi Dairesi"),
-                  ), 
-                  labelStyle:  TextStyle(
-                   
-                    color: kTextColor,
-                  ),
-                  
-                    ),
-                  ),
-                  
-                ),
-                // SizedBox(height: MediaQuery.of(context).size.height*0.02,),
-                Container(
-                  width: MediaQuery.of(context).size.width*0.8,
-                  child: TextFormField(
-                    style: const TextStyle(
-                            height: 1.5,
-                            ),
-                    decoration: const InputDecoration(
-                      contentPadding:
-                      EdgeInsets.only(left: 10, top: 10, bottom: 15),
-                       prefixIcon: Padding(
-                         padding:  EdgeInsets.only(top: 17),
-                         child: Icon(
-                              Icons.more_horiz,
-                              color: kIconColor,
-                                  ),
-                       ),
-                  enabledBorder: UnderlineInputBorder(      
-                      borderSide: BorderSide(color: kBorderColor),   
-                      ),  
-                   focusedBorder: UnderlineInputBorder(
-                    
-                      borderSide: BorderSide(color: kBorderColor) 
-                      ),
-                    label:  Center(
-                    child: Text("Vergi/TC Kimlik No"),
-                  ), 
-                  labelStyle: TextStyle(
-                   
-                    color: kTextColor,
-                  ),
-                  
-                    ),
-                  ),
-                  
-                ),
-               //  SizedBox(height: MediaQuery.of(context).size.height*0.02,),
-                Container(
-                  width: MediaQuery.of(context).size.width*0.8,
-                  child: TextFormField(
-                    style:const TextStyle(
-                            height: 1.5,
-                            ),
-                    decoration:const InputDecoration(
-                      contentPadding:
-                      EdgeInsets.only(left: 10, top: 10, bottom: 15),
-                       prefixIcon: Padding(
-                         padding:  EdgeInsets.only(top: 17),
-                         child: Icon(
-                              Icons.email_outlined,
-                              color: kIconColor,
-                                  ),
-                       ),
-                  enabledBorder: UnderlineInputBorder(      
-                      borderSide: BorderSide(color: kBorderColor),   
-                      ),  
-                   focusedBorder: UnderlineInputBorder(
-                    
-                      borderSide: BorderSide(color: kBorderColor) 
-                      ),
-                    label:  Center(
-                    child: Text("E-posta"),
-                  ), 
-                  labelStyle: TextStyle(
-                   
-                    color: kTextColor,
-                  ),
-                  
-                    ),
-                  ),
-                  
-                ),
+                musterieklecontainer(Icons.person,"Müsteri Ünvanı"),
+                musterieklecontainer(Icons.phone,"Telefon"),
+                musterieklecontainer(Icons.home_filled,"Adres"),
+                musterieklecontainer(Icons.business,"Vergi Dairesi"),
+                musterieklecontainer(Icons.more_horiz,"Vergi/TC Kimlik No"),
+                musterieklecontainer( Icons.email_outlined,"E-posta"),
+                
                 
                 SizedBox(height: MediaQuery.of(context).size.height*0.055,),
                 GestureDetector(
@@ -280,5 +72,43 @@ class _MusteriEkleState extends State<MusteriEkle> {
           ),
         ),
     );
+  }
+
+  Container musterieklecontainer(IconData icon, String text) {
+    return Container(
+                width: MediaQuery.of(context).size.width*0.8,
+                child: TextFormField(
+                  style:const TextStyle(
+                          height: 1.5,
+                          ),
+                  decoration: InputDecoration(
+                    contentPadding:
+                    EdgeInsets.only(left: 10, top: 10, bottom: 15),
+                     prefixIcon: Padding(
+                       padding: EdgeInsets.only(top: 17),
+                       child: Icon(
+                            icon,
+                            color: kIconColor,
+                                ),
+                     ),
+                enabledBorder: UnderlineInputBorder(      
+                    borderSide: BorderSide(color: kBorderColor),   
+                    ),  
+                 focusedBorder: UnderlineInputBorder(
+                  
+                    borderSide: BorderSide(color: kBorderColor) 
+                    ),
+                  label: Center(
+                  child: Text(text),
+                ), 
+                labelStyle: TextStyle(
+                 
+                  color: kTextColor,
+                ),
+                
+                  ),
+                ),
+                
+              );
   }
 }

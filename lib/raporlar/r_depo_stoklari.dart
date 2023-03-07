@@ -65,129 +65,9 @@ class _DepoStokRaporuState extends State<DepoStokRaporu> {
                 height: MediaQuery.of(context).size.height * 0.05,
               ),
              
-              Container(
-                  width: MediaQuery.of(context).size.width*0.8,
-                  child: Padding(
-                    padding:const EdgeInsets.only( top: 15),
-                    child: DropdownButton2(
-                      icon:const Icon(Icons.expand_more, color: kIconColor,),
-                      underline: Container( 
-                       height: 2, color: Colors.white60 ),
-                      hint:const Text(
-                        textAlign: TextAlign.start,
-                        'Kategori',
-                        style: TextStyle(
-                          fontSize: 15.5,
-                          color: kTextColor,
-                        ),
-                      ),
-                      items: items0
-                          .map((item) =>
-                          DropdownMenuItem<String>(
-                            value: item,
-                            child: Text(
-                              item,
-                              style: const TextStyle(
-                                fontSize: 14,
-                              ),
-                            ),
-                          ))
-                          .toList(),
-                      value: selectedValue,
-                      onChanged: (value) {
-                        setState(() {
-                          selectedValue = value as String;
-                        });
-                      },
-                      buttonHeight: 40,
-                      buttonWidth: MediaQuery.of(context).size.width * 0.8,
-                      itemHeight: 40,
-                      //itemWidth: 140,
-                    ),
-                  ),
-                ),
-              Container(
-                  width: MediaQuery.of(context).size.width*0.8,
-                  child: Padding(
-                    padding:const EdgeInsets.only( top: 15),
-                    child: DropdownButton2(
-                      icon:const Icon(Icons.expand_more, color: kIconColor,),
-                      underline: Container( 
-                       height: 2, color: Colors.white60 ),
-                      hint:const Text(
-                        textAlign: TextAlign.start,
-                        'Marka',
-                        style: TextStyle(
-                          fontSize: 15.5,
-                          color: kTextColor,
-                        ),
-                      ),
-                      items: items1
-                          .map((item) =>
-                          DropdownMenuItem<String>(
-                            value: item,
-                            child: Text(
-                              item,
-                              style: const TextStyle(
-                                fontSize: 14,
-                              ),
-                            ),
-                          ))
-                          .toList(),
-                      value: selectedValue,
-                      onChanged: (value) {
-                        setState(() {
-                          selectedValue = value as String;
-                        });
-                      },
-                      buttonHeight: 40,
-                      buttonWidth: MediaQuery.of(context).size.width * 0.8,
-                      itemHeight: 40,
-                      //itemWidth: 140,
-                    ),
-                  ),
-                ),
-                 Container(
-                  width: MediaQuery.of(context).size.width*0.8,
-                  child: Padding(
-                    padding:const EdgeInsets.only( top: 15),
-                    child: DropdownButton2(
-                      icon:const Icon(Icons.expand_more, color: kIconColor,),
-                      underline: Container( 
-                       height: 2, color: Colors.white60 ),
-                      hint:const Text(
-                        textAlign: TextAlign.start,
-                        'Stok Durumu',
-                        style: TextStyle(
-                          fontSize: 15.5,
-                          color: kTextColor,
-                        ),
-                      ),
-                      items: items2
-                          .map((item) =>
-                          DropdownMenuItem<String>(
-                            value: item,
-                            child: Text(
-                              item,
-                              style: const TextStyle(
-                                fontSize: 14,
-                              ),
-                            ),
-                          ))
-                          .toList(),
-                      value: selectedValue,
-                      onChanged: (value) {
-                        setState(() {
-                          selectedValue = value as String;
-                        });
-                      },
-                      buttonHeight: 40,
-                      buttonWidth: MediaQuery.of(context).size.width * 0.8,
-                      itemHeight: 40,
-                      //itemWidth: 140,
-                    ),
-                  ),
-                ),
+              rdepostokcontainer('Kategori'),
+              rdepostokcontainer('Marka'),
+              rdepostokcontainer('Stok Durumu'),
                
                SizedBox(
                 height: MediaQuery.of(context).size.height * 0.055,
@@ -223,5 +103,49 @@ class _DepoStokRaporuState extends State<DepoStokRaporu> {
         ),
       ),
     );
+  }
+
+  Container rdepostokcontainer(String text) {
+    return Container(
+                width: MediaQuery.of(context).size.width*0.8,
+                child: Padding(
+                  padding:const EdgeInsets.only( top: 15),
+                  child: DropdownButton2(
+                    icon:const Icon(Icons.expand_more, color: kIconColor,),
+                    underline: Container( 
+                     height: 2, color: Colors.white60 ),
+                    hint: Text(
+                      textAlign: TextAlign.start,
+                      text,
+                      style: TextStyle(
+                        fontSize: 15.5,
+                        color: kTextColor,
+                      ),
+                    ),
+                    items: items0
+                        .map((item) =>
+                        DropdownMenuItem<String>(
+                          value: item,
+                          child: Text(
+                            item,
+                            style: const TextStyle(
+                              fontSize: 14,
+                            ),
+                          ),
+                        ))
+                        .toList(),
+                    value: selectedValue,
+                    onChanged: (value) {
+                      setState(() {
+                        selectedValue = value as String;
+                      });
+                    },
+                    buttonHeight: 40,
+                    buttonWidth: MediaQuery.of(context).size.width * 0.8,
+                    itemHeight: 40,
+                    //itemWidth: 140,
+                  ),
+                ),
+              );
   }
 }

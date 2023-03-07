@@ -62,215 +62,13 @@ class _AlisRaporuState extends State<AlisRaporu> {
              SizedBox(
                 height: MediaQuery.of(context).size.height * 0.05,
               ),
-              Container(
-                width: MediaQuery.of(context).size.width * 0.8,
-                child: TextField(
-                  controller: dateInput,
-                  readOnly: false,
-                  //kullanıcının tarihi güncellemesi
-                  onTap: () async {
-                    DateTime? pickedDate = await showDatePicker(
-                        context: context,
-                        initialDate: DateTime.now(),
-                        firstDate: DateTime(1950),
-                        //DateTime.now() //bugunden baslatmak
-                        lastDate: DateTime(2100));
-
-                    if (pickedDate != null) {
-                      print(pickedDate);
-                      String formattedDate = DateFormat('dd-MM-yyyy').format(pickedDate);
-                      print(formattedDate); //formatted date output using intl package =>  2021-03-16
-                      setState(() {
-                        dateInput.text = 
-                        formattedDate;
-                      });
-                    } else {}
-                  },
-                  style: const TextStyle(
-                    height: 1.5,
-                  ),
-                  decoration: const InputDecoration(
-                    contentPadding: EdgeInsets.only(left: 10, top: 10, bottom: 15),
-                    suffixIcon: Icon(Icons.date_range,color: kIconColor,),
-                    prefixIcon: Padding(
-                        padding: EdgeInsets.only(top: 12),
-                        child: Text(
-                          "Başlangıç Tarihi: ",
-                          style: TextStyle(color: kTextColor),
-                        )),
-                    enabledBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: kBorderColor),
-                    ),
-                    focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: kBorderColor)),
-                  ),
-                ),
-              ),
-              Container(
-                width: MediaQuery.of(context).size.width * 0.8,
-                child: TextField(
-                  controller: dateInput,
-                  readOnly: false,
-                  //kullanıcının tarihi güncellemesi
-                  onTap: () async {
-                    DateTime? pickedDate = await showDatePicker(
-                        context: context,
-                        initialDate: DateTime.now(),
-                        firstDate: DateTime(1950),
-                        //DateTime.now() //bugunden baslatmak
-                        lastDate: DateTime(2100));
-
-                    if (pickedDate != null) {
-                      print(pickedDate);
-                      String formattedDate = DateFormat('dd-MM-yyyy').format(pickedDate);
-                      print(formattedDate); //formatted date output using intl package =>  2021-03-16
-                      setState(() {
-                        dateInput.text = 
-                        formattedDate;
-                      });
-                    } else {}
-                  },
-                  style: const TextStyle(
-                    height: 1.5,
-                  ),
-                  decoration: const InputDecoration(
-                    contentPadding: EdgeInsets.only(left: 10, top: 10, bottom: 15),
-                    suffixIcon: Icon(Icons.date_range,color: kIconColor,),
-                    prefixIcon: Padding(
-                        padding: EdgeInsets.only(top: 12),
-                        child: Text(
-                          "Bitiş Tarihi: ",
-                          style: TextStyle(color: kTextColor),
-                        )),
-                    enabledBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: kBorderColor),
-                    ),
-                    focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: kBorderColor)),
-                  ),
-                ),
-              ),
-               Container(
-                  width: MediaQuery.of(context).size.width*0.8,
-                  child: Padding(
-                    padding:const EdgeInsets.only( top: 15),
-                    child: DropdownButton2(
-                      icon:const Icon(Icons.expand_more, color: kIconColor,),
-                      underline: Container( 
-                       height: 2, color: Colors.white60 ),
-                      hint:const Text(
-                        textAlign: TextAlign.start,
-                        'Kategori',
-                        style: TextStyle(
-                          fontSize: 15.5,
-                          color: kTextColor,
-                        ),
-                      ),
-                      items: items0
-                          .map((item) =>
-                          DropdownMenuItem<String>(
-                            value: item,
-                            child: Text(
-                              item,
-                              style: const TextStyle(
-                                fontSize: 14,
-                              ),
-                            ),
-                          ))
-                          .toList(),
-                      value: selectedValue,
-                      onChanged: (value) {
-                        setState(() {
-                          selectedValue = value as String;
-                        });
-                      },
-                      buttonHeight: 40,
-                      buttonWidth: MediaQuery.of(context).size.width * 0.8,
-                      itemHeight: 40,
-                      //itemWidth: 140,
-                    ),
-                  ),
-                ),
-              Container(
-                  width: MediaQuery.of(context).size.width*0.8,
-                  child: Padding(
-                    padding:const EdgeInsets.only( top: 15),
-                    child: DropdownButton2(
-                      icon:const Icon(Icons.expand_more, color: kIconColor,),
-                      underline: Container( 
-                       height: 2, color: Colors.white60 ),
-                      hint:const Text(
-                        textAlign: TextAlign.start,
-                        'Marka',
-                        style: TextStyle(
-                          fontSize: 15.5,
-                          color: kTextColor,
-                        ),
-                      ),
-                      items: items1
-                          .map((item) =>
-                          DropdownMenuItem<String>(
-                            value: item,
-                            child: Text(
-                              item,
-                              style: const TextStyle(
-                                fontSize: 14,
-                              ),
-                            ),
-                          ))
-                          .toList(),
-                      value: selectedValue,
-                      onChanged: (value) {
-                        setState(() {
-                          selectedValue = value as String;
-                        });
-                      },
-                      buttonHeight: 40,
-                      buttonWidth: MediaQuery.of(context).size.width * 0.8,
-                      itemHeight: 40,
-                      //itemWidth: 140,
-                    ),
-                  ),
-                ),
-                 Container(
-                  width: MediaQuery.of(context).size.width*0.8,
-                  child: Padding(
-                    padding:const EdgeInsets.only( top: 15),
-                    child: DropdownButton2(
-                      icon:const Icon(Icons.expand_more, color: kIconColor,),
-                      underline: Container( 
-                       height: 2, color: Colors.white60 ),
-                      hint:const Text(
-                        textAlign: TextAlign.start,
-                        'Rapor Tipi',
-                        style: TextStyle(
-                          fontSize: 15.5,
-                          color: kTextColor,
-                        ),
-                      ),
-                      items: items2
-                          .map((item) =>
-                          DropdownMenuItem<String>(
-                            value: item,
-                            child: Text(
-                              item,
-                              style: const TextStyle(
-                                fontSize: 14,
-                              ),
-                            ),
-                          ))
-                          .toList(),
-                      value: selectedValue,
-                      onChanged: (value) {
-                        setState(() {
-                          selectedValue = value as String;
-                        });
-                      },
-                      buttonHeight: 40,
-                      buttonWidth: MediaQuery.of(context).size.width * 0.8,
-                      itemHeight: 40,
-                      //itemWidth: 140,
-                    ),
-                  ),
-                ),
+              ralislarcontainer("Başlangıç Tarihi: "),
+              ralislarcontainer("Bitiş Tarihi: "),
+              ralislarcontainer1('Kategori'),
+              ralislarcontainer1('Marka'),
+              ralislarcontainer1('Rapor Tipi'),
+             
+                
                
                SizedBox(
                 height: MediaQuery.of(context).size.height * 0.055,
@@ -306,5 +104,95 @@ class _AlisRaporuState extends State<AlisRaporu> {
         ),
       ),
     );
+  }
+
+  Container ralislarcontainer1(String text) {
+    return Container(
+                width: MediaQuery.of(context).size.width*0.8,
+                child: Padding(
+                  padding:const EdgeInsets.only( top: 15),
+                  child: DropdownButton2(
+                    icon:const Icon(Icons.expand_more, color: kIconColor,),
+                    underline: Container( 
+                     height: 2, color: Colors.white60 ),
+                    hint: Text(
+                      textAlign: TextAlign.start,
+                      text,
+                      style: TextStyle(
+                        fontSize: 15.5,
+                        color: kTextColor,
+                      ),
+                    ),
+                    items: items0
+                        .map((item) =>
+                        DropdownMenuItem<String>(
+                          value: item,
+                          child: Text(
+                            item,
+                            style: const TextStyle(
+                              fontSize: 14,
+                            ),
+                          ),
+                        ))
+                        .toList(),
+                    value: selectedValue,
+                    onChanged: (value) {
+                      setState(() {
+                        selectedValue = value as String;
+                      });
+                    },
+                    buttonHeight: 40,
+                    buttonWidth: MediaQuery.of(context).size.width * 0.8,
+                    itemHeight: 40,
+                    //itemWidth: 140,
+                  ),
+                ),
+              );
+  }
+
+  Container ralislarcontainer(String text) {
+    return Container(
+              width: MediaQuery.of(context).size.width * 0.8,
+              child: TextField(
+                controller: dateInput,
+                readOnly: false,
+                //kullanıcının tarihi güncellemesi
+                onTap: () async {
+                  DateTime? pickedDate = await showDatePicker(
+                      context: context,
+                      initialDate: DateTime.now(),
+                      firstDate: DateTime(1950),
+                      //DateTime.now() //bugunden baslatmak
+                      lastDate: DateTime(2100));
+
+                  if (pickedDate != null) {
+                    print(pickedDate);
+                    String formattedDate = DateFormat('dd-MM-yyyy').format(pickedDate);
+                    print(formattedDate); //formatted date output using intl package =>  2021-03-16
+                    setState(() {
+                      dateInput.text = 
+                      formattedDate;
+                    });
+                  } else {}
+                },
+                style: const TextStyle(
+                  height: 1.5,
+                ),
+                decoration: InputDecoration(
+                  contentPadding: EdgeInsets.only(left: 10, top: 10, bottom: 15),
+                  suffixIcon: Icon(Icons.date_range,color: kIconColor,),
+                  prefixIcon: Padding(
+                      padding: EdgeInsets.only(top: 12),
+                      child: Text(
+                        text,
+                        style: TextStyle(color: kTextColor),
+                      )),
+                  enabledBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: kBorderColor),
+                  ),
+                  focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: kBorderColor)),
+                ),
+              ),
+            );
   }
 }
