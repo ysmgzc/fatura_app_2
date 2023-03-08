@@ -40,47 +40,169 @@ class _RaporlarScreenState extends State<RaporlarScreen> {
                 height: size.height * 0.03,      
               ),
              
-               raporlarcontainer(Icons.add_shopping_cart,"Alış Raporu"),
-                const Divider(),
-               raporlarcontainer(Icons.shopping_cart,"Satış Raporu"),
-                const Divider(),
-               raporlarcontainer(Icons.account_balance_wallet,"Masraflar"),
-                const Divider(),
-               raporlarcontainer(Icons.recycling, "İadeler"),
-                const Divider(),
-               raporlarcontainer(Icons.warehouse,"Depo Stokları"),
-                const Divider(),
-               raporlarcontainer(Icons.warehouse,"Stok Hareketleri"),
-                const Divider(),
-               raporlarcontainer(Icons.person,"Hesap Hareketleri"),
+               Container(
+                color: Colors.white,
+                 width:  MediaQuery.of(context).size.width*3,
+                 child: Column(
+                   children: [
+                      GestureDetector(
+                      onTap: (){
+                        Navigator.of(context).push(
+                            MaterialPageRoute(builder: (context) => const AlisRaporu()));
+                      },
+                  child: const ListTile(
+                      leading: Icon(Icons.add_shopping_cart, color: kIconColor2),
+                      
+                      title: Text(
+                        "Alış Raporu",
+                      ),
+                      trailing:Icon(Icons.navigate_next, color: kIconColor2, size: 30.0)
+                  ))
+                   ],
+                 ),
+                           
+               ),
+               const Divider(),
+                Container(
+                color: Colors.white,
+                 width:  MediaQuery.of(context).size.width*3,
+                 child: Column(
+                   children: [
+                      GestureDetector(
+                      onTap: (){
+                        Navigator.of(context).push(
+                            MaterialPageRoute(builder: (context) => const SatisRaporu()));
+                      },
+                  child: const ListTile(
+                      leading: Icon(Icons.shopping_cart, color: kIconColor2),
+                      
+                      title: Text(
+                        "Satış Raporu",
+                      ),
+                      trailing:Icon(Icons.navigate_next, color: kIconColor2, size: 30.0)
+                  ))
+                   ],
+                 ),
+                           
+               ),
+               const Divider(),
+                Container(
+                color: Colors.white,
+                 width:  MediaQuery.of(context).size.width*3,
+                 child: Column(
+                   children: [
+                      GestureDetector(
+                      onTap: (){
+                        Navigator.of(context).push(
+                            MaterialPageRoute(builder: (context) => const MasrafRaporu()));
+                      },
+                  child: const ListTile(
+                      leading: Icon(Icons.account_balance_wallet, color: kIconColor2),
+                      
+                      title: Text(
+                        "Masraflar",
+                      ),
+                      trailing:Icon(Icons.navigate_next, color: kIconColor2, size: 30.0)
+                  ))
+                   ],
+                 ),
+                           
+               ),
+               const Divider(),
+                Container(
+                color: Colors.white,
+                 width:  MediaQuery.of(context).size.width*3,
+                 child: Column(
+                   children: [
+                      GestureDetector(
+                      onTap: (){
+                        Navigator.of(context).push(
+                            MaterialPageRoute(builder: (context) => const IadeRaporu()));
+                      },
+                  child: const ListTile(
+                      leading: Icon(Icons.recycling, color: kIconColor2),
+                      
+                      title: Text(
+                        "İadeler",
+                      ),
+                      trailing:Icon(Icons.navigate_next, color: kIconColor2, size: 30.0)
+                  ))
+                   ],
+                 ),
+                           
+               ),
+              const  Divider(),
+                Container(
+                color: Colors.white,
+                 width:  MediaQuery.of(context).size.width*3,
+                 child: Column(
+                   children: [
+                      GestureDetector(
+                      onTap: (){
+                        Navigator.of(context).push(
+                            MaterialPageRoute(builder: (context) => const DepoStokRaporu()));
+                      },
+                  child: const ListTile(
+                      leading: Icon(Icons.warehouse, color: kIconColor2),
+                      
+                      title: Text(
+                        "Depo Stokları",
+                      ),
+                      trailing:Icon(Icons.navigate_next, color: kIconColor2, size: 30.0)
+                  ))
+                   ],
+                 ),
+                           
+               ),
+               const Divider(),
+                Container(
+                color: Colors.white,
+                 width:  MediaQuery.of(context).size.width*3,
+                 child: Column(
+                   children: [
+                      GestureDetector(
+                      onTap: (){
+                        Navigator.of(context).push(
+                            MaterialPageRoute(builder: (context) => const StokHareketleriRaporu()));
+                      },
+                  child: const ListTile(
+                      leading:Icon(Icons.warehouse, color: kIconColor2),
+                      
+                      title: Text(
+                        "Stok Hareketleri",
+                      ),
+                      trailing:Icon(Icons.navigate_next, color: kIconColor2, size: 30.0)
+                  ))
+                   ],
+                 ),
+                           
+               ),
+              const  Divider(),
+                Container(
+                color: Colors.white,
+                 width:  MediaQuery.of(context).size.width*3,
+                 child: Column(
+                   children: [
+                      GestureDetector(
+                      onTap: (){
+                        Navigator.of(context).push(
+                            MaterialPageRoute(builder: (context) => const HesapHareketleri()));
+                      },
+                  child: const ListTile(
+                      leading: Icon(Icons.person, color: kIconColor2),
+                      
+                      title: Text(
+                        "Hesap Hareketleri",
+                      ),
+                      trailing:Icon(Icons.navigate_next, color: kIconColor2, size: 30.0)
+                  ))
+                   ],
+                 ),                       
+               ),
+              
             ]
          ),
       ),
     ),);
-  }
-
-  Container raporlarcontainer(IconData icon, String text) {
-    return Container(
-              color: Colors.white,
-               width:  MediaQuery.of(context).size.width*3,
-               child: Column(
-                 children: [
-                    GestureDetector(
-                    onTap: (){
-                      Navigator.of(context).push(
-                          MaterialPageRoute(builder: (context) => const AlisRaporu()));
-                    },
-                child:  ListTile(
-                    leading: Icon(icon, color: kIconColor2),
-                    
-                    title: Text(
-                      text,
-                    ),
-                    trailing:const Icon(Icons.navigate_next, color: kIconColor2, size: 30.0)
-                ))
-                 ],
-               ),
-                         
-             );
   }
 }
