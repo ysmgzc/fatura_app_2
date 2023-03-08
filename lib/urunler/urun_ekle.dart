@@ -124,7 +124,7 @@ List<String> items2 = [
            side: MaterialStateBorderSide.resolveWith(
              (states) => const BorderSide(width: 1.0, color: kBorderColor),
               ),
-            value: this.value,
+            value: value,
             onChanged: (bool? value) {
             setState(() {
             this.value = value;

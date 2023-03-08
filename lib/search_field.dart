@@ -9,7 +9,7 @@ class SearchField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var _controller = TextEditingController();
+    var controller = TextEditingController();
     return Padding(
       padding: const EdgeInsets.only(left: 10, right: 10),
       child: Container(
@@ -18,7 +18,7 @@ class SearchField extends StatelessWidget {
           borderRadius: BorderRadius.circular(15),
         ),
         child: TextField(
-          controller: _controller,
+          controller: controller,
           onChanged: (value){}, //=> print(value),
           decoration: InputDecoration(
               contentPadding:const EdgeInsets.symmetric(
@@ -34,7 +34,7 @@ class SearchField extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   IconButton(
-                    onPressed: _controller.clear,
+                    onPressed: controller.clear,
                      icon:const Icon(Icons.clear),
                   ),
                  const Text("|"),
