@@ -65,9 +65,9 @@ class _DepoStokRaporuState extends State<DepoStokRaporu> {
                 height: MediaQuery.of(context).size.height * 0.05,
               ),
              
-              rdepostokcontainer('Kategori'),
-              rdepostokcontainer('Marka'),
-              rdepostokcontainer('Stok Durumu'),
+              rdepostokcontainer('Kategori',items0),
+              rdepostokcontainer('Marka',items1),
+              rdepostokcontainer('Stok Durumu',items2),
                
                SizedBox(
                 height: MediaQuery.of(context).size.height * 0.055,
@@ -105,7 +105,7 @@ class _DepoStokRaporuState extends State<DepoStokRaporu> {
     );
   }
 
-  Container rdepostokcontainer(String text) {
+  Container rdepostokcontainer(String text,List item) {
     return Container(
                 width: MediaQuery.of(context).size.width*0.8,
                 alignment: Alignment.center,
@@ -123,7 +123,7 @@ class _DepoStokRaporuState extends State<DepoStokRaporu> {
                         color: kTextColor,
                       ),
                     ),
-                    items: items0
+                    items: item
                         .map((item) =>
                         DropdownMenuItem<String>(
                           value: item,

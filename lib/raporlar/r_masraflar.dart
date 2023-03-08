@@ -70,8 +70,8 @@ class _MasrafRaporuState extends State<MasrafRaporu> {
               rmasraflarcontainer("Başlangıç Tarihi: "),
               rmasraflarcontainer("Bitiş Tarihi: "),
               
-               rmasraflarcontainer1('Ana Masraf'),
-               rmasraflarcontainer1('Alt Masraflar'),
+               rmasraflarcontainer1('Ana Masraf',items0),
+               rmasraflarcontainer1('Alt Masraflar',items1),
             
             
                 Container(
@@ -114,7 +114,7 @@ class _MasrafRaporuState extends State<MasrafRaporu> {
                      ),
                 ),
                 ),
-                 rmasraflarcontainer1('Ödeme Durumu'),
+                 rmasraflarcontainer1('Ödeme Durumu',items2),
                
                SizedBox(
                 height: MediaQuery.of(context).size.height * 0.055,
@@ -152,7 +152,7 @@ class _MasrafRaporuState extends State<MasrafRaporu> {
     );
   }
 
-  Container rmasraflarcontainer1(String text) {
+  Container rmasraflarcontainer1(String text,List item) {
     return Container(
                 width: MediaQuery.of(context).size.width*0.8,
                 alignment: Alignment.center,
@@ -170,7 +170,7 @@ class _MasrafRaporuState extends State<MasrafRaporu> {
                         color: kTextColor,
                       ),
                     ),
-                    items: items0
+                    items: item
                         .map((item) =>
                         DropdownMenuItem<String>(
                           value: item,

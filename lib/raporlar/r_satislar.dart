@@ -69,10 +69,10 @@ class _SatisRaporuState extends State<SatisRaporu> {
               rsatislarcontainer("Başlangıç Tarihi: "),
               rsatislarcontainer("Bitiş Tarihi: "),
              
-               rsatislarcontainer1('İşlem Durumu'),
-               rsatislarcontainer1('Kategori'),
-               rsatislarcontainer1('Marka'),
-               rsatislarcontainer1('Rapor Tipi'),
+               rsatislarcontainer1('İşlem Durumu',items0),
+               rsatislarcontainer1('Kategori',items1),
+               rsatislarcontainer1('Marka',items2),
+               rsatislarcontainer1('Rapor Tipi',items3),
                
                SizedBox(
                 height: MediaQuery.of(context).size.height * 0.055,
@@ -110,7 +110,7 @@ class _SatisRaporuState extends State<SatisRaporu> {
     );
   }
 
-  Container rsatislarcontainer1(String text) {
+  Container rsatislarcontainer1(String text,List item) {
     return Container(
                 width: MediaQuery.of(context).size.width*0.8,
                 alignment: Alignment.center,
@@ -128,7 +128,7 @@ class _SatisRaporuState extends State<SatisRaporu> {
                         color: kTextColor,
                       ),
                     ),
-                    items: items0
+                    items: item
                         .map((item) =>
                         DropdownMenuItem<String>(
                           value: item,

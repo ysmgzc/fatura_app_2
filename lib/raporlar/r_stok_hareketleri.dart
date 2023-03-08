@@ -67,9 +67,9 @@ class _StokHareketleriRaporuState extends State<StokHareketleriRaporu> {
               rstokhareketlericontainer("Başlangıç Tarihi: "),
               rstokhareketlericontainer("Bitiş Tarihi: "),
              
-               rstokhareketlericontainer1('Kategori'),
-               rstokhareketlericontainer1('Marka'),
-               rstokhareketlericontainer1('İşlem Tipi'),
+               rstokhareketlericontainer1('Kategori',items0),
+               rstokhareketlericontainer1('Marka',items1),
+               rstokhareketlericontainer1('İşlem Tipi',items2),
              
                   
                SizedBox(
@@ -108,7 +108,7 @@ class _StokHareketleriRaporuState extends State<StokHareketleriRaporu> {
     );
   }
 
-  Container rstokhareketlericontainer1(String text) {
+  Container rstokhareketlericontainer1(String text, List item) {
     return Container(
                 width: MediaQuery.of(context).size.width*0.8,
                 alignment: Alignment.center,
@@ -126,7 +126,7 @@ class _StokHareketleriRaporuState extends State<StokHareketleriRaporu> {
                         color: kTextColor,
                       ),
                     ),
-                    items: items0
+                    items: item
                         .map((item) =>
                         DropdownMenuItem<String>(
                           value: item,

@@ -64,9 +64,9 @@ class _AlisRaporuState extends State<AlisRaporu> {
               ),
               ralislarcontainer("Başlangıç Tarihi: "),
               ralislarcontainer("Bitiş Tarihi: "),
-              ralislarcontainer1('Kategori'),
-              ralislarcontainer1('Marka'),
-              ralislarcontainer1('Rapor Tipi'),
+              ralislarcontainer1('Kategori',items0),
+              ralislarcontainer1('Marka',items1),
+              ralislarcontainer1('Rapor Tipi',items2),
              
                 
                
@@ -106,7 +106,7 @@ class _AlisRaporuState extends State<AlisRaporu> {
     );
   }
 
-  Container ralislarcontainer1(String text) {
+  Container ralislarcontainer1(String text,List item) {
     return Container(
                 width: MediaQuery.of(context).size.width*0.8,
                 alignment: Alignment.center,
@@ -124,7 +124,7 @@ class _AlisRaporuState extends State<AlisRaporu> {
                         color: kTextColor,
                       ),
                     ),
-                    items: items0
+                    items: item
                         .map((item) =>
                         DropdownMenuItem<String>(
                           value: item,

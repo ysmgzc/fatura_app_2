@@ -64,8 +64,8 @@ class _HesapBilgileriState extends State<HesapBilgileri> {
                 height: MediaQuery.of(context).size.height * 0.05,
               ),
               hesapbilgilericontainer1("Hesap Adı: "),
-              hesapbilgilericontainer('Hesap Tipi'),
-              hesapbilgilericontainer('Para Birimi'),  
+              hesapbilgilericontainer('Hesap Tipi',items0),
+              hesapbilgilericontainer('Para Birimi',items1),  
               hesapbilgilericontainer1("Bakiyesi: "),               
                
                SizedBox(
@@ -129,7 +129,7 @@ class _HesapBilgileriState extends State<HesapBilgileri> {
             );
   }
 
-  Container hesapbilgilericontainer(String text,) {
+  Container hesapbilgilericontainer(String text,List item) {
     return Container(
                 width: MediaQuery.of(context).size.width*0.8,
                 alignment: Alignment.center,
@@ -147,7 +147,7 @@ class _HesapBilgileriState extends State<HesapBilgileri> {
                         color: kTextColor,
                       ),
                     ),
-                    items: items0
+                    items: item
                         .map((item) =>
                         DropdownMenuItem<String>(
                           value: item,

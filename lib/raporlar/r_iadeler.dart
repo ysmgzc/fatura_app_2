@@ -69,10 +69,10 @@ List<String> items2 = [
               riadelercontainer("Başlangıç Tarihi: "),
               riadelercontainer("Bitiş Tarihi: "),
           
-               riadelercontainer1('Kategori'),
-               riadelercontainer1('Marka'),
-               riadelercontainer1('İade Tipi'),
-               riadelercontainer1('Rapor Tipi'),
+               riadelercontainer1('Kategori',items0),
+               riadelercontainer1('Marka',items1),
+               riadelercontainer1('İade Tipi',items2),
+               riadelercontainer1('Rapor Tipi',items3),
                 
                SizedBox(
                 height: MediaQuery.of(context).size.height * 0.055,
@@ -110,7 +110,7 @@ List<String> items2 = [
     );
   }
 
-  Container riadelercontainer1(String text) {
+  Container riadelercontainer1(String text,List item) {
     return Container(
                 width: MediaQuery.of(context).size.width*0.8,
                 alignment: Alignment.center,
@@ -128,7 +128,7 @@ List<String> items2 = [
                         color: kTextColor,
                       ),
                     ),
-                    items: items0
+                    items: item
                         .map((item) =>
                         DropdownMenuItem<String>(
                           value: item,

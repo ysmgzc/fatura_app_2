@@ -115,10 +115,10 @@ class _ManuelMasrafState extends State<ManuelMasraf> {
                 ),
               ),
               
-               manuelmasrafgirisicontainer('Durumu'),
-               manuelmasrafgirisicontainer('Ödenen Hesap'),
+               manuelmasrafgirisicontainer('Durumu',items0),
+               manuelmasrafgirisicontainer('Ödenen Hesap',items1),
                manuelmasrafgirisicontainer1("Tutar: "),
-               manuelmasrafgirisicontainer('KDV Oranı(%)'),
+               manuelmasrafgirisicontainer('KDV Oranı(%)',items2),
                manuelmasrafgirisicontainer1("Açıklama: "),
                SizedBox(
                 height: MediaQuery.of(context).size.height * 0.055,
@@ -181,7 +181,7 @@ class _ManuelMasrafState extends State<ManuelMasraf> {
             );
   }
 
-  Container manuelmasrafgirisicontainer(String text) {
+  Container manuelmasrafgirisicontainer(String text,List item) {
     return Container(
                 width: MediaQuery.of(context).size.width*0.8,
                 alignment: Alignment.center,
@@ -199,7 +199,7 @@ class _ManuelMasrafState extends State<ManuelMasraf> {
                         color: kTextColor,
                       ),
                     ),
-                    items: items0
+                    items: item
                         .map((item) =>
                         DropdownMenuItem<String>(
                           value: item,

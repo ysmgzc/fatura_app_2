@@ -73,9 +73,9 @@ List<String> items2 = [
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: 
                      [    
-                        uruneklecontainer1('Birim'),
-                        uruneklecontainer1('Kdv(%)'),
-                        uruneklecontainer1('Para Birimi'),
+                        uruneklecontainer1('Birim',items),
+                        uruneklecontainer1('Kdv(%)',items1),
+                        uruneklecontainer1('Para Birimi',items2),
                     ],
                               ),
                   ),
@@ -124,7 +124,8 @@ List<String> items2 = [
            side: MaterialStateBorderSide.resolveWith(
              (states) => const BorderSide(width: 1.0, color: kBorderColor),
               ),
-            value: value,
+              
+            value: this.value,
             onChanged: (bool? value) {
             setState(() {
             this.value = value;
@@ -187,7 +188,7 @@ List<String> items2 = [
     );
   }
 
-  DropdownButton2<String> uruneklecontainer1(String text) {
+  DropdownButton2<String> uruneklecontainer1(String text, List item) {
     return DropdownButton2(
                         icon:const Icon(Icons.expand_more, color: kIconColor,),
                         underline: Container( 
@@ -200,7 +201,7 @@ List<String> items2 = [
                             color: kTextColor,
                           ),
                         ),
-                        items: items
+                        items: item
                             .map((item) =>
                             DropdownMenuItem<String>(
                               value: item,
@@ -215,7 +216,7 @@ List<String> items2 = [
                         value: selectedValue,
                         onChanged: (value) {
                           setState(() {
-                            selectedValue = value as String;
+                            selectedValue = value as String; //= kaldır
                           });
                         },
                         buttonHeight: 40,
