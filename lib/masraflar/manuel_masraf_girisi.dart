@@ -72,6 +72,7 @@ class _ManuelMasrafState extends State<ManuelMasraf> {
               ),
                Container(
                 width: MediaQuery.of(context).size.width * 0.8,
+                alignment: Alignment.center,
                 child: TextField(
                   controller: dateInput,
                   readOnly: false,
@@ -158,6 +159,7 @@ class _ManuelMasrafState extends State<ManuelMasraf> {
   Container manuelmasrafgirisicontainer1(String text) {
     return Container(
               width: MediaQuery.of(context).size.width * 0.8,
+              alignment: Alignment.center,
               child: TextFormField(
                 style: const TextStyle(
                   height: 1.5,
@@ -182,6 +184,7 @@ class _ManuelMasrafState extends State<ManuelMasraf> {
   Container manuelmasrafgirisicontainer(String text) {
     return Container(
                 width: MediaQuery.of(context).size.width*0.8,
+                alignment: Alignment.center,
                 child: Padding(
                   padding:const EdgeInsets.only( top: 15),
                   child: DropdownButton2(

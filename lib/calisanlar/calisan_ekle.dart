@@ -82,6 +82,7 @@ class _CalisanEkleState extends State<CalisanEkle> {
   Container buildContainer(IconData icon, String text) {
     return Container(
       width: MediaQuery.of(context).size.width * 0.8,
+      alignment: Alignment.center,
       child: TextFormField(
         style: const TextStyle(
           height: 1.5,

@@ -108,6 +108,7 @@ class _DepoStokRaporuState extends State<DepoStokRaporu> {
   Container rdepostokcontainer(String text) {
     return Container(
                 width: MediaQuery.of(context).size.width*0.8,
+                alignment: Alignment.center,
                 child: Padding(
                   padding:const EdgeInsets.only( top: 15),
                   child: DropdownButton2(

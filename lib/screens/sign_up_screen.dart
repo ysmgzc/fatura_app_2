@@ -176,6 +176,7 @@ class SignUp extends StatelessWidget {
   Container signupcontainer(BuildContext context, IconData icon, String text) {
     return Container(
                 width: MediaQuery.of(context).size.width * 0.76,
+                alignment: Alignment.center,
                 child: TextFormField(
                   style: const TextStyle(
                     height: 1.5,

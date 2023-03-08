@@ -111,6 +111,7 @@ class _StokHareketleriRaporuState extends State<StokHareketleriRaporu> {
   Container rstokhareketlericontainer1(String text) {
     return Container(
                 width: MediaQuery.of(context).size.width*0.8,
+                alignment: Alignment.center,
                 child: Padding(
                   padding:const EdgeInsets.only( top: 15),
                   child: DropdownButton2(
@@ -155,6 +156,7 @@ class _StokHareketleriRaporuState extends State<StokHareketleriRaporu> {
   Container rstokhareketlericontainer(String text) {
     return Container(
               width: MediaQuery.of(context).size.width * 0.8,
+              alignment: Alignment.center,
               child: TextField(
                 controller: dateInput,
                 readOnly: false,

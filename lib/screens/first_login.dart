@@ -39,6 +39,7 @@ class _FirstLoginScreenState extends State<FirstLoginScreen> {
                 SizedBox(height: MediaQuery.of(context).size.height*0.12,),
                 Container(
                   width: MediaQuery.of(context).size.width*0.76,
+                  alignment: Alignment.center,
                   child: TextFormField(
                     style:const TextStyle(
                             height: 1.5,
@@ -75,6 +76,7 @@ class _FirstLoginScreenState extends State<FirstLoginScreen> {
        SizedBox(height: MediaQuery.of(context).size.height*0.02,),
                 Container(
                   width: MediaQuery.of(context).size.width*0.76,
+                  alignment: Alignment.center,
                   child: TextFormField(
                     style:const TextStyle(
                             height: 1.5,
@@ -126,6 +128,7 @@ class _FirstLoginScreenState extends State<FirstLoginScreen> {
              ),
            Container(
               width: MediaQuery.of(context).size.width*0.8,
+              alignment: Alignment.center,
                child: Row(
                 children: [
                GestureDetector(

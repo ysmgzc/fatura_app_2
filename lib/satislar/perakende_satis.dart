@@ -53,6 +53,7 @@ class _PerakendeState extends State<Perakende> {
               ),
               Container(
                 width: MediaQuery.of(context).size.width * 0.8,
+                alignment: Alignment.center,
                 child: TextFormField(
                   style: const TextStyle(
                     height: 1.5,
@@ -75,6 +76,7 @@ class _PerakendeState extends State<Perakende> {
               // SizedBox(height: MediaQuery.of(context).size.height*0.02,),
               Container(
                 width: MediaQuery.of(context).size.width * 0.8,
+                alignment: Alignment.center,
                 child: TextField(
                   controller: dateInput,
                   readOnly: false,
@@ -119,6 +121,7 @@ class _PerakendeState extends State<Perakende> {
               //  SizedBox(height: MediaQuery.of(context).size.height*0.02,),
               Container(
                 width: MediaQuery.of(context).size.width * 0.8,
+                alignment: Alignment.center,
                 child: TextFormField(
                   style: const TextStyle(
                     height: 1.5,

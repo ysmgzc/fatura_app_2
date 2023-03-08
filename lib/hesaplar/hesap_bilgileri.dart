@@ -107,6 +107,7 @@ class _HesapBilgileriState extends State<HesapBilgileri> {
   Container hesapbilgilericontainer1(String text) {
     return Container(
               width: MediaQuery.of(context).size.width * 0.8,
+              alignment: Alignment.center,
               child: TextFormField(
                 style: const TextStyle(
                   height: 1.5,
@@ -131,6 +132,7 @@ class _HesapBilgileriState extends State<HesapBilgileri> {
   Container hesapbilgilericontainer(String text,) {
     return Container(
                 width: MediaQuery.of(context).size.width*0.8,
+                alignment: Alignment.center,
                 child: Padding(
                   padding:const EdgeInsets.only( top: 15),
                   child: DropdownButton2(

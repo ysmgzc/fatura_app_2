@@ -76,6 +76,7 @@ class _MasrafRaporuState extends State<MasrafRaporu> {
             
                 Container(
                    width: MediaQuery.of(context).size.width*0.8,
+                   alignment: Alignment.center,
                   child: GestureDetector(
                   onTap: () {
                     Navigator.of(context).push(
@@ -154,6 +155,7 @@ class _MasrafRaporuState extends State<MasrafRaporu> {
   Container rmasraflarcontainer1(String text) {
     return Container(
                 width: MediaQuery.of(context).size.width*0.8,
+                alignment: Alignment.center,
                 child: Padding(
                   padding:const EdgeInsets.only( top: 15),
                   child: DropdownButton2(
@@ -198,6 +200,7 @@ class _MasrafRaporuState extends State<MasrafRaporu> {
   Container rmasraflarcontainer(String text) {
     return Container(
               width: MediaQuery.of(context).size.width * 0.8,
+              alignment: Alignment.center,
               child: TextField(
                 controller: dateInput,
                 readOnly: false,

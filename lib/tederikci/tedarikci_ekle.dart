@@ -78,6 +78,7 @@ class _TedarikciEkleState extends State<TedarikciEkle> {
   Container tedarikcieklecontainer(BuildContext context,IconData icon, String text) {
     return Container(
                 width: MediaQuery.of(context).size.width*0.8,
+                alignment: Alignment.center,
                 child: TextFormField(
                   style:const TextStyle(
                           height: 1.5,

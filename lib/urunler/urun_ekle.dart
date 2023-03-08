@@ -66,6 +66,7 @@ List<String> items2 = [
 
                 Container(
                   width: MediaQuery.of(context).size.width*0.8,
+                  alignment: Alignment.center,
                   child: Padding(
                     padding:const EdgeInsets.only( top: 15),
                     child: Row(
@@ -132,6 +133,7 @@ List<String> items2 = [
              ),
            Container(
               width: MediaQuery.of(context).size.width*0.8,
+              alignment: Alignment.center,
                child: Row(
                 children: [
                GestureDetector(
@@ -226,6 +228,7 @@ List<String> items2 = [
   Container uruneklecontainer(BuildContext context,IconData icon, String text) {
     return Container(
                 width: MediaQuery.of(context).size.width*0.8,
+                alignment: Alignment.center,
                 child: TextFormField(
                   style:const TextStyle(
                           height: 1.5,
