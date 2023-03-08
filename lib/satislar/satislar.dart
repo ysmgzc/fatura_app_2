@@ -1,10 +1,13 @@
 import 'package:fatura_app_2/constants.dart';
+import 'package:fatura_app_2/enum.dart';
 import 'package:fatura_app_2/musteri/musteriler.dart';
 import 'package:fatura_app_2/navigation_bar.dart';
 import 'package:fatura_app_2/satislar/perakende_satis.dart';
 import 'package:fatura_app_2/search_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
+
+import '../bottom_nav_bar.dart';
 
 class SatislarScreen extends StatefulWidget {
   const SatislarScreen({super.key});
@@ -29,6 +32,7 @@ class _SatislarScreenState extends State<SatislarScreen> {
       length: 3,
       child: Scaffold(
         drawer: const NavBar(),
+        bottomNavigationBar:const BottomNavBar(selectedMenu: MenuState.home),
         appBar: AppBar(
           backgroundColor: kAppBarColor,
           centerTitle: true,

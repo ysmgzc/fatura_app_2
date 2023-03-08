@@ -1,8 +1,10 @@
+import 'package:fatura_app_2/bottom_nav_bar.dart';
 import 'package:fatura_app_2/constants.dart';
 import 'package:fatura_app_2/navigation_bar.dart';
 import 'package:fatura_app_2/search_field.dart';
 import 'package:flutter/material.dart';
 
+import '../enum.dart';
 import 'musteri_ekle.dart';
 
 class MusterilerScreen extends StatefulWidget {
@@ -18,6 +20,7 @@ class _MusterilerScreenState extends State<MusterilerScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: const NavBar(),
+      bottomNavigationBar:const BottomNavBar(selectedMenu: MenuState.home),
       appBar: AppBar(
         backgroundColor: kAppBarColor,
         centerTitle: true,

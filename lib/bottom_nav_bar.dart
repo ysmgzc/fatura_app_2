@@ -1,3 +1,4 @@
+import 'package:fatura_app_2/screens/profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'constants.dart';
 import 'enum.dart';
@@ -53,7 +54,7 @@ class BottomNavBar extends StatelessWidget {
               ),
               IconButton(
                icon: Icon(Icons.add_comment,
-                color: MenuState.profile == selectedMenu
+                color: MenuState.favourite == selectedMenu
                       ? kDrawerIconColor
                       : inActiveIconColor,
                       ),
@@ -62,7 +63,7 @@ class BottomNavBar extends StatelessWidget {
               IconButton(
                // icon: SvgPicture.asset("assets/icons/f.svg"),
                icon: Icon(Icons.file_download,
-                color: MenuState.profile == selectedMenu
+                color: MenuState.message == selectedMenu
                       ? kDrawerIconColor
                       : inActiveIconColor,
                       ),
@@ -74,7 +75,15 @@ class BottomNavBar extends StatelessWidget {
                       ? kDrawerIconColor
                       : inActiveIconColor,
                 ),
-                onPressed: () {},
+                onPressed: () {
+                   Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                            const ProfileScreen(),
+                        ),
+                      );
+                },
               ),
             ],
           )),

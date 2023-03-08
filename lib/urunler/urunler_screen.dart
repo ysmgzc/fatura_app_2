@@ -2,6 +2,8 @@ import 'package:fatura_app_2/constants.dart';
 import 'package:fatura_app_2/navigation_bar.dart';
 import 'package:fatura_app_2/search_field.dart';
 import 'package:flutter/material.dart';
+import '../bottom_nav_bar.dart';
+import '../enum.dart';
 import 'urun_ekle.dart';
 
 class UrunlerScreen extends StatefulWidget {
@@ -16,6 +18,7 @@ class _UrunlerScreenState extends State<UrunlerScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer:const NavBar(),
+      bottomNavigationBar:const BottomNavBar(selectedMenu: MenuState.home),
       appBar: AppBar(
         backgroundColor: kAppBarColor,
         centerTitle: true,
