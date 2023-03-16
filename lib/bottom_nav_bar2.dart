@@ -3,14 +3,14 @@ import 'package:fatura_app_2/screens/home_page_screen.dart';
 import 'package:fatura_app_2/screens/profile_screen.dart';
 import 'package:flutter/material.dart';
 
-class BottomNavBar2 extends StatefulWidget {
-  const BottomNavBar2({super.key});
+class BottomNavBar extends StatefulWidget {
+  const BottomNavBar({super.key});
 
   @override
-  State<BottomNavBar2> createState() => _BottomNavBar2State();
+  State<BottomNavBar> createState() => _BottomNavBarState();
 }
 
-class _BottomNavBar2State extends State<BottomNavBar2> {
+class _BottomNavBarState extends State<BottomNavBar> {
  int selectedindex = 0;
  final List<Widget> _widgetOptions= [
       const HomePageScreen(),
