@@ -1,11 +1,8 @@
 import 'package:fatura_app_2/constants.dart';
-import 'package:fatura_app_2/enum.dart';
 import 'package:fatura_app_2/navigation_bar.dart';
 import 'package:fatura_app_2/search_field.dart';
 import 'package:fatura_app_2/tederikci/tedarikci_ekle.dart';
 import 'package:flutter/material.dart';
-
-import '../bottom_nav_bar.dart';
 
 class TedarikcilerScreen extends StatefulWidget {
   const TedarikcilerScreen({super.key});
@@ -20,7 +17,7 @@ class _TedarikcilerScreenState extends State<TedarikcilerScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer:const NavBar(),
-      bottomNavigationBar:const BottomNavBar(selectedMenu: MenuState.home),
+    //  bottomNavigationBar:const BottomNavBar(selectedMenu: MenuState.home),
       appBar: AppBar(
         backgroundColor: kAppBarColor,
         centerTitle: true,

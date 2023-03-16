@@ -1,6 +1,4 @@
-import 'package:fatura_app_2/bottom_nav_bar.dart';
 import 'package:fatura_app_2/constants.dart';
-import 'package:fatura_app_2/enum.dart';
 import 'package:fatura_app_2/masraflar/manuel_masraf_girisi.dart';
 import 'package:fatura_app_2/navigation_bar.dart';
 import 'package:fatura_app_2/search_field.dart';
@@ -30,7 +28,7 @@ class _MasraflarScreenState extends State<MasraflarScreen> {
       length: 3,
       child: Scaffold(
         drawer: const NavBar(),
-        bottomNavigationBar:const BottomNavBar(selectedMenu: MenuState.home),
+      //  bottomNavigationBar:const BottomNavBar(selectedMenu: MenuState.home),
         appBar: AppBar(
           backgroundColor: kAppBarColor,
           centerTitle: true,

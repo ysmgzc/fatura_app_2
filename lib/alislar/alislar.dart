@@ -4,8 +4,6 @@ import 'package:fatura_app_2/search_field.dart';
 import 'package:fatura_app_2/tederikci/tedarikciler.dart';
 import 'package:flutter/material.dart';
 
-import '../bottom_nav_bar.dart';
-import '../enum.dart';
 
 class AlislarScreen extends StatefulWidget {
   const AlislarScreen({super.key});
@@ -21,7 +19,6 @@ class _AlislarScreenState extends State<AlislarScreen> {
       length: 3,
       child: Scaffold(
         drawer: const NavBar(),
-        bottomNavigationBar:const BottomNavBar(selectedMenu: MenuState.home),
         appBar: AppBar(
           backgroundColor: kAppBarColor,
           centerTitle: true,

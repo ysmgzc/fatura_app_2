@@ -1,5 +1,5 @@
+import 'package:fatura_app_2/bottom_nav_bar2.dart';
 import 'package:fatura_app_2/constants.dart';
-import 'package:fatura_app_2/screens/home_page_screen.dart';
 import 'package:flutter/material.dart';
 
 class FirstLoginScreen extends StatefulWidget {
@@ -159,7 +159,7 @@ class _FirstLoginScreenState extends State<FirstLoginScreen> {
                         context,
                         MaterialPageRoute(
                           builder: (context) =>
-                            const  HomePageScreen(),
+                            const  BottomNavBar2(),
                         ),
                       );
                   },

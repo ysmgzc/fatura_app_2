@@ -179,7 +179,7 @@ class NavBar extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                           builder: (context) =>
-                           const   BildirimlerScreen(),
+                          const    BildirimlerScreen(),
                         ),
                       );
             },

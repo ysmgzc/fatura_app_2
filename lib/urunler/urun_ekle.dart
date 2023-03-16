@@ -11,7 +11,7 @@ class UrunEkle extends StatefulWidget {
 
 class _UrunEkleState extends State<UrunEkle> {
   bool? value = true;
-  String? selectedValue = '';
+  String? selectedValue ;
   List<String> items = [
     'Adet',
     'kg',
@@ -134,7 +134,7 @@ class _UrunEkleState extends State<UrunEkle> {
                     side: MaterialStateBorderSide.resolveWith(
                       (states) => const BorderSide(width: 1.0, color: kBorderColor),
                     ),
-                    value: this.value,
+                    value: value,
                     onChanged: (bool? value) {
                       setState(() {
                         this.value = value;
