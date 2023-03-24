@@ -1,4 +1,5 @@
 import 'package:fatura_app_2/constants.dart';
+import 'package:fatura_app_2/satislar/satislar.dart';
 import "package:flutter/material.dart";
 import 'package:intl/intl.dart';
 
@@ -181,7 +182,7 @@ class _PerakendeState extends State<Perakende> {
                   ),
                 ),
               ),
-                  GestureDetector(
+               /*   GestureDetector(
                     onTap: () {},
                     child: Container(
                       width: MediaQuery.of(context).size.width * 0.3,
@@ -205,12 +206,59 @@ class _PerakendeState extends State<Perakende> {
                         ),
                       ),
                     ),
-                  ),
+                  ),*/
                 ],
               ),
             ],
           ),
         ),
+      ),
+      floatingActionButton: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          FloatingActionButton.extended(
+            backgroundColor: kButtonColor,
+            onPressed: () {
+               Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                            const  SatislarScreen(),
+                        ),
+                      );
+            },
+            icon: const Icon(Icons.delete_outline),
+            label: const Text('Vazgeç'),
+            shape: const StadiumBorder(side: BorderSide(color: kButtonColor, width: 5)),
+          ),
+          FloatingActionButton.extended(
+            backgroundColor: kButtonColor,
+            onPressed: () {
+              showDialog(
+                context: context,
+                builder: (context) => AlertDialog(
+                  title: const Text('Kaydet'),
+                  content:const  Text('Kaydetme işleminiz başarılı.'),
+                  actions: [
+                    
+                    ElevatedButton(
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(kButtonColor),
+                      ),
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                        child:const Text('Kapat')
+                        )
+                  ],
+                ),
+              );
+            },
+            icon: const Icon(Icons.save),
+            label: const Text('Kaydet'),
+            shape: const StadiumBorder(side: BorderSide(color: kButtonColor, width: 5)),
+          ),
+        ],
       ),
     );
   }

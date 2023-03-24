@@ -22,7 +22,7 @@ class _TedarikcilerScreenState extends State<TedarikcilerScreen> {
         backgroundColor: kAppBarColor,
         centerTitle: true,
         title:const Text(
-          'tedarikçiler',
+          'Tedarikçiler',
         ),
       ),
       body: Column(

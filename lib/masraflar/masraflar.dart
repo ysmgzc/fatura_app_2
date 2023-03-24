@@ -33,7 +33,7 @@ class _MasraflarScreenState extends State<MasraflarScreen> {
           backgroundColor: kAppBarColor,
           centerTitle: true,
           title:const Text(
-            'masraflar',
+            'Masraflar',
           ),
           bottom:const TabBar(
             indicatorColor: Colors.white,

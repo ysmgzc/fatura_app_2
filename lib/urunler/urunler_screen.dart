@@ -21,7 +21,7 @@ class _UrunlerScreenState extends State<UrunlerScreen> {
         backgroundColor: kAppBarColor,
         centerTitle: true,
         title:const Text(
-          'ürünler',
+          'Stok Ekle',
         ),
       ),
       body: Column(

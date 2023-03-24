@@ -14,7 +14,7 @@ class BildirimlerScreen extends StatelessWidget {
         backgroundColor: kAppBarColor,
         centerTitle: true,
         title: const Text(
-          'bildirimler',
+          'Bildirimler',
         ),
       ),
       body: Container(),

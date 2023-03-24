@@ -23,7 +23,7 @@ class _AlislarScreenState extends State<AlislarScreen> {
           backgroundColor: kAppBarColor,
           centerTitle: true,
           title: const Text(
-            'alışlar',
+            'Alışlar',
           ),
           bottom: const TabBar(
             indicatorColor: Colors.white,

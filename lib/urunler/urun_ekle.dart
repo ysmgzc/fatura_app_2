@@ -1,4 +1,5 @@
 import 'package:fatura_app_2/constants.dart';
+import 'package:fatura_app_2/urunler/urunler_screen.dart';
 import "package:flutter/material.dart";
 import 'package:dropdown_button2/dropdown_button2.dart';
 
@@ -53,7 +54,7 @@ class _UrunEkleState extends State<UrunEkle> {
                 height: MediaQuery.of(context).size.height * 0.1,
               ),
               Text(
-                'Yeni Ürün Ekle',
+                'Yeni Stok Ekle',
                 style: TextStyle(
                   color: kTextColor,
                   fontSize: MediaQuery.of(context).size.width * 0.07,
@@ -66,8 +67,8 @@ class _UrunEkleState extends State<UrunEkle> {
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.05,
               ),
-              uruneklecontainer(context, Icons.code, "Ürün Kodu"),
-              uruneklecontainer(context, Icons.text_rotate_vertical, "Ürün Adı"),
+              uruneklecontainer(context, Icons.code, "Stok Kodu"),
+              uruneklecontainer(context, Icons.text_rotate_vertical, "Stok Adı"),
               Container(
                 width: MediaQuery.of(context).size.width * 0.8,
                 alignment: Alignment.center,
@@ -166,7 +167,7 @@ class _UrunEkleState extends State<UrunEkle> {
                   ),
                 ],
               ),
-              SizedBox(
+             /* SizedBox(
                 height: MediaQuery.of(context).size.height * 0.055,
               ),
               GestureDetector(
@@ -191,13 +192,60 @@ class _UrunEkleState extends State<UrunEkle> {
                     ),
                   ),
                 ),
-              ),
+              ),*/
               SizedBox(
-                height: MediaQuery.of(context).size.height * 0.055,
+                height: MediaQuery.of(context).size.height * 0.15,
               ),
             ],
           ),
         ),
+      ),
+      floatingActionButton: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          FloatingActionButton.extended(
+            backgroundColor: kButtonColor,
+            onPressed: () {
+               Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                            const  UrunlerScreen(),
+                        ),
+                      );
+            },
+            icon: const Icon(Icons.delete_outline),
+            label: const Text('Vazgeç'),
+            shape: const StadiumBorder(side: BorderSide(color: kButtonColor, width: 5)),
+          ),
+          FloatingActionButton.extended(
+            backgroundColor: kButtonColor,
+            onPressed: () {
+              showDialog(
+                context: context,
+                builder: (context) => AlertDialog(
+                  title: const Text('Kaydet'),
+                  content:const  Text('Kaydetme işleminiz başarılı.'),
+                  actions: [
+                    
+                    ElevatedButton(
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(kButtonColor),
+                      ),
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                        child:const Text('Kapat')
+                        )
+                  ],
+                ),
+              );
+            },
+            icon: const Icon(Icons.save),
+            label: const Text('Kaydet'),
+            shape: const StadiumBorder(side: BorderSide(color: kButtonColor, width: 5)),
+          ),
+        ],
       ),
     );
    

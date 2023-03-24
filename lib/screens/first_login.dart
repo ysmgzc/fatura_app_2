@@ -29,7 +29,7 @@ class _FirstLoginScreenState extends State<FirstLoginScreen> {
               children: [
                 SizedBox(height: MediaQuery.of(context).size.height*0.15,),
                 Text(
-                  'e-fatura',
+                  'E-Fatura',
                   style: TextStyle(
                       color: kTextColor,
                       fontSize: MediaQuery.of(context).size.width*0.1,

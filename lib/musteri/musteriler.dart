@@ -22,7 +22,7 @@ class _MusterilerScreenState extends State<MusterilerScreen> {
         backgroundColor: kAppBarColor,
         centerTitle: true,
         title: const Text(
-          'müşteriler',
+          'Müşteriler',
         ),
       ),
       body:Column(

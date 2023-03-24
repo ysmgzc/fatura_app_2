@@ -22,7 +22,7 @@ class _CalisanlarScreenState extends State<CalisanlarScreen> {
         backgroundColor: kAppBarColor,
         centerTitle: true,
         title: const Text(
-          'çalışanlar',
+          'Çalışanlar',
         ),
       ),
       

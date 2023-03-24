@@ -20,7 +20,7 @@ class _StokScreenState extends State<StokScreen> {
         backgroundColor: kAppBarColor,
         centerTitle: true,
         title: const Text(
-          'stok',
+          'Stok',
         ),
       ),
       

@@ -12,7 +12,8 @@ class HomePageScreen extends StatelessWidget {
       //  bottomNavigationBar:const BottomNavBar(selectedMenu: MenuState.home),
       appBar: AppBar(
         backgroundColor: kAppBarColor,
-        title: const Text("e-fatura"),
+        centerTitle: true,
+        title: const Text("E-Fatura"),
       ),
   
     body:Container(),

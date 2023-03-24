@@ -1,3 +1,4 @@
+import 'package:fatura_app_2/masraflar/masraflar.dart';
 import "package:flutter/material.dart";
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:fatura_app_2/constants.dart';
@@ -120,7 +121,8 @@ class _ManuelMasrafState extends State<ManuelMasraf> {
                manuelmasrafgirisicontainer1("Tutar: "),
                manuelmasrafgirisicontainer('KDV Oranı(%)',items2),
                manuelmasrafgirisicontainer1("Açıklama: "),
-               SizedBox(
+             
+             /*  SizedBox(
                 height: MediaQuery.of(context).size.height * 0.055,
               ),
               
@@ -148,10 +150,57 @@ class _ManuelMasrafState extends State<ManuelMasraf> {
                     ),
                   ),
                 ),
-              ),
+              ),*/
             ],
           ),
         ),
+      ),
+      floatingActionButton: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          FloatingActionButton.extended(
+            backgroundColor: kButtonColor,
+            onPressed: () {
+               Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                            const  MasraflarScreen(),
+                        ),
+                      );
+            },
+            icon: const Icon(Icons.delete_outline),
+            label: const Text('Vazgeç'),
+            shape: const StadiumBorder(side: BorderSide(color: kButtonColor, width: 5)),
+          ),
+          FloatingActionButton.extended(
+            backgroundColor: kButtonColor,
+            onPressed: () {
+              showDialog(
+                context: context,
+                builder: (context) => AlertDialog(
+                  title: const Text('Kaydet'),
+                  content:const  Text('Kaydetme işleminiz başarılı.'),
+                  actions: [
+                    
+                    ElevatedButton(
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(kButtonColor),
+                      ),
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                        child:const Text('Kapat')
+                        )
+                  ],
+                ),
+              );
+            },
+            icon: const Icon(Icons.save),
+            label: const Text('Kaydet'),
+            shape: const StadiumBorder(side: BorderSide(color: kButtonColor, width: 5)),
+          ),
+        ],
       ),
     );
   }

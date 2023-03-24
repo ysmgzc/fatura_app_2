@@ -1,7 +1,13 @@
 import 'package:fatura_app_2/constants.dart';
+import 'package:fatura_app_2/hesaplar/banka_eur_hesabi.dart';
+import 'package:fatura_app_2/hesaplar/banka_tl_hesabi.dart';
+import 'package:fatura_app_2/hesaplar/banka_usd_hesabi.dart';
 import 'package:fatura_app_2/hesaplar/hesap_bilgileri.dart';
+import 'package:fatura_app_2/hesaplar/tl_kasa_hesaplari.dart';
 import 'package:fatura_app_2/navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'kredi_kartlarim.dart';
+import 'pos_hesabi_screen.dart';
 
 class HesaplarScreen extends StatefulWidget {
   const HesaplarScreen({super.key});
@@ -36,7 +42,32 @@ class _HesaplarScreenState extends State<HesaplarScreen> {
                 height: size.height * 0.03,      
               ),
               hesaplarcontainer(size,"Kasa Hesapları"),
-               hesaplarcontainer1(Icons.warehouse, "TL Kasa",),
+             //  hesaplarcontainer1(Icons.warehouse, "TL Kasa",),
+               Container(
+              color: Colors.white,
+               width:  MediaQuery.of(context).size.width*3,
+               child: Column(
+                 children: [
+                    GestureDetector(
+                    onTap: (){
+                          Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const TLKasaScreen(),
+                      ),
+          );
+                    },
+                child: const ListTile(
+                    leading: Icon(Icons.warehouse, color:kIconColor2),
+                    title: Text(
+                      "TL Kasa",
+                    ),
+                    trailing: Icon(Icons.navigate_next, color: kIconColor2, size: 30.0)
+                ))
+                 ],
+               ),
+                       
+             ),
                hesaplarcontainer(size,"Banka Hesapları"),
                
                Container(
@@ -45,7 +76,14 @@ class _HesaplarScreenState extends State<HesaplarScreen> {
                  child: Column(
                    children: [
                       GestureDetector(
-                      onTap: (){},
+                      onTap: (){
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const BankaTLScreen(),
+                        ),
+                          );
+                      },
                   child: const ListTile(
                       leading: Icon(Icons.currency_lira, color: kIconColor2),
                       
@@ -55,7 +93,14 @@ class _HesaplarScreenState extends State<HesaplarScreen> {
                       trailing:Icon(Icons.navigate_next, color: kIconColor2, size: 30.0)
                   )),
                   GestureDetector(
-                      onTap: (){},
+                        onTap: (){
+                         Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const BankaUSDScreen(),
+                        ),
+                          );
+                      },
                   child: const ListTile(
                       leading: Icon(Icons.attach_money, color: kIconColor2),
                       
@@ -65,7 +110,14 @@ class _HesaplarScreenState extends State<HesaplarScreen> {
                       trailing:Icon(Icons.navigate_next, color: kIconColor2, size: 30.0)
                   )),
                   GestureDetector(
-                      onTap: (){},
+                      onTap: (){
+                        Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const BankaEURScreen(),
+                        ),
+                          );
+                      },
                   child:const ListTile(
                       leading:Icon(Icons.euro, color: kIconColor2),
                       
@@ -79,10 +131,60 @@ class _HesaplarScreenState extends State<HesaplarScreen> {
                            
                ),
                hesaplarcontainer(size,"POS Hesapları"),
-               hesaplarcontainer1(Icons.point_of_sale, "POS Hesabı"),
+             //  hesaplarcontainer1(Icons.point_of_sale, "POS Hesabı"),
+              Container(
+              color: Colors.white,
+               width:  MediaQuery.of(context).size.width*3,
+               child: Column(
+                 children: [
+                    GestureDetector(
+                    onTap: (){
+                       Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const POSHesabiScreen(),
+                        ),
+                          );
+                    },
+                child:const ListTile(
+                    leading: Icon(Icons.point_of_sale, color:kIconColor2),
+                    title: Text(
+                      "POS Hesabı",
+                    ),
+                    trailing: Icon(Icons.navigate_next, color: kIconColor2, size: 30.0)
+                ))
+                 ],
+               ),
+                         
+              ),
               
                hesaplarcontainer(size,"Kredi Kartları"),
-              hesaplarcontainer1(Icons.credit_card, "Kredi Kartım"),
+          //    hesaplarcontainer1(Icons.credit_card, "Kredi Kartım"),
+          Container(
+              color: Colors.white,
+               width:  MediaQuery.of(context).size.width*3,
+               child: Column(
+                 children: [
+                    GestureDetector(
+                    onTap: (){
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const KrediKartlarimScreen(),
+                        ),
+                          );
+                    },
+                child:const ListTile(
+                    leading: Icon(Icons.credit_card, color:kIconColor2),
+                    title: Text(
+                      "Kredi Kartım",
+                    ),
+                    trailing: Icon(Icons.navigate_next, color: kIconColor2, size: 30.0)
+                ))
+                 ],
+               ),
+                         
+             ),
                
             ]
          ),
@@ -102,27 +204,6 @@ class _HesaplarScreenState extends State<HesaplarScreen> {
           //  label: Text('Ekle'),
         ),
     );
-  }
-
-  Container hesaplarcontainer1(IconData icon, String text) {
-    return Container(
-              color: Colors.white,
-               width:  MediaQuery.of(context).size.width*3,
-               child: Column(
-                 children: [
-                    GestureDetector(
-                    onTap: (){},
-                child: ListTile(
-                    leading: Icon(icon, color:kIconColor2),
-                    title: Text(
-                      text,
-                    ),
-                    trailing:const Icon(Icons.navigate_next, color: kIconColor2, size: 30.0)
-                ))
-                 ],
-               ),
-                         
-             );
   }
 
   Container hesaplarcontainer(Size size,String text) {

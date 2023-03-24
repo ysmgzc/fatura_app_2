@@ -30,22 +30,25 @@ class _BottomNavBarState extends State<BottomNavBar> {
         child: _widgetOptions.elementAt(selectedindex),
       ),
       bottomNavigationBar: BottomNavigationBar(
+        unselectedFontSize: 14,
+        selectedFontSize: 15,
         items: const [
         BottomNavigationBarItem(
             icon: Icon(
               Icons.home,
             ),
-            label: 'home'),
+            label: 'Ana Sayfa'),
         BottomNavigationBarItem(
             icon: Icon(
-              Icons.home,
+              Icons.notification_add,
             ),
-            label: 'bildirimler'),
+            label: 'Bildirimler'),
         BottomNavigationBarItem(
             icon: Icon(
               Icons.person,
             ),
-            label: 'profil'),
+            label: 'Profil',
+            ),
       ],
       currentIndex: selectedindex,
        onTap: itemtab ,

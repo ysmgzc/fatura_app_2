@@ -1,5 +1,6 @@
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:fatura_app_2/constants.dart';
+import 'package:fatura_app_2/hesaplar/hesaplar.dart';
 import "package:flutter/material.dart";
 class HesapBilgileri extends StatefulWidget {
   const HesapBilgileri({super.key});
@@ -68,10 +69,9 @@ class _HesapBilgileriState extends State<HesapBilgileri> {
               hesapbilgilericontainer('Para Birimi',items1),  
               hesapbilgilericontainer1("Bakiyesi: "),               
                
-               SizedBox(
+             /*  SizedBox(
                 height: MediaQuery.of(context).size.height * 0.055,
               ),
-              
               GestureDetector(
                 onTap: () {},
                 child: Container(
@@ -96,10 +96,57 @@ class _HesapBilgileriState extends State<HesapBilgileri> {
                     ),
                   ),
                 ),
-              ),
+              ),*/
             ],
           ),
         ),
+      ),
+      floatingActionButton: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          FloatingActionButton.extended(
+            backgroundColor: kButtonColor,
+            onPressed: () {
+               Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                            const  HesaplarScreen(),
+                        ),
+                      );
+            },
+            icon: const Icon(Icons.delete_outline),
+            label: const Text('Vazgeç'),
+            shape: const StadiumBorder(side: BorderSide(color: kButtonColor, width: 5)),
+          ),
+          FloatingActionButton.extended(
+            backgroundColor: kButtonColor,
+            onPressed: () {
+              showDialog(
+                context: context,
+                builder: (context) => AlertDialog(
+                  title: const Text('Kaydet'),
+                  content:const  Text('Kaydetme işleminiz başarılı.'),
+                  actions: [
+                    
+                    ElevatedButton(
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(kButtonColor),
+                      ),
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                        child:const Text('Kapat')
+                        )
+                  ],
+                ),
+              );
+            },
+            icon: const Icon(Icons.save),
+            label: const Text('Kaydet'),
+            shape: const StadiumBorder(side: BorderSide(color: kButtonColor, width: 5)),
+          ),
+        ],
       ),
     );
   }
@@ -147,7 +194,7 @@ class _HesapBilgileriState extends State<HesapBilgileri> {
                         color: kTextColor,
                       ),
                     ),
-                    items: item
+                    items:item
                         .map((item) =>
                         DropdownMenuItem<String>(
                           value: item,

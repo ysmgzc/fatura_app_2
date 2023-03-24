@@ -30,7 +30,7 @@ class _LoginScreenState extends State<LoginScreen> {
               children: [
                 SizedBox(height: MediaQuery.of(context).size.height*0.15,),
                 Text(
-                  'e-fatura',
+                  'E-Fatura',
                   style: TextStyle(
                       color: kTextColor,
                       fontSize: MediaQuery.of(context).size.width*0.1,
@@ -192,7 +192,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         text: 'Hesabınız yok mu? ',
                         style: TextStyle(
                           color: Colors.white70,
-                          //fontSize: 18,
+                        //  fontSize: 14,
                           //fontWeight: FontWeight.w500,
                         )
                       ),
@@ -201,7 +201,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         text: 'Kaydol',
                         style: TextStyle(
                           color: kTextColor,
-                        //  fontSize: 18,
+                        //  fontSize: 14,
                           fontWeight: FontWeight.bold,
                         )
                       )

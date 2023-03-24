@@ -34,7 +34,7 @@ class _SatislarScreenState extends State<SatislarScreen> {
           backgroundColor: kAppBarColor,
           centerTitle: true,
           title:const Text(
-            'satışlar',
+            'Satışlar',
           ),
           bottom:const TabBar(
             indicatorColor: Colors.white,
