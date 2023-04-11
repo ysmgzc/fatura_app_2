@@ -65,7 +65,7 @@ class _PerakendeState extends State<Perakende> {
                         padding: EdgeInsets.only(top: 12),
                         child: Text(
                           "Belge No: ",
-                          style: TextStyle(color: kTextColor),
+                          style: kHintTextStyle,
                         )),
                     enabledBorder: UnderlineInputBorder(
                       borderSide: BorderSide(color: kBorderColor),
@@ -101,7 +101,7 @@ class _PerakendeState extends State<Perakende> {
                     } else {}
                   },
                   style: const TextStyle(
-                    height: 1.5,
+                    height: 1.7,
                   ),
                   decoration: const InputDecoration(
                     contentPadding: EdgeInsets.only(left: 10, top: 10, bottom: 15),
@@ -110,7 +110,7 @@ class _PerakendeState extends State<Perakende> {
                         padding: EdgeInsets.only(top: 12),
                         child: Text(
                           "İşlem Tarihi: ",
-                          style: TextStyle(color: kTextColor),
+                          style: kHintTextStyle,
                         )),
                     enabledBorder: UnderlineInputBorder(
                       borderSide: BorderSide(color: kBorderColor),
@@ -133,7 +133,7 @@ class _PerakendeState extends State<Perakende> {
                         padding: EdgeInsets.only(top: 12),
                         child: Text(
                           "Açıklama: ",
-                          style: TextStyle(color: kTextColor),
+                          style:kHintTextStyle,
                         )),
                     enabledBorder: UnderlineInputBorder(
                       borderSide: BorderSide(color: kBorderColor),

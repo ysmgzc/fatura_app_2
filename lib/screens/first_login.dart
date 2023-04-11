@@ -65,10 +65,7 @@ class _FirstLoginScreenState extends State<FirstLoginScreen> {
                     label: Center(
                     child: Text("Şirket Adı"),
                   ), 
-                  labelStyle: TextStyle(
-                   
-                    color: kTextColor,
-                  ),
+                  labelStyle: kHintTextStyle,
                   
                     ),
                   ),
@@ -102,10 +99,7 @@ class _FirstLoginScreenState extends State<FirstLoginScreen> {
                     label: Center(
                     child: Text("Telefon"),
                   ), 
-                  labelStyle: TextStyle(
-                   
-                    color: kTextColor,
-                  ),
+                  labelStyle: kHintTextStyle,
                   
                     ),
                   ),
@@ -144,7 +138,7 @@ class _FirstLoginScreenState extends State<FirstLoginScreen> {
                     },
                 child:const Text(
                   "Üyelik Sözleşmesini Kabul Ediyorum",
-                  style: TextStyle(color: kTextColor,decoration: TextDecoration.underline),
+                  style: TextStyle(color: kTextColor,decoration: TextDecoration.underline,fontSize: kInputFontSize),
                 ),
               )
                   ],

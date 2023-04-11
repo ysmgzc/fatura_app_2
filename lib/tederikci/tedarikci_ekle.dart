@@ -150,7 +150,7 @@ class _TedarikciEkleState extends State<TedarikciEkle> {
                   child: Text(text),
                 ), 
                 labelStyle:const TextStyle(
-                 
+                 fontSize: kInputFontSize,
                   color: kTextColor,
                 ),
                 

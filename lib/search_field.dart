@@ -37,61 +37,13 @@ class SearchField extends StatelessWidget {
                     onPressed: controller.clear,
                      icon:const Icon(Icons.clear),
                   ),
-                 const Text("|"),
+                /* const Text("|"),
                   IconButton(
                     icon:const Icon(Icons.add),
                     onPressed: () {  
-                     /* if (index == 0) { //eğer butona calısanscreen sayfasında tıklandıysa calısanekle sayafasına gitsin
-                            Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => CalisanEkle(),
-                      ));
-                            } 
-                      else if(index==1) {
-                            Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => MusteriEkle(),
-                            ));
-                            } 
-                      else {
-                         Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => TedarikciEkle(),
-                          ));
-                                }*/
-     //-------------------------------------------------------------
-                    
-                     /* var index;
-              switch (index) {
-                case 0:
-                   Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => CalisanEkle(),
-                ));
-                  break;
-                case 1:
-                   Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => MusteriEkle(),
-                ));
-                  break;
-                case 2:
-                 Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => TedarikciEkle(),
-                ));
-                  break;
-              }*/
-              
                     },
                     
-                  ),
+                  ),*/
                 ],
               ),
               ),

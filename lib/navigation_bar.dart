@@ -138,12 +138,12 @@ class NavBar extends StatelessWidget {
             textColor: kDrawerTextColor,
              initiallyExpanded: true,
             leading:const Icon(Icons.shopping_basket,color: kDrawerIconColor),
-            title:const Text('Stoklarım',style: kExpTileSize),
+            title:const Text('Stoklarım(Ürün)',style: kExpTileSize),
            children: <Widget>[
                     ListTile( 
                       contentPadding:const EdgeInsets.only(left: 50),
                     leading: const Icon(Icons.groups, color: kDrawerIconColor1),
-                    title: const Text('Stoklarım',style: kListTileSize),
+                    title: const Text('Stoklarım(ürün)',style: kListTileSize),
                     onTap: () {
               Navigator.push(
                         context,
@@ -157,7 +157,7 @@ class NavBar extends StatelessWidget {
                     ListTile( 
                     contentPadding:const EdgeInsets.only(left: 50),
                     leading: const Icon(Icons.person_add, color: kDrawerIconColor1),
-                    title: const Text('Stok Ekle',style: kListTileSize),
+                    title: const Text('Stok(ürün) Ekle',style: kListTileSize),
                     onTap: () {
                       Navigator.push(
                                 context,

@@ -109,6 +109,7 @@ class _MusteriEkleState extends State<MusteriEkle> {
                 child: TextFormField(
                   style:const TextStyle(
                           height: 1.5,
+                        
                           ),
                   decoration: InputDecoration(
                     contentPadding:const
@@ -131,7 +132,7 @@ class _MusteriEkleState extends State<MusteriEkle> {
                   child: Text(text),
                 ), 
                 labelStyle:const TextStyle(
-                 
+                  fontSize: kInputFontSize ,
                   color: kTextColor,
                 ),
                 

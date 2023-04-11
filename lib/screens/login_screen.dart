@@ -66,10 +66,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     label: Center(
                     child: Text("Kullanıcı Adı"),
                   ), 
-                  labelStyle: TextStyle(
-                   
-                    color: kTextColor,
-                  ),
+                  labelStyle: kHintTextStyle,
                   
                     ),
                   ),
@@ -104,10 +101,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     label: Center(
                     child: Text("Parola"),
                   ), 
-                  labelStyle: TextStyle(
-                   
-                    color: kTextColor,
-                  ),
+                  labelStyle: kHintTextStyle,
                   
                     ),
                   ),
@@ -132,7 +126,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     },
                 child:const Text(
                   "Şifremi Unuttum",
-                  style: TextStyle(color: kTextColor,decoration: TextDecoration.underline),
+                  style: TextStyle(color: kTextColor,decoration: TextDecoration.underline,fontSize:kInputFontSize ),
                 ),
               )
                    /* MaterialButton(
@@ -191,8 +185,8 @@ class _LoginScreenState extends State<LoginScreen> {
                       TextSpan(
                         text: 'Hesabınız yok mu? ',
                         style: TextStyle(
-                          color: Colors.white70,
-                        //  fontSize: 14,
+                          color: Colors.white70, 
+                         fontSize: kInputFontSize,
                           //fontWeight: FontWeight.w500,
                         )
                       ),
@@ -201,7 +195,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         text: 'Kaydol',
                         style: TextStyle(
                           color: kTextColor,
-                        //  fontSize: 14,
+                          fontSize: kInputFontSize,
                           fontWeight: FontWeight.bold,
                         )
                       )

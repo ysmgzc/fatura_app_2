@@ -34,6 +34,7 @@ class ForgotPassword extends StatelessWidget {
                 "Lütfen e-postanızı girin. \nHesabınıza girebilmeniz için size bir bağlantı göndereceğiz",
                 textAlign: TextAlign.center,
                 style: TextStyle(
+                  
                       color: Colors.white70,
                       fontSize: MediaQuery.of(context).size.width*0.03,
                       
@@ -67,10 +68,7 @@ class ForgotPassword extends StatelessWidget {
                     label: Center(
                     child: Text("E-posta"),
                   ), 
-                  labelStyle: TextStyle(
-                   
-                    color: kTextColor,
-                  ),
+                  labelStyle: kHintTextStyle,
                   
                     ),
                   ),

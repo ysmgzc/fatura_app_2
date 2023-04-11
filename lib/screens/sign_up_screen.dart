@@ -197,9 +197,7 @@ class SignUp extends StatelessWidget {
                     label:  Center(
                       child: Text(text),
                     ),
-                    labelStyle:const TextStyle(
-                      color: Colors.white,
-                    ),
+                    labelStyle:kHintTextStyle,
                   ),
                 ),
               );

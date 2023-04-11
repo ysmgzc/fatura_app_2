@@ -18,17 +18,19 @@ class _MasrafRaporuState extends State<MasrafRaporu> {
     super.initState();
   }
  bool? value = false;
-  String? selectedValue;
-  List<String> items0 = [
+  String? selectedValue1;
+  List<String> items1 = [
     'Hepsi',
     'Araç Giderleri',
     'İşletme Giderleri',
     'Personel Giderleri',
   ];
-  List<String> items1 = [
+  String? selectedValue2;
+  List<String> items2 = [
    'Hepsi',
 ];
-  List<String> items2 = [
+  String? selectedValue3;
+  List<String> items3 = [
     'Hepsi',
     'Ödenmişler',
     'Ödenecekler',
@@ -69,11 +71,88 @@ class _MasrafRaporuState extends State<MasrafRaporu> {
               
               rmasraflarcontainer("Başlangıç Tarihi: "),
               rmasraflarcontainer("Bitiş Tarihi: "),
-              
-               rmasraflarcontainer1('Ana Masraf',items0),
-               rmasraflarcontainer1('Alt Masraflar',items1),
-            
-            
+              Container(
+                alignment: Alignment.center,
+                child: Padding(
+                  padding:const EdgeInsets.only( top: 15),
+                  child: DropdownButton2(
+                    icon:const Padding(
+                      padding: EdgeInsets.only(right: 7),
+                      child: Icon(Icons.expand_more, color: kIconColor,),
+                    ),
+                    underline: Container( 
+                     height: 2, color: Colors.white60 ),
+                    hint:const Text(
+                      textAlign: TextAlign.start,
+                      "Ana Masraf",
+                      style:kHintTextStyle,
+                    ),
+                    items: items1
+                        .map((item) =>
+                        DropdownMenuItem<String>(
+                          value: item,
+                          child: Text(
+                            item,
+                            style: const TextStyle(
+                              fontSize: 14,
+                            ),
+                          ),
+                        ))
+                        .toList(),
+                    value: selectedValue1,
+                    onChanged: (value) {
+                      setState(() {
+                        selectedValue1 = value as String;
+                      });
+                    },
+                    buttonHeight: 40,
+                    buttonWidth: MediaQuery.of(context).size.width * 0.8,
+                    itemHeight: 40,
+                    //itemWidth: 140,
+                  ),
+                ),
+              ),
+              Container(
+                alignment: Alignment.center,
+                child: Padding(
+                  padding:const EdgeInsets.only( top: 10),
+                  child: DropdownButton2(
+                    icon:const Padding(
+                      padding: EdgeInsets.only(right: 7),
+                      child: Icon(Icons.expand_more, color: kIconColor,),
+                    ),
+                    underline: Container( 
+                     height: 2, color: Colors.white60 ),
+                    hint:const Text(
+                      textAlign: TextAlign.start,
+                      "Alt Masraflar",
+                      style:kHintTextStyle,
+                    ),
+                    items: items2
+                        .map((item) =>
+                        DropdownMenuItem<String>(
+                          value: item,
+                          child: Text(
+                            item,
+                            style: const TextStyle(
+                              fontSize: 14,
+                            ),
+                          ),
+                        ))
+                        .toList(),
+                    value: selectedValue2,
+                    onChanged: (value) {
+                      setState(() {
+                        selectedValue2 = value as String;
+                      });
+                    },
+                    buttonHeight: 40,
+                    buttonWidth: MediaQuery.of(context).size.width * 0.8,
+                    itemHeight: 40,
+                    //itemWidth: 140,
+                  ),
+                ),
+              ),
                 Container(
                    width: MediaQuery.of(context).size.width*0.8,
                    alignment: Alignment.center,
@@ -114,7 +193,47 @@ class _MasrafRaporuState extends State<MasrafRaporu> {
                      ),
                 ),
                 ),
-                 rmasraflarcontainer1('Ödeme Durumu',items2),
+                 Container(
+                alignment: Alignment.center,
+                child: Padding(
+                  padding:const EdgeInsets.only( top: 15),
+                  child: DropdownButton2(
+                    icon:const Padding(
+                      padding: EdgeInsets.only(right: 7),
+                      child: Icon(Icons.expand_more, color: kIconColor,),
+                    ),
+                    underline: Container( 
+                     height: 2, color: Colors.white60 ),
+                    hint:const Text(
+                      textAlign: TextAlign.start,
+                      "Ödeme Durumu",
+                      style:kHintTextStyle,
+                    ),
+                    items: items3
+                        .map((item) =>
+                        DropdownMenuItem<String>(
+                          value: item,
+                          child: Text(
+                            item,
+                            style: const TextStyle(
+                              fontSize: 14,
+                            ),
+                          ),
+                        ))
+                        .toList(),
+                    value: selectedValue3,
+                    onChanged: (value) {
+                      setState(() {
+                        selectedValue3 = value as String;
+                      });
+                    },
+                    buttonHeight: 40,
+                    buttonWidth: MediaQuery.of(context).size.width * 0.8,
+                    itemHeight: 40,
+                    //itemWidth: 140,
+                  ),
+                ),
+              ),
                
                SizedBox(
                 height: MediaQuery.of(context).size.height * 0.055,
@@ -152,50 +271,6 @@ class _MasrafRaporuState extends State<MasrafRaporu> {
     );
   }
 
-  Container rmasraflarcontainer1(String text,List item) {
-    return Container(
-                width: MediaQuery.of(context).size.width*0.8,
-                alignment: Alignment.center,
-                child: Padding(
-                  padding:const EdgeInsets.only( top: 15),
-                  child: DropdownButton2(
-                    icon:const Icon(Icons.expand_more, color: kIconColor,),
-                    underline: Container( 
-                     height: 2, color: Colors.white60 ),
-                    hint: Text(
-                      textAlign: TextAlign.start,
-                      text,
-                      style:const TextStyle(
-                        fontSize: 15.5,
-                        color: kTextColor,
-                      ),
-                    ),
-                    items: item
-                        .map((item) =>
-                        DropdownMenuItem<String>(
-                          value: item,
-                          child: Text(
-                            item,
-                            style: const TextStyle(
-                              fontSize: 14,
-                            ),
-                          ),
-                        ))
-                        .toList(),
-                    value: selectedValue,
-                    onChanged: (value) {
-                      setState(() {
-                        selectedValue = value as String;
-                      });
-                    },
-                    buttonHeight: 40,
-                    buttonWidth: MediaQuery.of(context).size.width * 0.8,
-                    itemHeight: 40,
-                    //itemWidth: 140,
-                  ),
-                ),
-              );
-  }
 
   Container rmasraflarcontainer(String text) {
     return Container(
@@ -224,7 +299,7 @@ class _MasrafRaporuState extends State<MasrafRaporu> {
                   } else {}
                 },
                 style: const TextStyle(
-                  height: 1.5,
+                  height: 1.7,
                 ),
                 decoration:  InputDecoration(
                   contentPadding:const EdgeInsets.only(left: 10, top: 10, bottom: 15),
@@ -233,7 +308,7 @@ class _MasrafRaporuState extends State<MasrafRaporu> {
                       padding:const EdgeInsets.only(top: 12),
                       child: Text(
                         text,
-                        style:const TextStyle(color: kTextColor),
+                        style:kHintTextStyle,
                       )),
                   enabledBorder:const UnderlineInputBorder(
                     borderSide: BorderSide(color: kBorderColor),

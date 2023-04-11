@@ -13,9 +13,15 @@ const kTextColor4 = Colors.grey;
 const kIconColor = Colors.white;
 const kIconColor2 = Colors.black;
 const kBorderColor = Colors.white;
+const kAvatarBGColor= Color(0xff055E98);
 const kListTileSize = TextStyle(
   fontSize: 14,
 );
 const kExpTileSize = TextStyle(
   fontSize: 14,
 );
+const kHintTextStyle =TextStyle(
+   fontSize: 15.5,
+   color: Colors.white,
+);
+const kInputFontSize= 15.5;

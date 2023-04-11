@@ -121,7 +121,7 @@ class _CalisanEkleState extends State<CalisanEkle> {
           label: Center(
             child: Text(text),
           ),
-          labelStyle:const TextStyle(color: kTextColor),
+          labelStyle:kHintTextStyle,
         ),
       ),
     );
