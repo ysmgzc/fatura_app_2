@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import '../../../constants.dart';
+
 class SearchField extends StatelessWidget {
   const SearchField({
     Key? key,
   }) : super(key: key);
-  
+
   get index => null;
 
   @override
@@ -19,24 +20,26 @@ class SearchField extends StatelessWidget {
         ),
         child: TextField(
           controller: controller,
-          onChanged: (value){}, //=> print(value),
+          onChanged: (value) {
+            print(value);
+          }, 
           decoration: InputDecoration(
-              contentPadding:const EdgeInsets.symmetric(
-                 // horizontal: 20,
-                  vertical: 20),
-              border: InputBorder.none,
-              focusedBorder: InputBorder.none,
-              enabledBorder: InputBorder.none,
-              hintText: "Ara",
-              prefixIcon:const Icon(Icons.search),
-              suffixIcon: Row(
-                 mainAxisAlignment: MainAxisAlignment.spaceBetween, // added line
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  IconButton(
-                    onPressed: controller.clear,
-                     icon:const Icon(Icons.clear),
-                  ),
+            contentPadding: const EdgeInsets.symmetric(
+                // horizontal: 20,
+                vertical: 20),
+            border: InputBorder.none,
+            focusedBorder: InputBorder.none,
+            enabledBorder: InputBorder.none,
+            hintText: "Ara",
+            prefixIcon: const Icon(Icons.search),
+            suffixIcon: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween, // added line
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                IconButton(
+                  onPressed: controller.clear,
+                  icon: const Icon(Icons.clear),
+                ),
                 /* const Text("|"),
                   IconButton(
                     icon:const Icon(Icons.add),
@@ -44,9 +47,9 @@ class SearchField extends StatelessWidget {
                     },
                     
                   ),*/
-                ],
-              ),
-              ),
+              ],
+            ),
+          ),
         ),
       ),
     );

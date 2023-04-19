@@ -30,7 +30,7 @@ class _TedarikcilerScreenState extends State<TedarikcilerScreen> {
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.02,
             ),
-           const SearchField(),
+              const SearchField(),
            Expanded(
             child:  
             Padding(
