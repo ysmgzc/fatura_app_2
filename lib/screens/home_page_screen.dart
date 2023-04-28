@@ -13,7 +13,7 @@ class HomePageScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: kAppBarColor,
         centerTitle: true,
-        title: const Text("E-Fatura"),
+        title: const Text("Genel Bakış"),
       ),
   
     body:Container(),

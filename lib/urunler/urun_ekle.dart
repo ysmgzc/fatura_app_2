@@ -14,9 +14,9 @@ class _UrunEkleState extends State<UrunEkle> {
   String? selectedValue1;
 List<String> items1 = <String>[
   'Adet',
-  'kg',
-  'litre',
-  'kutu',
+  'KG',
+  'Litre',
+  'Kutu',
 ];
    String? selectedValue2;
 List<String> items2 = <String>[
