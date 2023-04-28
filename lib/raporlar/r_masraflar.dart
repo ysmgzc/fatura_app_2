@@ -115,7 +115,7 @@ class _MasrafRaporuState extends State<MasrafRaporu> {
               Container(
                 alignment: Alignment.center,
                 child: Padding(
-                  padding:const EdgeInsets.only( top: 10),
+                  padding:const EdgeInsets.only( top: 8),
                   child: DropdownButton2(
                     icon:const Padding(
                       padding: EdgeInsets.only(right: 7),
@@ -153,50 +153,11 @@ class _MasrafRaporuState extends State<MasrafRaporu> {
                   ),
                 ),
               ),
-                Container(
-                   width: MediaQuery.of(context).size.width*0.8,
-                   alignment: Alignment.center,
-                  child: GestureDetector(
-                  onTap: () {
-                    Navigator.of(context).push(
-                            MaterialPageRoute(builder: (context) => const HesaplarScreen()));
-                  },
-                  
-                  child: Container(
-                      decoration: const BoxDecoration(
-                        border: Border(
-                          bottom: BorderSide(
-                            width: 2.0, 
-                            color: Colors.white60))),
-                    child: const ListTile(
-                      title: Padding(
-                        padding: EdgeInsets.only(left: 1),
-                        child: Text(
-                           textAlign: TextAlign.start,
-                          "Ödenen Hesap",style: TextStyle(
-                            fontSize: 15.5,
-                            color: kTextColor,
-                          ),
-                        ),
-                      ),
-                      trailing:Icon(Icons.navigate_next, color: kIconColor, )
-                  )
-                    /* Text(
-                        textAlign: TextAlign.start,
-                        'Ödenen Hesap',
-                        style: TextStyle(
-                          fontSize: 15.5,
-                          color: ktextColor,
-                        ),
-                      ), */   
-                             
-                     ),
-                ),
-                ),
+                
                  Container(
                 alignment: Alignment.center,
                 child: Padding(
-                  padding:const EdgeInsets.only( top: 15),
+                  padding:const EdgeInsets.only( top: 8),
                   child: DropdownButton2(
                     icon:const Padding(
                       padding: EdgeInsets.only(right: 7),
@@ -229,12 +190,62 @@ class _MasrafRaporuState extends State<MasrafRaporu> {
                     },
                     buttonHeight: 40,
                     buttonWidth: MediaQuery.of(context).size.width * 0.8,
-                    itemHeight: 40,
+                    itemHeight: 40,//açılırmenü yüksekliği
                     //itemWidth: 140,
                   ),
                 ),
               ),
-               
+               Container(
+                   width: MediaQuery.of(context).size.width*0.8,
+                   alignment: Alignment.center,
+                  child: GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(
+                            MaterialPageRoute(builder: (context) => const HesaplarScreen()));
+                  },
+                  
+                  child: Container(
+                    height: 40,
+                    decoration: const BoxDecoration(
+                      border: Border(
+                        bottom: BorderSide(
+                          width: 2.0, 
+                          color: Colors.white60))),
+                    child: Row(
+                      mainAxisAlignment:
+                          MainAxisAlignment.spaceBetween,
+                      children:const [
+                        Padding(
+                          padding:
+                               EdgeInsets.only(left: 1),
+                          child: Text(
+                            "Ödenen Hesap",
+                            textAlign: TextAlign.start,
+                            style: TextStyle(
+                              fontSize: 15.5,
+                              color: kTextColor,
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding:  EdgeInsets.only(right: 7),
+                          child: Icon(Icons.navigate_next, color: kIconColor),
+                        ),
+                      ],
+                    ),
+
+                    /* Text(
+                        textAlign: TextAlign.start,
+                        'Ödenen Hesap',
+                        style: TextStyle(
+                          fontSize: 15.5,
+                          color: ktextColor,
+                        ),
+                      ), */   
+                             
+                     ),
+                ),
+                ),
                SizedBox(
                 height: MediaQuery.of(context).size.height * 0.055,
               ),

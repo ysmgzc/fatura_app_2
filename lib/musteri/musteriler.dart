@@ -12,7 +12,6 @@ class MusterilerScreen extends StatefulWidget {
 }
 
 class _MusterilerScreenState extends State<MusterilerScreen> {
-  var index = 1;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,7 +35,7 @@ class _MusterilerScreenState extends State<MusterilerScreen> {
             Padding(
               padding: const EdgeInsets.all(16.0),
               child:  ListView.separated(
-                itemCount: 15,
+                itemCount: 5,
                 separatorBuilder: (BuildContext context, int index) =>const Divider(),
                 itemBuilder: (BuildContext context, int index) {
                   return ListTile(
