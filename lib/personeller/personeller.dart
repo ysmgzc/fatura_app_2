@@ -1,4 +1,4 @@
-import 'package:fatura_app_2/calisanlar/calisan_ekle.dart';
+import 'package:fatura_app_2/personeller/personel_ekle.dart';
 import 'package:fatura_app_2/constants.dart';
 import 'package:fatura_app_2/navigation_bar.dart';
 import 'package:fatura_app_2/search_field.dart';
@@ -22,7 +22,7 @@ class _CalisanlarScreenState extends State<CalisanlarScreen> {
         backgroundColor: kAppBarColor,
         centerTitle: true,
         title: const Text(
-          'Çalışanlar',
+          'Personel',
         ),
       ),
 

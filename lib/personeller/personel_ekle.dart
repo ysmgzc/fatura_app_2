@@ -1,5 +1,5 @@
-import 'package:fatura_app_2/calisanlar/calisanlar.dart';
 import 'package:fatura_app_2/constants.dart';
+import 'package:fatura_app_2/personeller/personeller.dart';
 import "package:flutter/material.dart";
 
 class CalisanEkle extends StatefulWidget {
@@ -29,7 +29,7 @@ class _CalisanEkleState extends State<CalisanEkle> {
                 height: MediaQuery.of(context).size.height * 0.15,
               ),
               Text(
-                'Yeni Çalışan Ekle',
+                'Yeni Personel Ekle',
                 style: TextStyle(
                   color: kTextColor,
                   fontSize: MediaQuery.of(context).size.width * 0.07,

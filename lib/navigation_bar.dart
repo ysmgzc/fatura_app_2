@@ -1,6 +1,5 @@
 import 'package:fatura_app_2/alislar/alislar.dart';
-import 'package:fatura_app_2/calisanlar/calisan_ekle.dart';
-import 'package:fatura_app_2/calisanlar/calisanlar.dart';
+import 'package:fatura_app_2/personeller/personel_ekle.dart';
 import 'package:fatura_app_2/hesaplar/hesap_bilgileri.dart';
 import 'package:fatura_app_2/hesaplar/hesaplar.dart';
 import 'package:fatura_app_2/masraflar/manuel_masraf_girisi.dart';
@@ -8,6 +7,7 @@ import 'package:fatura_app_2/masraflar/masraflar.dart';
 import 'package:fatura_app_2/musteri/musteri_ekle.dart';
 import 'package:fatura_app_2/musteri/musteriler.dart';
 import 'package:fatura_app_2/notifications.dart';
+import 'package:fatura_app_2/personeller/personeller.dart';
 import 'package:fatura_app_2/raporlar/r_alislar.dart';
 import 'package:fatura_app_2/raporlar/r_depo_stoklari.dart';
 import 'package:fatura_app_2/raporlar/r_hesap_harekerleri.dart';
@@ -26,7 +26,6 @@ import 'package:fatura_app_2/tederikci/tedarikciler.dart';
 import 'package:fatura_app_2/urunler/urun_ekle.dart';
 import 'package:fatura_app_2/urunler/urunler_screen.dart';
 import 'package:flutter/material.dart';
-
 import 'constants.dart';
 
 class NavBar extends StatelessWidget {
@@ -315,12 +314,12 @@ class NavBar extends StatelessWidget {
             textColor: kDrawerTextColor,
              initiallyExpanded: true,
             leading:const Icon(Icons.group_add,color: kDrawerIconColor),
-            title:const Text('Çalışanlar',style: kExpTileSize),
+            title:const Text('Personeller',style: kExpTileSize),
             children: <Widget>[
                     ListTile( 
                       contentPadding:const EdgeInsets.only(left: 50),
                     leading: const Icon(Icons.groups, color: kDrawerIconColor1),
-                    title: const Text('Çalışanlarım',style: kListTileSize),
+                    title: const Text('Personellerim',style: kListTileSize),
                     onTap: () {
               Navigator.push(
                         context,
@@ -334,7 +333,7 @@ class NavBar extends StatelessWidget {
                     ListTile( 
                     contentPadding:const EdgeInsets.only(left: 50),
                     leading: const Icon(Icons.person_add, color: kDrawerIconColor1),
-                    title: const Text('Çalışan Ekle',style: kListTileSize),
+                    title: const Text('Personel Ekle',style: kListTileSize),
                     onTap: () {
                       Navigator.push(
                                 context,

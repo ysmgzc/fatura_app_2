@@ -10,10 +10,12 @@ const kTextColor = Colors.white;
 const kTextColor2 = Colors.black;
 const kTextColor3 = Color(0xff055E98);
 const kTextColor4 = Colors.grey;
+const kTextColor5 =   Color(0xff055E98);
 const kIconColor = Colors.white;
 const kIconColor2 = Colors.black;
 const kBorderColor = Colors.white;
 const kAvatarBGColor= Color(0xff055E98);
+
 const kListTileSize = TextStyle(
   fontSize: 14,
 );
