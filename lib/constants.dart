@@ -15,7 +15,7 @@ const kIconColor = Colors.white;
 const kIconColor2 = Colors.black;
 const kBorderColor = Colors.white;
 const kAvatarBGColor= Color(0xff055E98);
-
+const kBarColor= Color(0xff055E98);
 const kListTileSize = TextStyle(
   fontSize: 14,
 );
