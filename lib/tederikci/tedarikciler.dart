@@ -56,31 +56,38 @@ class _TedarikcilerScreenState extends State<TedarikcilerScreen> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                       Ink(
-                        decoration: ShapeDecoration(
-                          color:const Color(0xff055E98),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
+                        InkWell(
+                            onTap: () {},
+                            child: Container(
+                              padding: const EdgeInsets.all(8),
+                              decoration: BoxDecoration(
+                                color: const Color(0xff055E98),
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              child: const Icon(
+                                Icons.mail,
+                                color: Colors.white,
+                              ),
+                            ),
                           ),
-                        ),
-                        child: IconButton(
-                          icon:const Icon(Icons.mail,color: Colors.white,),
-                          onPressed: () {},
-                        ),
-                      ),
-                     const SizedBox(width: 15,),
-                       Ink(
-                        decoration: ShapeDecoration(
-                          color: Colors.green,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
+                          const SizedBox(
+                            width: 15,
                           ),
-                        ),
-                        child: IconButton(
-                          icon:const Icon(Icons.call,color: Colors.white,),
-                          onPressed: () {},
-                        ),
-                      ),
+                          InkWell(
+                            onTap: () {},
+                            child: Container(
+                              padding: const EdgeInsets.all(8),
+                              decoration: BoxDecoration(
+                                color: Colors.green,
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              child: const Icon(
+                                Icons.call,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+
                       ],
                   )
                 );

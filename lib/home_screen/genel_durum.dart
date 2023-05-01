@@ -151,7 +151,7 @@ class GenelDurumScreen extends StatelessWidget {
                           ),
                            SizedBox(height: 8.0),
                           Text(
-                            "₺0.00", // burada gerçek verileri kullanabilirsin
+                            "₺0.00", 
                             style: TextStyle(fontSize: 20.0),
                           ),
                         ],
@@ -164,7 +164,7 @@ class GenelDurumScreen extends StatelessWidget {
                           ),
                            SizedBox(height: 8.0),
                           Text(
-                            "₺0.00", // burada gerçek verileri kullanabilirsin
+                            "₺0.00", 
                             style: TextStyle(fontSize: 20.0),
                           ),
                         ],
@@ -186,7 +186,7 @@ class GenelDurumScreen extends StatelessWidget {
                           ),
                           SizedBox(height: 8.0),
                           Text(
-                            "₺0.00", // burada gerçek verileri kullanabilirsin
+                            "₺0.00", 
                             style: TextStyle(fontSize: 20.0),
                           ),
                         ],
@@ -244,6 +244,7 @@ class GenelDurumScreen extends StatelessWidget {
                  ),
               ],
                   ),
+                  //---------------------------------------------------------------------------------------
                   const SizedBox(height: 35,),
                   Column(
                 children: [
@@ -299,6 +300,7 @@ class GenelDurumScreen extends StatelessWidget {
                   ),
                 ],
               ),
+              //----------------------------------------------------------------
               const SizedBox(height: 15,),
               Column(
                 children: [
@@ -329,7 +331,7 @@ class GenelDurumScreen extends StatelessWidget {
                                 child: Padding(
                                   padding:  EdgeInsets.only(left: 20.2,top: 10),
                                   child: Text(
-                                  "Kasa Toplamı",               // textAlign: TextAlign.start,
+                                  "Kasa Toplamı",              
                                   style: TextStyle(
                                     color: kTextColor3,
                                     fontWeight: FontWeight.bold,
@@ -361,8 +363,9 @@ class GenelDurumScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                ],
-              ),
+                ], ),
+                //--------------------------------------------------------
+             
                   ],
                 ),
                 
