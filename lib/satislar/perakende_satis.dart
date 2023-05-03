@@ -1,4 +1,5 @@
 import 'package:fatura_app_2/constants.dart';
+import 'package:fatura_app_2/satislar/satis_siparisler.dart';
 import 'package:fatura_app_2/satislar/satislar.dart';
 import "package:flutter/material.dart";
 import 'package:intl/intl.dart';
@@ -213,7 +214,7 @@ class _PerakendeState extends State<Perakende> {
           ),
         ),
       ),
-      floatingActionButton: Row(
+     floatingActionButton: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           FloatingActionButton.extended(
@@ -223,7 +224,7 @@ class _PerakendeState extends State<Perakende> {
                         context,
                         MaterialPageRoute(
                           builder: (context) =>
-                            const  SatislarScreen(),
+                            const  SatisSiparislerScreen(),
                         ),
                       );
             },

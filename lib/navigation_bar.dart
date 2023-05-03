@@ -1,4 +1,6 @@
-import 'package:fatura_app_2/alislar/alislar.dart';
+import 'package:fatura_app_2/alislar/alis_faturalar.dart';
+import 'package:fatura_app_2/alislar/alis_makbuz.dart';
+import 'package:fatura_app_2/alislar/alis_siparisler.dart';
 import 'package:fatura_app_2/home_screen/genel_durum.dart';
 import 'package:fatura_app_2/masraflar/masraflar.dart';
 import 'package:fatura_app_2/musteri/musteriler.dart';
@@ -12,7 +14,9 @@ import 'package:fatura_app_2/raporlar/r_masraflar.dart';
 import 'package:fatura_app_2/raporlar/r_satislar.dart';
 import 'package:fatura_app_2/raporlar/r_stok_hareketleri.dart';
 import 'package:fatura_app_2/raporlar/raporlar.dart';
-import 'package:fatura_app_2/satislar/satislar.dart';
+import 'package:fatura_app_2/satislar/satis_faturalar.dart';
+import 'package:fatura_app_2/satislar/satis_makbuz.dart';
+import 'package:fatura_app_2/satislar/satis_siparisler.dart';
 import 'package:fatura_app_2/screens/login_screen.dart';
 import 'package:fatura_app_2/stok/stok.dart';
 import 'package:fatura_app_2/tederikci/tedarikciler.dart';
@@ -87,7 +91,7 @@ class NavBar extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const SatislarScreen(),
+                      builder: (context) => const SatisFaturalarScreen(),
                     ),
                   );
                 },
@@ -104,7 +108,7 @@ class NavBar extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const SatislarScreen(),
+                      builder: (context) => const SatisSiparislerScreen(),
                     ),
                   );
                 },
@@ -121,7 +125,7 @@ class NavBar extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const SatislarScreen(),
+                      builder: (context) => const SatisMakbuzScreen(),
                     ),
                   );
                 },
@@ -152,7 +156,7 @@ class NavBar extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const AlislarScreen(),
+                      builder: (context) => const AlisFaturalarScreen(),
                     ),
                   );
                 },
@@ -169,7 +173,7 @@ class NavBar extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const AlislarScreen(),
+                      builder: (context) => const AlisSiparislerScreen(),
                     ),
                   );
                 },
@@ -186,7 +190,7 @@ class NavBar extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const AlislarScreen(),
+                      builder: (context) => const AlisMakbuzScreen(),
                     ),
                   );
                 },

@@ -1,10 +1,11 @@
-import 'package:fatura_app_2/alislar/alis_makbuz.dart';
+/*import 'package:fatura_app_2/alislar/alis_makbuz.dart';
 import 'package:fatura_app_2/alislar/alis_siparisler.dart';
 import 'package:fatura_app_2/constants.dart';
 import 'package:fatura_app_2/navigation_bar.dart';
 import 'package:fatura_app_2/tederikci/tedarikciler.dart';
 import 'package:flutter/material.dart';
 
+import '../search_field.dart';
 import 'alis_faturalar.dart';
 
 
@@ -65,7 +66,6 @@ class _AlislarScreenState extends State<AlislarScreen> {
               ),
             );
           },
-          //  label: Text('Ekle'),
         ),
       ),
     );
@@ -75,5 +75,61 @@ class _AlislarScreenState extends State<AlislarScreen> {
 
 
 
+class AlisFaturalar extends StatelessWidget {
+ const AlisFaturalar({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        SizedBox(
+          height: MediaQuery.of(context).size.height * 0.02,
+        ),
+        const SearchField(),
+        const Center(
+          child: Text("Faturalar"),
+        ),
+      ],
+    );
+  }
+}
+class AlisMakbuz extends StatelessWidget {
+ const AlisMakbuz({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        SizedBox(
+          height: MediaQuery.of(context).size.height * 0.02,
+        ),
+        const SearchField(),
+        const Center(
+          child: Text("Makbuzlar"),
+        ),
+      ],
+    );
+  }
+}
+
+class AlisSiparisler extends StatelessWidget {
+  const AlisSiparisler({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        SizedBox(
+          height: MediaQuery.of(context).size.height * 0.02,
+        ),
+        const SearchField(),
+         SizedBox(
+          height: MediaQuery.of(context).size.height * 0.02,
+        ),
+        const Center(
+          child: Text("Siparişler"),
+        ),
+      ],
+    );
+  }
+}
 
 
+*/

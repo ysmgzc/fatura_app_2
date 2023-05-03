@@ -1,22 +1,49 @@
+import 'package:fatura_app_2/constants.dart';
+import 'package:fatura_app_2/navigation_bar.dart';
+import 'package:fatura_app_2/search_field.dart';
 import 'package:flutter/material.dart';
 
-import '../search_field.dart';
+class SatisFaturalarScreen extends StatefulWidget {
+  const SatisFaturalarScreen({super.key});
 
+  @override
+  State<SatisFaturalarScreen> createState() => _SatisFaturalarScreenState();
+}
 
-class SatisFaturalar extends StatelessWidget {
-  const SatisFaturalar({super.key});
+class _SatisFaturalarScreenState extends State<SatisFaturalarScreen> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-        children: [
-          SizedBox(
-            height: MediaQuery.of(context).size.height * 0.02,
-          ),
-         const SearchField(),
-         const Center(
-            child: Text("Faturalar"),
-          ),
-        ],
+    return Scaffold(
+      drawer:const NavBar(),
+      appBar: AppBar(
+        backgroundColor: kAppBarColor,
+        centerTitle: true,
+        title:const Text(
+          'Satış Faturaları',
+        ),
+      ),
+      body: Column(
+          children: [
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.02,
+            ),
+           const SearchField(),
+          ],
+        ),
+    /*  floatingActionButton: FloatingActionButton.extended(
+        backgroundColor: kButtonColor,
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const UrunEkle(),
+            ),
+          );
+        },
+        icon:const Icon(Icons.add),
+        label:const Text('Ekle'),
+        shape: const StadiumBorder(side: BorderSide(color: kButtonColor, width: 3)),
+      ),*/
     );
   }
 }

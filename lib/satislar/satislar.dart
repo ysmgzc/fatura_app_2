@@ -1,10 +1,8 @@
-import 'package:fatura_app_2/constants.dart';
+/*import 'package:fatura_app_2/constants.dart';
 import 'package:fatura_app_2/musteri/musteriler.dart';
 import 'package:fatura_app_2/navigation_bar.dart';
-import 'package:fatura_app_2/satislar/satis_faturalar.dart';
-import 'package:fatura_app_2/satislar/satis_makbuz.dart';
 import 'package:fatura_app_2/satislar/perakende_satis.dart';
-import 'package:fatura_app_2/satislar/satis_siparisler.dart';
+import 'package:fatura_app_2/search_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 
@@ -131,3 +129,59 @@ class _SatislarScreenState extends State<SatislarScreen> {
   ),
   ); 
 }
+
+class SatisFaturalar extends StatelessWidget {
+  const SatisFaturalar({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+        children: [
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.02,
+          ),
+         const SearchField(),
+         const Center(
+            child: Text("Faturalar"),
+          ),
+        ],
+    );
+  }
+}
+
+class SatisSiparisler extends StatelessWidget {
+ const SatisSiparisler({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+        children: [
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.02,
+          ),
+         const SearchField(),
+         const Center(
+            child: Text("Siparişler"),
+          ),
+        ],
+    );
+  }
+}
+
+
+class SatisMakbuz extends StatelessWidget {
+  const SatisMakbuz({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+        children: [
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.02,
+          ),
+         const SearchField(),
+          const Center(
+            child: Text("Makbuz"),
+          ),
+        ],
+    );
+  }
+}
+*/
