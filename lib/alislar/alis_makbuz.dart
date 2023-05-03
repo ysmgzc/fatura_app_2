@@ -2,8 +2,8 @@ import 'package:fatura_app_2/search_field.dart';
 import 'package:flutter/material.dart';
 
 
-class AlisIrsaliyeler extends StatelessWidget {
- const AlisIrsaliyeler({super.key});
+class AlisMakbuz extends StatelessWidget {
+ const AlisMakbuz({super.key});
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -13,7 +13,7 @@ class AlisIrsaliyeler extends StatelessWidget {
         ),
         const SearchField(),
         const Center(
-          child: Text("İrsaliyeler"),
+          child: Text("Makbuzlar"),
         ),
       ],
     );

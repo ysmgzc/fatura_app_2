@@ -33,7 +33,7 @@ class HomePageScreen extends StatelessWidget {
         onTap: () {
           Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => const GenelDurumScreen()),
+        MaterialPageRoute(builder: (context) => const GenelBakisScreen()),
           );
         },
         child: Column(

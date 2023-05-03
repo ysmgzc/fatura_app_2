@@ -1,10 +1,10 @@
 import 'package:fatura_app_2/constants.dart';
 import 'package:fatura_app_2/musteri/musteriler.dart';
 import 'package:fatura_app_2/navigation_bar.dart';
-import 'package:fatura_app_2/satislar/faturalar.dart';
-import 'package:fatura_app_2/satislar/irsaliyeler.dart';
+import 'package:fatura_app_2/satislar/satis_faturalar.dart';
+import 'package:fatura_app_2/satislar/satis_makbuz.dart';
 import 'package:fatura_app_2/satislar/perakende_satis.dart';
-import 'package:fatura_app_2/satislar/siparisler.dart';
+import 'package:fatura_app_2/satislar/satis_siparisler.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 
@@ -18,7 +18,7 @@ class SatislarScreen extends StatefulWidget {
 class _SatislarScreenState extends State<SatislarScreen> {
   final isDialOpen = ValueNotifier(false);
   @override
-  Widget build(BuildContext context) => WillPopScope(//geri tusuna basılınca speedbar kapatır sayfadan cikis olmaz
+  Widget build(BuildContext context) => WillPopScope(
     onWillPop: ()async{
       if (isDialOpen.value) {
         isDialOpen.value=false;
@@ -41,27 +41,27 @@ class _SatislarScreenState extends State<SatislarScreen> {
           bottom:const TabBar(
             indicatorColor: Colors.white,
             indicatorWeight: 5,
-            tabs: [
+            tabs: [ 
+              Tab(
+                icon: Icon(Icons.receipt),
+                text: "Faturalar",
+              ),
               Tab(
                 icon: Icon(Icons.add_shopping_cart),
                 text: "Siparişler",
               ),
-              Tab(
+               Tab(
                 icon: Icon(Icons.difference),
-                text: "İrsaliyeler",
-              ),
-              Tab(
-                icon: Icon(Icons.receipt),
-                text: "Faturalar",
+                text: "Makbuz",
               ),
             ],
           ),
         ),
         body: const TabBarView(
           children: [
-          SatisSiparisler(),
-          SatisIrsaliyeler(),
           SatisFaturalar(),
+          SatisSiparisler(),
+          SatisMakbuz(),
           ],
         ),
         floatingActionButton: SpeedDial(

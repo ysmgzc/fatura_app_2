@@ -1,11 +1,11 @@
-import 'package:fatura_app_2/alislar/siparisler.dart';
+import 'package:fatura_app_2/alislar/alis_makbuz.dart';
+import 'package:fatura_app_2/alislar/alis_siparisler.dart';
 import 'package:fatura_app_2/constants.dart';
 import 'package:fatura_app_2/navigation_bar.dart';
 import 'package:fatura_app_2/tederikci/tedarikciler.dart';
 import 'package:flutter/material.dart';
 
-import 'faturalar.dart';
-import 'irsaliyeler.dart';
+import 'alis_faturalar.dart';
 
 
 class AlislarScreen extends StatefulWidget {
@@ -33,25 +33,25 @@ class _AlislarScreenState extends State<AlislarScreen> {
             indicatorWeight: 5,
             tabs: [
               Tab(
+                icon: Icon(Icons.receipt),
+                text: "Faturalar",
+              ),
+              Tab(
                 icon: Icon(Icons.add_shopping_cart),
                 text: "Siparişler",
               ),
-              Tab(
+               Tab(
                 icon: Icon(Icons.difference),
-                text: "İrsaliyeler",
-              ),
-              Tab(
-                icon: Icon(Icons.receipt),
-                text: "Faturalar",
+                text: "Makbuz",
               ),
             ],
           ),
         ),
         body:const TabBarView(
-          children: [
-            AlisSiparisler(),
-            AlisIrsaliyeler(),
+          children: [ 
             AlisFaturalar(),
+            AlisSiparisler(),
+            AlisMakbuz(),
           ],
         ),
         floatingActionButton: FloatingActionButton(

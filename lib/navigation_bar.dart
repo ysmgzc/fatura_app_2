@@ -1,11 +1,6 @@
 import 'package:fatura_app_2/alislar/alislar.dart';
-import 'package:fatura_app_2/alislar/siparisler.dart';
-import 'package:fatura_app_2/personeller/personel_ekle.dart';
-import 'package:fatura_app_2/hesaplar/hesap_bilgileri.dart';
-import 'package:fatura_app_2/hesaplar/hesaplar.dart';
-import 'package:fatura_app_2/masraflar/manuel_masraf_girisi.dart';
+import 'package:fatura_app_2/home_screen/genel_durum.dart';
 import 'package:fatura_app_2/masraflar/masraflar.dart';
-import 'package:fatura_app_2/musteri/musteri_ekle.dart';
 import 'package:fatura_app_2/musteri/musteriler.dart';
 import 'package:fatura_app_2/notifications.dart';
 import 'package:fatura_app_2/personeller/personeller.dart';
@@ -17,11 +12,9 @@ import 'package:fatura_app_2/raporlar/r_masraflar.dart';
 import 'package:fatura_app_2/raporlar/r_satislar.dart';
 import 'package:fatura_app_2/raporlar/r_stok_hareketleri.dart';
 import 'package:fatura_app_2/raporlar/raporlar.dart';
-import 'package:fatura_app_2/satislar/perakende_satis.dart';
 import 'package:fatura_app_2/satislar/satislar.dart';
 import 'package:fatura_app_2/screens/login_screen.dart';
 import 'package:fatura_app_2/stok/stok.dart';
-import 'package:fatura_app_2/tederikci/tedarikci_ekle.dart';
 import 'package:fatura_app_2/tederikci/tedarikciler.dart';
 import 'package:fatura_app_2/urunler/urunler_screen.dart';
 import 'package:flutter/material.dart';
@@ -54,13 +47,17 @@ class NavBar extends StatelessWidget {
           //-------------------------------------------------
 
           ListTile(
-            leading: const Icon(Icons.groups, color: kDrawerIconColor),
+            leading: SizedBox(
+              width: 30.0,
+              height: 30.0,
+              child: Image.asset('assets/icons/genelbakisicon.png'),
+            ),
             title: const Text('Genel Bakış', style: kListTileSize),
             onTap: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => const MusterilerScreen(),
+                  builder: (context) => const GenelBakisScreen(),
                 ),
               );
             },
@@ -70,14 +67,39 @@ class NavBar extends StatelessWidget {
           ExpansionTile(
             iconColor: kDrawerIconColor,
             textColor: kDrawerTextColor,
-            initiallyExpanded: false,
-            leading: const Icon(Icons.shopping_cart, color: kDrawerIconColor),
+            initiallyExpanded: true,
+             leading: SizedBox(
+              width: 30.0,
+              height: 30.0,
+              child: Image.asset('assets/icons/satisicon.png'),
+            ),
             title: const Text('Satışlar', style: kExpTileSize),
             children: <Widget>[
               ListTile(
                 contentPadding: const EdgeInsets.only(left: 50),
-                leading: const Icon(Icons.groups, color: kDrawerIconColor1),
+                 leading: SizedBox(
+              width: 30.0,
+              height: 30.0,
+              child: Image.asset('assets/icons/faturaicon.png'),
+            ),
                 title: const Text('Satış Faturaları', style: kListTileSize),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const SatislarScreen(),
+                    ),
+                  );
+                },
+              ),
+               ListTile(
+                contentPadding: const EdgeInsets.only(left: 50),
+                leading: SizedBox(
+              width: 30.0,
+              height: 30.0,
+              child: Image.asset('assets/icons/siparisicon.png'),
+            ),
+                title: const Text('Siparişler', style: kListTileSize),
                 onTap: () {
                   Navigator.push(
                     context,
@@ -89,13 +111,17 @@ class NavBar extends StatelessWidget {
               ),
               ListTile(
                 contentPadding: const EdgeInsets.only(left: 50),
-                leading: const Icon(Icons.person_add, color: kDrawerIconColor1),
-                title: const Text('Perakende Satış', style: kListTileSize),
+                 leading: SizedBox(
+              width: 30.0,
+              height: 30.0,
+              child: Image.asset('assets/icons/serbestmeslekmakbuzicon.png'),
+            ),
+                title: const Text('Serbest Meslek Makbuzu', style: kListTileSize),
                 onTap: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const Perakende(),
+                      builder: (context) => const SatislarScreen(),
                     ),
                   );
                 },
@@ -106,13 +132,21 @@ class NavBar extends StatelessWidget {
           ExpansionTile(
             iconColor: kDrawerIconColor,
             textColor: kDrawerTextColor,
-            initiallyExpanded: false,
-            leading: const Icon(Icons.add_shopping_cart, color: kDrawerIconColor),
+            initiallyExpanded: true,
+            leading: SizedBox(
+              width: 30.0,
+              height: 30.0,
+              child: Image.asset('assets/icons/alisicon.png'),
+            ),
             title: const Text('Alışlar', style: kExpTileSize),
             children: <Widget>[
               ListTile(
                 contentPadding: const EdgeInsets.only(left: 50),
-                leading: const Icon(Icons.groups, color: kDrawerIconColor1),
+                leading: SizedBox(
+              width: 30.0,
+              height: 30.0,
+              child: Image.asset('assets/icons/faturaicon.png'),
+            ),
                 title: const Text('Alış Faturaları', style: kListTileSize),
                 onTap: () {
                   Navigator.push(
@@ -125,13 +159,34 @@ class NavBar extends StatelessWidget {
               ),
               ListTile(
                 contentPadding: const EdgeInsets.only(left: 50),
-                leading: const Icon(Icons.groups, color: kDrawerIconColor1),
+                leading: SizedBox(
+              width: 30.0,
+              height: 30.0,
+              child: Image.asset('assets/icons/siparisicon.png'),
+            ),
                 title: const Text('Siparişler', style: kListTileSize),
                 onTap: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const AlisSiparisler(),
+                      builder: (context) => const AlislarScreen(),
+                    ),
+                  );
+                },
+              ),
+               ListTile(
+                contentPadding: const EdgeInsets.only(left: 50),
+                leading: SizedBox(
+              width: 30.0,
+              height: 30.0,
+              child: Image.asset('assets/icons/serbestmeslekmakbuzicon.png'),
+            ),
+             title: const Text('Serbest Meslek Makbuzu', style: kListTileSize),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const AlislarScreen(),
                     ),
                   );
                 },
@@ -139,16 +194,12 @@ class NavBar extends StatelessWidget {
             ],
           ),
           //-------------------------------------------------------------------
-          ExpansionTile(
-            iconColor: kDrawerIconColor,
-            textColor: kDrawerTextColor,
-            initiallyExpanded: false,
-            leading: const Icon(Icons.account_balance_wallet, color: kDrawerIconColor),
-            title: const Text('Masraflar', style: kExpTileSize),
-            children: <Widget>[
               ListTile(
-                contentPadding: const EdgeInsets.only(left: 50),
-                leading: const Icon(Icons.groups, color: kDrawerIconColor1),
+                leading: SizedBox(
+              width: 30.0,
+              height: 30.0,
+              child: Image.asset('assets/icons/masraficon.png'),
+            ),
                 title: const Text('Masraflarım', style: kListTileSize),
                 onTap: () {
                   Navigator.push(
@@ -159,36 +210,16 @@ class NavBar extends StatelessWidget {
                   );
                 },
               ),
-              ListTile(
-                contentPadding: const EdgeInsets.only(left: 50),
-                leading: const Icon(Icons.person_add, color: kDrawerIconColor1),
-                title: const Text('Manuel Masraf Girişi', style: kListTileSize),
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const ManuelMasraf(),
-                    ),
-                  );
-                },
-              ),
-            ],
-          ),
+             
           //------------------------------------------------------------
-          ExpansionTile(
-            iconColor: kDrawerIconColor,
-            initiallyExpanded: false,
-            textColor: kDrawerTextColor,
-            leading: const Icon(Icons.groups, color: kDrawerIconColor),
-            title: const Text(
-              'Müşteriler',
-              style: kExpTileSize,
-            ),
-            children: <Widget>[
+         
               ListTile(
-                contentPadding: const EdgeInsets.only(left: 50),
-                leading: const Icon(Icons.groups, color: kDrawerIconColor1),
-                title: const Text('Müşterilerim', style: kListTileSize),
+                leading: SizedBox(
+              width: 30.0,
+              height: 30.0,
+              child: Image.asset('assets/icons/musteriicon.png'),
+            ),
+                title: const Text('Müşteriler', style: kListTileSize),
                 onTap: () {
                   Navigator.push(
                     context,
@@ -198,33 +229,15 @@ class NavBar extends StatelessWidget {
                   );
                 },
               ),
-              ListTile(
-                contentPadding: const EdgeInsets.only(left: 50),
-                leading: const Icon(Icons.person_add, color: kDrawerIconColor1),
-                title: const Text('Müşteri Ekle', style: kListTileSize),
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const MusteriEkle(),
-                    ),
-                  );
-                },
-              ),
-            ],
-          ),
           //----------------------------------------------------------
-          ExpansionTile(
-            iconColor: kDrawerIconColor,
-            textColor: kDrawerTextColor,
-            initiallyExpanded: false,
-            leading: const Icon(Icons.local_shipping, color: kDrawerIconColor),
-            title: const Text('Tedarikçiler', style: kExpTileSize),
-            children: <Widget>[
+          
               ListTile(
-                contentPadding: const EdgeInsets.only(left: 50),
-                leading: const Icon(Icons.groups, color: kDrawerIconColor1),
-                title: const Text('Tedarikçilerim', style: kListTileSize),
+                leading: SizedBox(
+              width: 30.0,
+              height: 30.0,
+              child: Image.asset('assets/icons/tedarikciicon.png'),
+            ),
+                title: const Text('Tedarikçiler', style: kListTileSize),
                 onTap: () {
                   Navigator.push(
                     context,
@@ -234,33 +247,14 @@ class NavBar extends StatelessWidget {
                   );
                 },
               ),
-              ListTile(
-                contentPadding: const EdgeInsets.only(left: 50),
-                leading: const Icon(Icons.person_add, color: kDrawerIconColor1),
-                title: const Text('Tedarikçi Ekle', style: kListTileSize),
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const TedarikciEkle(),
-                    ),
-                  );
-                },
-              ),
-            ],
-          ),
           //--------------------------------------------------------------------
-          ExpansionTile(
-            iconColor: kDrawerIconColor,
-            textColor: kDrawerTextColor,
-            initiallyExpanded: false,
-            leading: const Icon(Icons.group_add, color: kDrawerIconColor),
-            title: const Text('Personeller', style: kExpTileSize),
-            children: <Widget>[
               ListTile(
-                contentPadding: const EdgeInsets.only(left: 50),
-                leading: const Icon(Icons.groups, color: kDrawerIconColor1),
-                title: const Text('Personellerim', style: kListTileSize),
+                leading: SizedBox(
+              width: 30.0,
+              height: 30.0,
+              child: Image.asset('assets/icons/personelicon.png'),
+            ),
+                title: const Text('Personeller', style: kListTileSize),
                 onTap: () {
                   Navigator.push(
                     context,
@@ -270,33 +264,43 @@ class NavBar extends StatelessWidget {
                   );
                 },
               ),
-              ListTile(
-                contentPadding: const EdgeInsets.only(left: 50),
-                leading: const Icon(Icons.person_add, color: kDrawerIconColor1),
-                title: const Text('Personel Ekle', style: kListTileSize),
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const CalisanEkle(),
-                    ),
-                  );
-                },
-              ),
-            ],
-          ),
           //-------------------------------------------------------
           ExpansionTile(
             iconColor: kDrawerIconColor,
             textColor: kDrawerTextColor,
-            initiallyExpanded: false,
-            leading: const Icon(Icons.shopping_basket, color: kDrawerIconColor),
-            title: const Text('Stoklarım', style: kExpTileSize),
+            initiallyExpanded: true,
+            leading: SizedBox(
+              width: 30.0,
+              height: 30.0,
+              child: Image.asset('assets/icons/stokicon.png'),
+            ),
+            title: const Text('Stoklar & Hizmetler', style: kExpTileSize),
             children: <Widget>[
               ListTile(
                 contentPadding: const EdgeInsets.only(left: 50),
-                leading: const Icon(Icons.groups, color: kDrawerIconColor1),
+                 leading: SizedBox(
+              width: 30.0,
+              height: 30.0,
+              child: Image.asset('assets/icons/urunicon.png'),
+            ),
                 title: const Text('Ürünler', style: kListTileSize),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const UrunlerScreen(),
+                    ),
+                  );
+                },
+              ),
+               ListTile(
+                contentPadding: const EdgeInsets.only(left: 50),
+                 leading: SizedBox(
+              width: 30.0,
+              height: 30.0,
+              child: Image.asset('assets/icons/hizmetlericon.png'),
+            ),
+                title: const Text('Hizmetler', style: kListTileSize),
                 onTap: () {
                   Navigator.push(
                     context,
@@ -308,7 +312,11 @@ class NavBar extends StatelessWidget {
               ),
               ListTile(
                 contentPadding: const EdgeInsets.only(left: 50),
-                leading: const Icon(Icons.groups, color: kDrawerIconColor1),
+                 leading: SizedBox(
+              width: 30.0,
+              height: 30.0,
+              child: Image.asset('assets/icons/stokhareketicon.png'),
+            ),
                 title: const Text('Stok Hareketleri', style: kListTileSize),
                 onTap: () {
                   Navigator.push(
@@ -322,35 +330,98 @@ class NavBar extends StatelessWidget {
             ],
           ),
           //---------------------------------------------------------------------
-          ExpansionTile(
+           ExpansionTile(
             iconColor: kDrawerIconColor,
             textColor: kDrawerTextColor,
-            initiallyExpanded: false,
-            leading: const Icon(Icons.point_of_sale, color: kDrawerIconColor),
-            title: const Text('Hesaplar', style: kExpTileSize),
+            initiallyExpanded: true,
+            leading: SizedBox(
+              width: 30.0,
+              height: 30.0,
+              child: Image.asset('assets/icons/parahesabiicon.png'),
+            ),
+            title: const Text('Para', style: kExpTileSize),
             children: <Widget>[
               ListTile(
                 contentPadding: const EdgeInsets.only(left: 50),
-                leading: const Icon(Icons.groups, color: kDrawerIconColor1),
-                title: const Text('Hesaplarım', style: kListTileSize),
+                 leading: SizedBox(
+              width: 30.0,
+              height: 30.0,
+              child: Image.asset('assets/icons/nakitdurumicon.png'),
+            ),
+                title: const Text('Nakit Durumu', style: kListTileSize),
                 onTap: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const HesaplarScreen(),
+                      builder: (context) => const UrunlerScreen(),
                     ),
                   );
                 },
               ),
               ListTile(
                 contentPadding: const EdgeInsets.only(left: 50),
-                leading: const Icon(Icons.person_add, color: kDrawerIconColor1),
-                title: const Text('Hesap Bilgileri', style: kListTileSize),
+                 leading: SizedBox(
+              width: 30.0,
+              height: 30.0,
+              child: Image.asset('assets/icons/kasaicon.png'),
+            ),
+                title: const Text('Kasalar', style: kListTileSize),
                 onTap: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const HesapBilgileri(),
+                      builder: (context) => const StokScreen(),
+                    ),
+                  );
+                },
+              ),
+               ListTile(
+                contentPadding: const EdgeInsets.only(left: 50),
+                 leading: SizedBox(
+              width: 30.0,
+              height: 30.0,
+              child: Image.asset('assets/icons/bankahesapmutabakaticon.png'),
+            ),
+                title: const Text('Banka Hesapları', style: kListTileSize),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const StokScreen(),
+                    ),
+                  );
+                },
+              ),
+               ListTile(
+                contentPadding: const EdgeInsets.only(left: 50),
+                 leading: SizedBox(
+              width: 30.0,
+              height: 30.0,
+              child: Image.asset('assets/icons/bankahesapmutabakaticon.png'),
+            ),
+                title: const Text('Banka Mutabakatı', style: kListTileSize),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const StokScreen(),
+                    ),
+                  );
+                },
+              ),
+               ListTile(
+                contentPadding: const EdgeInsets.only(left: 50),
+                 leading: SizedBox(
+              width: 30.0,
+              height: 30.0,
+              child: Image.asset('assets/icons/cekicon.png'),
+            ),
+                title: const Text('Çekler', style: kListTileSize),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const StokScreen(),
                     ),
                   );
                 },
@@ -361,14 +432,22 @@ class NavBar extends StatelessWidget {
           ExpansionTile(
             iconColor: kDrawerIconColor,
             textColor: kDrawerTextColor,
-            initiallyExpanded: false,
-            leading: const Icon(Icons.trending_up, color: kDrawerIconColor),
+            initiallyExpanded: true,
+             leading: SizedBox(
+              width: 30.0,
+              height: 30.0,
+              child: Image.asset('assets/icons/raporicon.png'),
+            ),
             title: const Text('Raporlar', style: kExpTileSize),
             children: <Widget>[
               ListTile(
                 contentPadding: const EdgeInsets.only(left: 50),
-                leading: const Icon(Icons.groups, color: kDrawerIconColor1),
-                title: const Text('Raporlar', style: kListTileSize),
+               leading: SizedBox(
+              width: 30.0,
+              height: 30.0,
+              child: Image.asset('assets/icons/raporlarsayfasiicon.png'),
+            ),
+                title: const Text('Raporlar Sayfası', style: kListTileSize),
                 onTap: () {
                   Navigator.push(
                     context,
@@ -380,73 +459,12 @@ class NavBar extends StatelessWidget {
               ),
               ListTile(
                 contentPadding: const EdgeInsets.only(left: 50),
-                leading: const Icon(Icons.person_add, color: kDrawerIconColor1),
-                title: const Text('Alış Raporu', style: kListTileSize),
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const AlisRaporu(),
-                    ),
-                  );
-                },
-              ),
-              ListTile(
-                contentPadding: const EdgeInsets.only(left: 50),
-                leading: const Icon(Icons.groups, color: kDrawerIconColor1),
-                title: const Text('Depo Stok Raporu', style: kListTileSize),
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const DepoStokRaporu(),
-                    ),
-                  );
-                },
-              ),
-              ListTile(
-                contentPadding: const EdgeInsets.only(left: 50),
-                leading: const Icon(Icons.person_add, color: kDrawerIconColor1),
-                title: const Text('Hesap Hareket Raporu', style: kListTileSize),
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const HesapHareketleri(),
-                    ),
-                  );
-                },
-              ),
-              ListTile(
-                contentPadding: const EdgeInsets.only(left: 50),
-                leading: const Icon(Icons.groups, color: kDrawerIconColor1),
-                title: const Text('İade Edilenler', style: kListTileSize),
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const IadeRaporu(),
-                    ),
-                  );
-                },
-              ),
-              ListTile(
-                contentPadding: const EdgeInsets.only(left: 50),
-                leading: const Icon(Icons.person_add, color: kDrawerIconColor1),
-                title: const Text('Masraflar', style: kListTileSize),
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const MasrafRaporu(),
-                    ),
-                  );
-                },
-              ),
-              ListTile(
-                contentPadding: const EdgeInsets.only(left: 50),
-                leading: const Icon(Icons.groups, color: kDrawerIconColor1),
-                title: const Text('Satışlar', style: kListTileSize),
+                 leading: SizedBox(
+              width: 30.0,
+              height: 30.0,
+              child: Image.asset('assets/icons/satisraporicon.png'),
+            ),
+                title: const Text('Satış Raporu', style: kListTileSize),
                 onTap: () {
                   Navigator.push(
                     context,
@@ -458,7 +476,131 @@ class NavBar extends StatelessWidget {
               ),
               ListTile(
                 contentPadding: const EdgeInsets.only(left: 50),
-                leading: const Icon(Icons.person_add, color: kDrawerIconColor1),
+                 leading: SizedBox(
+              width: 30.0,
+              height: 30.0,
+              child: Image.asset('assets/icons/alisraporicon.png'),
+            ),
+                title: const Text('Alış Raporu', style: kListTileSize),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const AlisRaporu(),
+                    ),
+                  );
+                },
+              ),
+               ListTile(
+                contentPadding: const EdgeInsets.only(left: 50),
+                leading: SizedBox(
+              width: 30.0,
+              height: 30.0,
+              child: Image.asset('assets/icons/masrafraporuicon.png'),
+            ),
+                title: const Text('Masraf Raporu', style: kListTileSize),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const MasrafRaporu(),
+                    ),
+                  );
+                },
+              ),
+               ListTile(
+                contentPadding: const EdgeInsets.only(left: 50),
+                 leading: SizedBox(
+              width: 30.0,
+              height: 30.0,
+              child: Image.asset('assets/icons/siparisraporuicon.png'),
+            ),
+                title: const Text('Sipariş Raporu', style: kListTileSize),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const DepoStokRaporu(),
+                    ),
+                  );
+                },
+              ),
+               ListTile(
+                contentPadding: const EdgeInsets.only(left: 50),
+                 leading: SizedBox(
+              width: 30.0,
+              height: 30.0,
+              child: Image.asset('assets/icons/alissatistoplamrapor.png'),
+            ),
+                title: const Text('Alış / Satış Toplamları', style: kListTileSize),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const HesapHareketleri(),
+                    ),
+                  );
+                },
+              ),
+              
+              ListTile(
+                contentPadding: const EdgeInsets.only(left: 50),
+                 leading: SizedBox(
+              width: 30.0,
+              height: 30.0,
+              child: Image.asset('assets/icons/kdvraporicon.png'),
+            ),
+                title: const Text('KDV Raporu', style: kListTileSize),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const StokHareketleriRaporu(),
+                    ),
+                  );
+                },
+              ),
+              ListTile(
+                contentPadding: const EdgeInsets.only(left: 50),
+                 leading: SizedBox(
+              width: 30.0,
+              height: 30.0,
+              child: Image.asset('assets/icons/depostokraporicon.png'),
+            ),
+                title: const Text('Depo Stok Raporu', style: kListTileSize),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const DepoStokRaporu(),
+                    ),
+                  );
+                },
+              ),
+               ListTile(
+                contentPadding: const EdgeInsets.only(left: 50),
+                leading: SizedBox(
+              width: 30.0,
+              height: 30.0,
+              child: Image.asset('assets/icons/iaderaporuicon.png'),
+            ),
+                title: const Text('İade Raporu', style: kListTileSize),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const IadeRaporu(),
+                    ),
+                  );
+                },
+              ),
+              ListTile(
+                contentPadding: const EdgeInsets.only(left: 50),
+                 leading: SizedBox(
+              width: 30.0,
+              height: 30.0,
+              child: Image.asset('assets/icons/stokhareketraporicon.png'),
+            ),
                 title: const Text('Stok Hareketleri', style: kListTileSize),
                 onTap: () {
                   Navigator.push(
@@ -469,12 +611,18 @@ class NavBar extends StatelessWidget {
                   );
                 },
               ),
+             
+              
             ],
           ),
           //-----------------------------------------------------------------
           const Divider(),
           ListTile(
-            leading: const Icon(Icons.notifications, color: kDrawerIconColor),
+            leading: SizedBox(
+              width: 30.0,
+              height: 30.0,
+              child: Image.asset('assets/icons/bildirimicon.png'),
+            ),
             title: const Text('Bildirimler', style: kListTileSize),
             onTap: () {
               Navigator.push(
@@ -486,7 +634,11 @@ class NavBar extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: const Icon(Icons.exit_to_app, color: kDrawerIconColor),
+           leading: SizedBox(
+              width: 30.0,
+              height: 30.0,
+              child: Image.asset('assets/icons/cikisyapicon.png'),
+            ),
             title: const Text('Çıkış Yap', style: kListTileSize),
             onTap: () {
               Navigator.push(

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../search_field.dart';
 
-class SatisIrsaliyeler extends StatelessWidget {
-  const SatisIrsaliyeler({super.key});
+class SatisMakbuz extends StatelessWidget {
+  const SatisMakbuz({super.key});
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -13,7 +13,7 @@ class SatisIrsaliyeler extends StatelessWidget {
           ),
          const SearchField(),
           const Center(
-            child: Text("İrsaliyeler"),
+            child: Text("Makbuz"),
           ),
         ],
     );
