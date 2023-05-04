@@ -1,16 +1,17 @@
+import 'package:fatura_app_2/alislar/alis_siparisler/alis_siparis_ekle.dart';
 import 'package:fatura_app_2/constants.dart';
 import 'package:fatura_app_2/navigation_bar.dart';
 import 'package:fatura_app_2/search_field.dart';
 import 'package:flutter/material.dart';
 
-class SatisMakbuzScreen extends StatefulWidget {
-  const SatisMakbuzScreen({super.key});
+class AlisSiparislerScreen extends StatefulWidget {
+  const AlisSiparislerScreen({super.key});
 
   @override
-  State<SatisMakbuzScreen> createState() => _SatisMakbuzScreenState();
+  State<AlisSiparislerScreen> createState() => _AlisSiparislerScreenState();
 }
 
-class _SatisMakbuzScreenState extends State<SatisMakbuzScreen> {
+class _AlisSiparislerScreenState extends State<AlisSiparislerScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,7 +21,7 @@ class _SatisMakbuzScreenState extends State<SatisMakbuzScreen> {
         backgroundColor: kAppBarColor,
         centerTitle: true,
         title:const Text(
-          'Serbest Meslek Makbuzu',
+          'Alış Siparişleri',
         ),
       ),
       body: Column(
@@ -31,20 +32,21 @@ class _SatisMakbuzScreenState extends State<SatisMakbuzScreen> {
            const SearchField(),
           ],
         ),
-    /*  floatingActionButton: FloatingActionButton.extended(
-        backgroundColor: kButtonColor,
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => const UrunEkle(),
-            ),
-          );
-        },
-        icon:const Icon(Icons.add),
-        label:const Text('Ekle'),
-        shape: const StadiumBorder(side: BorderSide(color: kButtonColor, width: 3)),
-      ),*/
+     floatingActionButton: FloatingActionButton(
+  backgroundColor: kButtonColor,
+  onPressed: () {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => const AlisSiparisEkle(),
+      ),
+    );
+  }, 
+  shape: const StadiumBorder(side: BorderSide(color: kButtonColor, width: 3)),
+  child:const Icon(Icons.add),
+ 
+),
+
     );
   }
 }

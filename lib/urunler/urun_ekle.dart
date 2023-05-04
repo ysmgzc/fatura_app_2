@@ -55,7 +55,7 @@ String? selectedValue3;
                 height: MediaQuery.of(context).size.height * 0.1,
               ),
               Text(
-                'Yeni Ürün-Stok Ekle',
+                'Ürün Ekle',
                 style: TextStyle(
                   color: kTextColor,
                   fontSize: MediaQuery.of(context).size.width * 0.07,

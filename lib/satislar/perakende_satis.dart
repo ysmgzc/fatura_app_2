@@ -1,6 +1,5 @@
 import 'package:fatura_app_2/constants.dart';
-import 'package:fatura_app_2/satislar/satis_siparisler.dart';
-import 'package:fatura_app_2/satislar/satislar.dart';
+import 'package:fatura_app_2/satislar/satis_siparis/satis_siparisler.dart';
 import "package:flutter/material.dart";
 import 'package:intl/intl.dart';
 

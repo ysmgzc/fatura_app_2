@@ -1,16 +1,17 @@
 import 'package:fatura_app_2/constants.dart';
 import 'package:fatura_app_2/navigation_bar.dart';
+import 'package:fatura_app_2/satislar/satis_makbuz/satis_makbuz_ekle.dart';
 import 'package:fatura_app_2/search_field.dart';
 import 'package:flutter/material.dart';
 
-class AlisMakbuzScreen extends StatefulWidget {
-  const AlisMakbuzScreen({super.key});
+class SatisMakbuzScreen extends StatefulWidget {
+  const SatisMakbuzScreen({super.key});
 
   @override
-  State<AlisMakbuzScreen> createState() => _AlisMakbuzScreenState();
+  State<SatisMakbuzScreen> createState() => _SatisMakbuzScreenState();
 }
 
-class _AlisMakbuzScreenState extends State<AlisMakbuzScreen> {
+class _SatisMakbuzScreenState extends State<SatisMakbuzScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,7 +21,7 @@ class _AlisMakbuzScreenState extends State<AlisMakbuzScreen> {
         backgroundColor: kAppBarColor,
         centerTitle: true,
         title:const Text(
-          'Serbest Meslek Makbuzu',
+          'Verilen Serbest Meslek Makbuzu',
         ),
       ),
       body: Column(
@@ -31,20 +32,20 @@ class _AlisMakbuzScreenState extends State<AlisMakbuzScreen> {
            const SearchField(),
           ],
         ),
-    /*  floatingActionButton: FloatingActionButton.extended(
-        backgroundColor: kButtonColor,
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => const UrunEkle(),
-            ),
-          );
-        },
-        icon:const Icon(Icons.add),
-        label:const Text('Ekle'),
-        shape: const StadiumBorder(side: BorderSide(color: kButtonColor, width: 3)),
-      ),*/
+     floatingActionButton: FloatingActionButton(
+  backgroundColor: kButtonColor,
+  onPressed: () {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => const SatisMakbuzEkle(),
+      ),
+    );
+  }, 
+  shape: const StadiumBorder(side: BorderSide(color: kButtonColor, width: 3)),
+  child:const Icon(Icons.add),
+ 
+),
     );
   }
 }

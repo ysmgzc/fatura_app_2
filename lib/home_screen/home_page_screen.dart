@@ -1,12 +1,10 @@
-import 'package:fatura_app_2/alislar/alis_siparisler.dart';
-import 'package:fatura_app_2/alislar/alislar.dart';
+import 'package:fatura_app_2/alislar/alis_siparisler/alis_siparisler.dart';
 import 'package:fatura_app_2/constants.dart';
-import 'package:fatura_app_2/home_screen/genel_durum.dart';
-import 'package:fatura_app_2/masraflar/masraflar.dart';
+import 'package:fatura_app_2/home_screen/genel_bakis.dart';
+import 'package:fatura_app_2/masraflar/giderler.dart';
 import 'package:fatura_app_2/navigation_bar.dart';
 import 'package:fatura_app_2/raporlar/raporlar.dart';
-import 'package:fatura_app_2/satislar/satis_siparisler.dart';
-import 'package:fatura_app_2/satislar/satislar.dart';
+import 'package:fatura_app_2/satislar/satis_siparis/satis_siparisler.dart';
 import 'package:fatura_app_2/stok/stok.dart';
 import 'package:flutter/material.dart';
 
@@ -127,7 +125,7 @@ class HomePageScreen extends StatelessWidget {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) =>const MasraflarScreen()),
+                MaterialPageRoute(builder: (context) =>const GiderlerScreen()),
               );
             },
            child: Column(
@@ -144,7 +142,7 @@ class HomePageScreen extends StatelessWidget {
                  child: Image.asset('assets/images/masraflar.png',),
                  ),
                  const SizedBox(height: 5,),
-                const Text("Masraflar",
+                const Text("Giderler",
                  style: TextStyle(
                   color: kTextColor2,
                   fontSize: 15,

@@ -1,10 +1,16 @@
-import 'package:fatura_app_2/alislar/alis_faturalar.dart';
-import 'package:fatura_app_2/alislar/alis_makbuz.dart';
-import 'package:fatura_app_2/alislar/alis_siparisler.dart';
-import 'package:fatura_app_2/home_screen/genel_durum.dart';
-import 'package:fatura_app_2/masraflar/masraflar.dart';
+import 'package:fatura_app_2/alislar/alis_faturasi/alis_faturalar.dart';
+import 'package:fatura_app_2/alislar/alis_makbuz/alis_makbuz.dart';
+import 'package:fatura_app_2/alislar/alis_siparisler/alis_siparisler.dart';
+import 'package:fatura_app_2/hizmetler/hizmetler.dart';
+import 'package:fatura_app_2/home_screen/genel_bakis.dart';
+import 'package:fatura_app_2/masraflar/giderler.dart';
 import 'package:fatura_app_2/musteri/musteriler.dart';
 import 'package:fatura_app_2/notifications.dart';
+import 'package:fatura_app_2/para/banka_hesaplari/banka_hesaplari.dart';
+import 'package:fatura_app_2/para/banka_mutabakati/banka_mutabakati.dart';
+import 'package:fatura_app_2/para/cekler/cekler.dart';
+import 'package:fatura_app_2/para/kasalar/kasalar.dart';
+import 'package:fatura_app_2/para/nakit_durumu.dart';
 import 'package:fatura_app_2/personeller/personeller.dart';
 import 'package:fatura_app_2/raporlar/r_alislar.dart';
 import 'package:fatura_app_2/raporlar/r_depo_stoklari.dart';
@@ -14,11 +20,11 @@ import 'package:fatura_app_2/raporlar/r_masraflar.dart';
 import 'package:fatura_app_2/raporlar/r_satislar.dart';
 import 'package:fatura_app_2/raporlar/r_stok_hareketleri.dart';
 import 'package:fatura_app_2/raporlar/raporlar.dart';
-import 'package:fatura_app_2/satislar/satis_faturalar.dart';
-import 'package:fatura_app_2/satislar/satis_makbuz.dart';
-import 'package:fatura_app_2/satislar/satis_siparisler.dart';
+import 'package:fatura_app_2/satislar/satis_faturasi/satis_faturalar.dart';
+import 'package:fatura_app_2/satislar/satis_makbuz/satis_makbuz.dart';
+import 'package:fatura_app_2/satislar/satis_siparis/satis_siparisler.dart';
 import 'package:fatura_app_2/screens/login_screen.dart';
-import 'package:fatura_app_2/stok/stok.dart';
+import 'package:fatura_app_2/stok_hareketleri/stok_hareketleri.dart';
 import 'package:fatura_app_2/tederikci/tedarikciler.dart';
 import 'package:fatura_app_2/urunler/urunler_screen.dart';
 import 'package:flutter/material.dart';
@@ -204,12 +210,12 @@ class NavBar extends StatelessWidget {
               height: 30.0,
               child: Image.asset('assets/icons/masraficon.png'),
             ),
-                title: const Text('Masraflarım', style: kListTileSize),
+                title: const Text('Giderler', style: kListTileSize),
                 onTap: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const MasraflarScreen(),
+                      builder: (context) => const GiderlerScreen(),
                     ),
                   );
                 },
@@ -296,7 +302,7 @@ class NavBar extends StatelessWidget {
                     ),
                   );
                 },
-              ),
+              ), 
                ListTile(
                 contentPadding: const EdgeInsets.only(left: 50),
                  leading: SizedBox(
@@ -309,7 +315,7 @@ class NavBar extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const UrunlerScreen(),
+                      builder: (context) => const HizmetlerScreen(),
                     ),
                   );
                 },
@@ -326,7 +332,7 @@ class NavBar extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const StokScreen(),
+                      builder: (context) => const StokHareketleriScreen(),
                     ),
                   );
                 },
@@ -357,7 +363,7 @@ class NavBar extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const UrunlerScreen(),
+                      builder: (context) => const NakitDurumuScreen(),
                     ),
                   );
                 },
@@ -374,7 +380,7 @@ class NavBar extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const StokScreen(),
+                      builder: (context) => const KasalarScreen(),
                     ),
                   );
                 },
@@ -391,7 +397,7 @@ class NavBar extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const StokScreen(),
+                      builder: (context) => const BankaHesaplariScreen(),
                     ),
                   );
                 },
@@ -408,7 +414,7 @@ class NavBar extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const StokScreen(),
+                      builder: (context) => const BankaMutabakatiScreen(),
                     ),
                   );
                 },
@@ -425,7 +431,7 @@ class NavBar extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const StokScreen(),
+                      builder: (context) => const CeklerScreen(),
                     ),
                   );
                 },

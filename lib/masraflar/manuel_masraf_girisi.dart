@@ -1,4 +1,4 @@
-import 'package:fatura_app_2/masraflar/masraflar.dart';
+/*import 'package:fatura_app_2/masraflar/masraflar.dart';
 import "package:flutter/material.dart";
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:fatura_app_2/constants.dart';
@@ -324,4 +324,4 @@ class _ManuelMasrafState extends State<ManuelMasraf> {
               ),
             );
   }
-}
+}*/

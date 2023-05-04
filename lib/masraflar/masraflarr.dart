@@ -1,4 +1,5 @@
-import 'package:fatura_app_2/constants.dart';
+/*import 'package:fatura_app_2/constants.dart';
+import 'package:fatura_app_2/masraflar/hizmet_masraf_ekle.dart';
 import 'package:fatura_app_2/masraflar/manuel_masraf_girisi.dart';
 import 'package:fatura_app_2/navigation_bar.dart';
 import 'package:fatura_app_2/search_field.dart';
@@ -61,35 +62,20 @@ class _MasraflarScreenState extends State<MasraflarScreen> {
           Odenecek(),
           ],
         ),
-        floatingActionButton: SpeedDial(
-          animatedIcon: AnimatedIcons.add_event,
-          backgroundColor: kButtonColor,
-          overlayColor: kButtonColor,
-          overlayOpacity: 0.4,
-          spaceBetweenChildren: 12, //speedler arasındaki bosluk
-          spacing: 12, //speedbar ile floatactionbuton arasındaki bosluk
-          openCloseDial: isDialOpen,
-          children: [
-            SpeedDialChild(
-              child:const Icon(Icons.difference),
-              label: "Manuel Masraf Girişi",
-              onTap: () {
-                 Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) =>
-                            const  ManuelMasraf(),
-                        ),
-                      );
-              },
-            ),
-            SpeedDialChild(
-              child:const Icon(Icons.receipt),
-              label: "Kasa Fişi Okutarak",
-              onTap: () {},
-            )
-          ],
-        ),
+          floatingActionButton: FloatingActionButton(
+  backgroundColor: kButtonColor,
+  onPressed: () {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => const HizmetMasrafEkle(),
+      ),
+    );
+  }, 
+  shape: const StadiumBorder(side: BorderSide(color: kButtonColor, width: 3)),
+  child:const Icon(Icons.add),
+ 
+),
       ),
   ),
   ); 
@@ -144,4 +130,4 @@ class Odenecek extends StatelessWidget {
         ],
     );
   }
-}
+}*/
