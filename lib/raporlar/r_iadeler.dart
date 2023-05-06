@@ -13,7 +13,7 @@ class _IadeRaporuState extends State<IadeRaporu> {
   TextEditingController dateInput = TextEditingController();
   @override
   void initState() {
-    dateInput.text = ""; //set the initial value of text field
+    dateInput.text = "";
     super.initState();
   }
  bool? value = false;
